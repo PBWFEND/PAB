@@ -463,8 +463,6 @@ Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./c
 4. Apa perbedaan Flutter dan Dart?
 5. Apa yang terjadi ketika developer melakukan *hot reload*?
 
-> **Kunci jawaban** tersedia di [`kunci-jawaban-kuis.md`](./kunci-jawaban-kuis.md) — gunakan untuk pengecekan mandiri atau oleh dosen setelah kuis selesai.
-
 ---
 
 ## 17. Output Pembelajaran — Tugas 1
