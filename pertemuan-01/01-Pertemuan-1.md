@@ -472,7 +472,21 @@ Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](../
 
 **Tugas 1 — Identifikasi Kebutuhan Aplikasi Bergerak** (dikumpulkan sebelum Pertemuan 2). Panduan pengerjaan tersedia di [`contoh-tugas-1-mahasiswa.md`](./contoh-tugas-1-mahasiswa.md).
 
-Pilih **satu** domain Sistem Informasi: perpustakaan, laboratorium, akademik, absensi organisasi, atau usaha mikro. Kerjakan:
+Pilih **satu** domain Sistem Informasi yang memiliki pengguna, masalah, dan proses bisnis yang jelas. Contoh domain yang dapat dipilih adalah 
+
+- perpustakaan,
+- laboratorium, 
+- akademik, 
+- absensi organisasi, 
+- usaha mikro, 
+- layanan kesehatan kampus, 
+- pengaduan fasilitas, 
+- kegiatan kemahasiswaan, 
+- atau pemesanan ruang. 
+
+`Anda juga dapat mengusulkan domain lain selama domain tersebut relevan dengan aplikasi bergerak`, dapat dikembangkan menggunakan materi PAB, dan memiliki ruang lingkup yang dapat diselesaikan sampai UAS.
+
+Kerjakan:
 
 1. **Deskripsi sistem** — 1 paragraf: siapa penggunanya, apa masalahnya, dan mengapa solusinya berbentuk **aplikasi mobile** (kaitkan dengan minimal 2 karakteristik aplikasi bergerak).
 2. **Diagram arsitektur** — gambarkan alur `Aplikasi Mobile → HTTP Request → Backend SI → Database → HTTP Response → Aplikasi Mobile` menggunakan **tool diagram digital** — disarankan [Excalidraw](https://excalidraw.com/) (gratis, tanpa install); alternatif: [draw.io / diagrams.net](https://app.diagrams.net/) atau [Mermaid Live Editor](https://mermaid.live/). Ekspor sebagai PNG/SVG, dan sertakan juga **file sumbernya** (`.excalidraw` / `.drawio` / kode `.mmd`) agar mudah direvisi.

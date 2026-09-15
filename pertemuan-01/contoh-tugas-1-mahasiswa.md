@@ -12,7 +12,9 @@ Dokumen ini membantu Anda memahami **apa yang harus dikerjakan** pada Tugas 1. P
 
 ## 1. Pilih Satu Domain Sistem Informasi
 
-Pilih **satu** domain berikut:
+Pilih **satu** domain Sistem Informasi yang dekat dengan kebutuhan pengguna atau lingkungan Anda. Domain tidak harus sama dengan contoh yang tersedia, tetapi harus memiliki proses bisnis yang jelas dan dapat dikembangkan secara bertahap menjadi project aplikasi bergerak selama satu semester.
+
+Contoh domain yang dapat dipilih:
 
 - Perpustakaan kampus
 - Laboratorium
@@ -20,7 +22,15 @@ Pilih **satu** domain berikut:
 - Absensi organisasi
 - Usaha mikro (mis. koperasi, warung, toko)
 
-Domain dipilih **satu kali** untuk seluruh semester — keputusan ini menjadi dasar project Anda dari Minggu 1 sampai UAS.
+Anda dapat mengusulkan domain lain, misalnya layanan kesehatan kampus, pengaduan fasilitas, kegiatan kemahasiswaan, atau pemesanan ruang. Pastikan domain tersebut memenuhi kriteria berikut:
+
+- memiliki minimal satu kelompok pengguna yang jelas;
+- memiliki masalah atau proses bisnis yang dapat dijelaskan;
+- memiliki kebutuhan yang relevan untuk aplikasi bergerak;
+- dapat dikembangkan melalui materi PAB, seperti UI/UX, navigasi, data lokal, REST API, validasi, fitur perangkat, dan testing;
+- memiliki ruang lingkup yang dapat diselesaikan secara bertahap sampai UAS.
+
+Domain yang dipilih menjadi dasar project Anda dari Minggu 1 sampai UAS. Perubahan domain setelah tugas ini dikumpulkan perlu dibicarakan dengan dosen karena dapat memengaruhi kebutuhan, desain, implementasi, dan asesmen project.
 
 ## 2. Kelima Komponen Tugas
 
@@ -38,8 +48,27 @@ Jawab tiga pertanyaan dalam satu paragraf:
 
 Gambar alur: `Aplikasi Mobile → HTTP Request → Backend SI → Database → HTTP Response → Aplikasi Mobile`.
 
+Contoh diagram arsitektur menggunakan Mermaid:
+
+```mermaid
+flowchart LR
+	A["Aplikasi Mobile<br>(Flutter)"] -->|"HTTP Request<br>(JSON)"| B["Backend SI<br>(REST API)"]
+	B -->|"Query atau perubahan data"| C[("Database")]
+	C -->|"Data hasil query"| B
+	B -->|"HTTP Response<br>(JSON)"| A
+```
+
+Gunakan contoh tersebut sebagai struktur awal, kemudian sesuaikan labelnya dengan domain yang Anda pilih. Misalnya, `Backend SI` dapat diberi keterangan `Backend Perpustakaan`, sedangkan `Database` dapat diberi keterangan `Database Akademik`. Diagram harus menunjukkan dua arah komunikasi: request dari aplikasi menuju backend dan response dari backend kembali ke aplikasi.
+
 - Gunakan **tool diagram digital** — disarankan [Excalidraw](https://excalidraw.com/); alternatif: [draw.io / diagrams.net](https://app.diagrams.net/) atau [Mermaid Live Editor](https://mermaid.live/).
 - Ekspor sebagai **PNG/SVG** (`diagram.png`), dan sertakan juga **file sumbernya** (`.excalidraw` / `.drawio` / `.mmd`) agar mudah direvisi.
+
+Referensi penggunaan tool diagram:
+
+- [Mermaid — Flowchart Syntax](https://mermaid.js.org/syntax/flowchart.html) — sintaks `flowchart`, node, dan arah panah.
+- [Mermaid Live Editor](https://mermaid.live/) — menulis, melihat pratinjau, dan mengekspor diagram Mermaid.
+- [Excalidraw](https://excalidraw.com/) — membuat diagram secara visual dengan gaya papan tulis.
+- [diagrams.net](https://app.diagrams.net/) — membuat diagram menggunakan editor visual dan menyimpan file sumber `.drawio`.
 
 ### 2.3 Tabel Kebutuhan (minimal 6 kebutuhan)
 
