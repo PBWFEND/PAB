@@ -1,4 +1,4 @@
-# Panduan Lengkap Praktikum
+# Panduan Lengkap Praktikum PAB
 
 **USA-WP2360241 — Pemrograman Aplikasi Bergerak**
 
@@ -8,17 +8,33 @@
 | **Semester** | 2026/2027 Gasal |
 | **Platform** | Flutter (stable) + Dart |
 
+Dokumen ini adalah panduan utama untuk memilih lingkungan kerja, memasang tool, membuka project, dan menjalankan kode praktikum PAB. Folder `Requirements/` digunakan untuk menyimpan dokumen kebutuhan dan panduan teknis yang berlaku untuk seluruh pertemuan.
+
+## Cara Menggunakan Panduan Ini
+
+Baca bagian berikut sesuai kebutuhan:
+
+1. **Bagian I** — pilih skenario instalasi berdasarkan RAM, ruang penyimpanan, dan target eksekusi.
+2. **Bagian II** — pasang Flutter, Dart, VS Code, Chrome, atau Android Studio sesuai skenario yang dipilih.
+3. **Bagian III** — buat project, buka project di VS Code, lalu jalankan aplikasi.
+4. **Bagian IV** — gunakan DartPad atau bagian troubleshooting ketika menemui kendala.
+
+Untuk materi `Pertemuan 1–10`, gunakan target web (`flutter run -d chrome`) atau DartPad sesuai kebutuhan. Emulator dan perangkat fisik digunakan ketika materi memerlukan pengujian fitur perangkat atau runtime tertentu.
+
+Jika menemukan istilah teknis yang belum dipahami, lihat [Glosarium PAB](./Glosarium.md) sebelum melanjutkan ke bagian berikutnya.
+
 
 ---
 
 ## Daftar Isi
 
-- [Panduan Lengkap Praktikum](#panduan-lengkap-praktikum)
+- [Panduan Lengkap Praktikum PAB](#panduan-lengkap-praktikum-pab)
+  - [Cara Menggunakan Panduan Ini](#cara-menggunakan-panduan-ini)
   - [Daftar Isi](#daftar-isi)
 - [Bagian I — Perencanaan: Memilih Skenario Instalasi](#bagian-i--perencanaan-memilih-skenario-instalasi)
   - [1. Pendahuluan](#1-pendahuluan)
   - [2. Tiga Skenario Instalasi](#2-tiga-skenario-instalasi)
-  - [2.1 Peta Kebutuhan Environment per Pertemuan](#21-peta-kebutuhan-environment-per-pertemuan)
+    - [2.1 Peta Kebutuhan Environment per Pertemuan](#21-peta-kebutuhan-environment-per-pertemuan)
   - [3. Perkiraan Konsumsi Disk dan RAM per Skenario](#3-perkiraan-konsumsi-disk-dan-ram-per-skenario)
     - [3.1 Windows](#31-windows)
     - [3.2 macOS](#32-macos)
@@ -28,12 +44,14 @@
   - [5. Ringkasan Keputusan](#5-ringkasan-keputusan)
 - [Bagian II — Persiapan: Instalasi Tool](#bagian-ii--persiapan-instalasi-tool)
   - [6. Daftar Tool dan Tautan Unduhan](#6-daftar-tool-dan-tautan-unduhan)
+    - [Urutan Tool yang Perlu Disiapkan](#urutan-tool-yang-perlu-disiapkan)
     - [6.1 Dart SDK (Skenario Ringan, Standar, dan Lengkap)](#61-dart-sdk-skenario-ringan-standar-dan-lengkap)
     - [6.2 Flutter SDK (Skenario Standar dan Lengkap)](#62-flutter-sdk-skenario-standar-dan-lengkap)
     - [6.3 Visual Studio Code (Semua Skenario)](#63-visual-studio-code-semua-skenario)
     - [6.4 Google Chrome (Skenario Standar dan Lengkap — target web)](#64-google-chrome-skenario-standar-dan-lengkap--target-web)
-    - [6.5 Android Studio + Android SDK + Emulator (Hanya Skenario Lengkap)](#65-android-studio--android-sdk--emulator-hanya-skenario-lengkap)
+    - [6.5 Android Studio + Android SDK + Emulator (Skenario Lengkap)](#65-android-studio--android-sdk--emulator-skenario-lengkap)
     - [6.6 Perangkat Fisik Android (Opsional, semua skenario dengan target fisik)](#66-perangkat-fisik-android-opsional-semua-skenario-dengan-target-fisik)
+    - [6.7 Target iOS pada macOS (Opsional)](#67-target-ios-pada-macos-opsional)
   - [7. Verifikasi Kesehatan Environment](#7-verifikasi-kesehatan-environment)
     - [7.1 Cek Versi](#71-cek-versi)
     - [7.2 Jalankan `flutter doctor`](#72-jalankan-flutter-doctor)
@@ -45,6 +63,7 @@
   - [10. Menyiapkan Perangkat Uji](#10-menyiapkan-perangkat-uji)
     - [10.1 Emulator Android](#101-emulator-android)
     - [10.2 Perangkat Android fisik](#102-perangkat-android-fisik)
+    - [10.3 iOS Simulator pada macOS](#103-ios-simulator-pada-macos)
   - [11. Menjalankan Program](#11-menjalankan-program)
   - [12. Menguji Perubahan dengan Hot Reload](#12-menguji-perubahan-dengan-hot-reload)
   - [13. Menjalankan dari VS Code](#13-menjalankan-dari-vs-code)
@@ -60,6 +79,11 @@
   - [16. Troubleshooting Kapasitas](#16-troubleshooting-kapasitas)
   - [17. Catatan Penting](#17-catatan-penting)
   - [18. Catatan untuk Pengelola Kelas / Lab](#18-catatan-untuk-pengelola-kelas--lab)
+  - [Referensi Terkait](#referensi-terkait)
+    - [Flutter dan Dart](#flutter-dan-dart)
+    - [Android](#android)
+    - [iOS dan macOS](#ios-dan-macos)
+    - [Target Web dan IDE](#target-web-dan-ide)
 
 ---
 
@@ -85,11 +109,11 @@ Tiga skenario tersedia:
 
 | Skenario | Peruntukan | Beban instalasi |
 |:---------|:-----------|:----------------|
-| **Ringan** | Laptop low-end, lab komputer terbatas, atau hanya materi Pertemuan 1–2 | ~200 MB – 1 GB |
+| **Ringan** | Laptop dengan spesifikasi terbatas, lab komputer terbatas, atau hanya materi Pertemuan 1–2 | ~200 MB – 1 GB |
 | **Standar** | Praktikum Flutter dengan target web (Chrome) | ~1–3 GB |
 | **Lengkap** | Praktikum Flutter dengan target web + perangkat fisik/emulator (opsional) | ~15–25 GB |
 
-Pilih satu skenario sesuai kapasitas mesin Anda. Skenario ringan dan standar tidak memerlukan Android Studio atau emulator.
+Pilih satu skenario sesuai kapasitas komputer Anda. Skenario ringan dan standar tidak memerlukan Android Studio atau emulator. Jika Anda belum yakin, pilih **Standar** untuk menjalankan Flutter melalui Chrome tanpa emulator.
 
 Flutter SDK adalah kumpulan tool untuk membangun aplikasi dengan Flutter. Dart SDK ikut terpasang bersama Flutter SDK, sehingga tidak perlu diinstal terpisah bila Anda memilih skenario standar atau lengkap. Untuk skenario ringan, Anda cukup menggunakan `DartPad` atau `Dart SDK` tanpa instalasi Flutter penuh. Jika laptop Anda tidak sanggup menjalankan emulator, pilih target web atau DartPad dan lanjutkan materi sesuai kebutuhan.
 
@@ -203,6 +227,29 @@ Gunakan tabel berikut untuk memilih skenario secara cepat:
 
 Berikut tool yang diperlukan per skenario, dengan tautan unduhan resmi.
 
+### Urutan Tool yang Perlu Disiapkan
+
+Gunakan tabel ini untuk membedakan tool utama dan menentukan urutan instalasi:
+
+| Komponen | Fungsi | Kapan diperlukan |
+|:---------|:-------|:-----------------|
+| **DartPad** | Menulis dan menjalankan Dart dasar melalui browser | Skenario ringan atau latihan Pertemuan 1–2 |
+| **Flutter SDK** | Menyediakan framework Flutter, Dart SDK, command-line tool, dan engine | Wajib untuk membuat serta menjalankan project Flutter |
+| **VS Code + Flutter/Dart extension** | Editor kode, debugging, hot reload, dan perintah Flutter | Pilihan utama untuk semua project Flutter |
+| **Google Chrome** | Target untuk menjalankan aplikasi Flutter pada web | Skenario standar dan tahap awal praktikum |
+| **Android Studio + Android SDK** | Menyediakan tool Android dan pengelolaan emulator | Hanya jika menggunakan target Android |
+| **Emulator Android (AVD)** | Perangkat Android virtual untuk menguji aplikasi | Opsional; diperlukan jika tidak menggunakan perangkat fisik Android |
+
+**Urutan yang disarankan:**
+
+1. Pilih skenario instalasi.
+2. Pasang Flutter SDK — Dart SDK sudah termasuk di dalamnya.
+3. Pasang VS Code dan extension Flutter; extension Dart akan ikut tersedia.
+4. Pasang Chrome untuk target web.
+5. Jika memerlukan target Android, pasang Android Studio, Android SDK, plugin Flutter, lalu buat emulator.
+
+Android Studio dan emulator tidak diperlukan untuk materi dasar yang dijalankan melalui DartPad atau Chrome.
+
 ### 6.1 Dart SDK (Skenario Ringan, Standar, dan Lengkap)
 
 Dart SDK disertakan dalam instalasi Flutter SDK, sehingga tidak perlu diunduh terpisah jika Anda memilih skenario standar atau lengkap. Untuk skenario ringan saja, unduh Dart SDK:
@@ -232,22 +279,31 @@ Dart SDK disertakan dalam instalasi Flutter SDK, sehingga tidak perlu diunduh te
 - [Chrome — unduhan](https://www.google.com/chrome/)
 - Diperlukan untuk menjalankan `flutter run -d chrome`.
 
-### 6.5 Android Studio + Android SDK + Emulator (Hanya Skenario Lengkap)
+### 6.5 Android Studio + Android SDK + Emulator (Skenario Lengkap)
 
 Komponen ini hanya diperlukan jika Anda ingin menjalankan aplikasi di **emulator Android** (AVD). Jika Anda memilih target web atau perangkat fisik, bagian ini dapat dilewati.
 
 - [Android Studio — unduhan](https://developer.android.com/studio)
 - [Android SDK Command-line Tools](https://developer.android.com/studio/releases/command-line-tools)
-- Setelah instalasi Android Studio:
+- Setelah instalasi Android Studio, pasang plugin Flutter:
+  1. Buka **Settings/Preferences > Plugins > Marketplace**.
+  2. Cari dan pasang plugin **Flutter**.
+  3. Setujui pemasangan plugin Dart jika diminta. Plugin Dart menyediakan dukungan bahasa Dart di Android Studio.
+  4. Mulai ulang Android Studio.
+  5. Saat diminta lokasi Flutter SDK, pilih folder tempat Flutter SDK disimpan.
+- Setelah plugin terpasang, siapkan Android SDK dan emulator:
   1. Buka **Tools > SDK Manager**.
-  2. Pasang **Android SDK Platform** dan **Android Emulator**.
-  3. Buat **Virtual Device (AVD)** — misalnya Pixel 7, API level 34.
+  2. Pasang **Android SDK Platform** dan **Android SDK Command-line Tools**.
+  3. Buka **Tools > Device Manager**, lalu buat **Virtual Device (AVD)** — misalnya Pixel 7 dengan API level yang tersedia.
+  4. Jalankan emulator dari Device Manager dan verifikasi dengan `flutter devices`.
 - Alternatif tanpa Android Studio (hanya SDK command-line):
   - Unduh [Android SDK command-line tools](https://developer.android.com/studio/releases/command-line-tools)
   - Pasang platform dan emulator melalui `sdkmanager`
   - Jalankan emulator dengan `emulator -avd <nama-avd>`
 
 > **Catatan:** Emulator membutuhkan virtualisasi CPU (Intel VT-x / AMD-V) yang aktif di BIOS. Jika virtualisasi tidak diaktifkan, emulator tidak akan berjalan.
+
+> **Urutan penting:** Flutter SDK adalah tool utama untuk membangun aplikasi. Plugin Flutter dan plugin Dart pada VS Code atau Android Studio hanya membantu editor mengenali project dan menjalankan perintah Flutter; plugin tidak menggantikan Flutter SDK. Android SDK dan emulator hanya diperlukan untuk pengujian pada target Android.
 
 ### 6.6 Perangkat Fisik Android (Opsional, semua skenario dengan target fisik)
 
@@ -260,6 +316,48 @@ Tidak ada unduhan tambahan — cukup:
 5. Verifikasi dengan `flutter devices`.
 
 **Prasyarat umum sebelum praktikum:** VS Code dengan ekstensi Flutter dan Dart, terminal atau Command Prompt, serta — untuk skenario standar/lengkap — Flutter SDK versi 3.x (termasuk Dart SDK). Chrome untuk target web bila tidak menggunakan emulator; Android Studio + emulator atau perangkat fisik Android hanya bila memilih skenario lengkap atau target fisik.
+
+### 6.7 Target iOS pada macOS (Opsional)
+
+Target iOS hanya dapat dibuat dan dijalankan melalui macOS dengan Xcode. Bagian ini diperlukan jika Anda ingin menguji aplikasi pada iOS Simulator atau perangkat iPhone; target web dan Android tetap dapat digunakan tanpa Xcode.
+
+Komponen yang diperlukan:
+
+- [Xcode — Mac App Store](https://apps.apple.com/us/app/xcode/id497799835) — IDE, iOS SDK, dan iOS Simulator.
+- [Apple Developer — Xcode](https://developer.apple.com/xcode/) — dokumentasi dan unduhan terkait Xcode.
+- Flutter SDK dan extension/plugin Flutter serta Dart — lihat bagian [6.2](#62-flutter-sdk-skenario-standar-dan-lengkap) dan [6.3](#63-visual-studio-code-semua-skenario).
+
+Langkah persiapan:
+
+1. Instal Xcode dari Mac App Store.
+2. Buka Xcode satu kali untuk menyetujui lisensi dan menyelesaikan instalasi komponen tambahan.
+3. Jalankan perintah berikut untuk menyetujui lisensi Xcode dan memastikan command-line tools tersedia:
+
+  ```bash
+  sudo xcodebuild -license
+  xcode-select --install
+  ```
+
+4. Buka **Xcode > Settings > Platforms**, lalu pastikan iOS Simulator yang diperlukan sudah terpasang.
+5. Buka **Xcode > Open Developer Tool > Simulator** atau jalankan:
+
+  ```bash
+  open -a Simulator
+  ```
+
+6. Periksa target iOS yang tersedia:
+
+  ```bash
+  flutter devices
+  ```
+
+7. Jalankan project pada iOS Simulator dengan device ID yang terdeteksi:
+
+  ```bash
+  flutter run -d <ios-device-id>
+  ```
+
+> **Catatan:** Xcode dan iOS Simulator tidak tersedia pada Windows atau Linux. Jika Anda tidak menggunakan macOS, gunakan target web, emulator Android, atau perangkat Android fisik sesuai skenario yang dipilih.
 
 ## 7. Verifikasi Kesehatan Environment
 
@@ -307,6 +405,7 @@ Daftar perangkat yang dapat dijadikan target:
 - **Chrome** — untuk target web (skenario standar)
 - **Perangkat Android fisik** — terhubung via USB
 - **AVD (emulator)** — hanya jika skenario lengkap dan emulator berjalan
+- **iOS Simulator** — hanya pada macOS dengan Xcode terpasang
 
 ### 7.4 Cek RAM dan Disk (Opsional)
 
@@ -377,9 +476,22 @@ Aplikasi Flutter dapat dijalankan pada target web, emulator, atau perangkat fisi
 3. Sambungkan ponsel ke komputer, lalu setujui dialog otorisasi yang muncul di ponsel.
 4. Periksa kembali `flutter devices`.
 
+### 10.3 iOS Simulator pada macOS
+
+1. Pastikan Xcode dan iOS Simulator sudah terpasang sesuai [Bagian 6.7](#67-target-ios-pada-macos-opsional).
+2. Buka iOS Simulator melalui **Xcode > Open Developer Tool > Simulator** atau jalankan `open -a Simulator`.
+3. Periksa nama dan device ID dengan `flutter devices`.
+4. Jalankan project menggunakan `flutter run -d <ios-device-id>`.
+
 ## 11. Menjalankan Program
 
-Aplikasi dijalankan dari dalam folder project:
+Aplikasi dijalankan dari dalam folder project. Untuk tahap awal, gunakan Chrome sebagai target web karena tidak memerlukan emulator:
+
+```bash
+flutter run -d chrome
+```
+
+Untuk menjalankan aplikasi pada target yang dipilih secara otomatis, gunakan:
 
 ```bash
 flutter run
@@ -399,12 +511,12 @@ Perintah di atas mengompilasi kode, memasang aplikasi pada perangkat, lalu membu
 | `R` | Hot restart — mengulang aplikasi dari awal (keadaan diatur ulang) |
 | `q` | Menghentikan aplikasi dan keluar dari sesi |
 
-Untuk menjalankan aplikasi counter bawaan tanpa mengubah apa pun:
+Untuk menjalankan aplikasi counter bawaan tanpa mengubah apa pun pada target web:
 
 ```bash
 flutter create app_counter
 cd app_counter
-flutter run
+flutter run -d chrome
 ```
 
 ## 12. Menguji Perubahan dengan Hot Reload
@@ -522,3 +634,33 @@ Pastikan aplikasi dijalankan melalui `flutter run` atau `F5` (bukan aplikasi yan
 - Jika lab tidak dapat menjalankan emulator, target web (`flutter run -d chrome`) menjadi alternatif yang setara untuk seluruh materi PAB.
 - Mahasiswa dapat mengerjakan seluruh proyek PAB menggunakan target web; perbedaan target (web vs Android fisik) tidak memengaruhi logika aplikasi Flutter.
 - Untuk skenario perangkat fisik, mahasiswa menyiapkan ponsel Android sendiri; tidak diperlukan unduhan tambahan di komputer.
+
+## Referensi Terkait
+
+Gunakan dokumentasi berikut sebagai rujukan resmi ketika memasang tool atau menelusuri kendala target tertentu:
+
+### Flutter dan Dart
+
+- [Flutter — Install](https://docs.flutter.dev/get-started/install) — instalasi Flutter SDK pada Windows, macOS, dan Linux.
+- [Flutter — Set up your project](https://docs.flutter.dev/get-started/test-drive) — membuat dan menjalankan project Flutter.
+- [Flutter — Set up an editor](https://docs.flutter.dev/get-started/editor) — konfigurasi VS Code atau Android Studio.
+- [Dart — Get Dart](https://dart.dev/get-dart) — instalasi Dart SDK jika diperlukan secara terpisah.
+
+### Android
+
+- [Android Studio](https://developer.android.com/studio) — unduhan dan instalasi Android Studio.
+- [Android Developers — Configure Android Studio](https://developer.android.com/studio/intro) — pengenalan konfigurasi Android Studio dan Android SDK.
+- [Flutter — Android setup](https://docs.flutter.dev/platform-integration/android/setup) — konfigurasi target Android untuk Flutter.
+
+### iOS dan macOS
+
+- [Flutter — iOS setup](https://docs.flutter.dev/platform-integration/ios/setup) — konfigurasi Flutter untuk target iOS.
+- [Apple — Xcode](https://developer.apple.com/xcode/) — halaman resmi Xcode.
+- [Apple — Xcode support](https://developer.apple.com/support/xcode/) — kompatibilitas versi Xcode dan sistem operasi.
+- [Apple — Simulator Help](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device) — menjalankan aplikasi pada Simulator atau perangkat Apple.
+
+### Target Web dan IDE
+
+- [Flutter — Web development](https://docs.flutter.dev/platform-integration/web) — menjalankan dan mengembangkan Flutter pada web.
+- [VS Code — Flutter](https://docs.flutter.dev/tools/vs-code) — penggunaan Flutter extension pada VS Code.
+- [Flutter — Install with VS Code](https://docs.flutter.dev/get-started/install/windows/mobile) — panduan instalasi Flutter melalui VS Code.
