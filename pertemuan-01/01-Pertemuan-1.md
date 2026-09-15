@@ -42,7 +42,7 @@
 
 ## 1. Keterkaitan Pertemuan dengan RPS OBE
 
-Pertemuan 1 adalah **gerbang masuk** mata kuliah Pemrograman Aplikasi Bergerak. Dalam kerangka OBE (Outcome Based Education), pertemuan ini menyumbang capaian pada **CPMK-1**:
+Pertemuan 1 memberikan dasar untuk mengikuti mata kuliah Pemrograman Aplikasi Bergerak. Dalam kerangka OBE (Outcome Based Education), pertemuan ini menyumbang capaian pada **CPMK-1**:
 
 > Mahasiswa mampu menjelaskan konsep aplikasi bergerak dalam konteks Sistem Informasi serta mempersiapkan lingkungan pengembangan berbasis Flutter dan Dart.
 
@@ -56,10 +56,12 @@ timeline
         Minggu 2 : Dasar Pemrograman Dart
         Minggu 3 : Struktur Flutter dan Widget
     section CPMK-2 s.d. CPMK-3 (M4-M8)
-        Minggu 4-8 : Kebutuhan, UI/UX, Navigasi : Data Lokal : UTS
+        Minggu 4-7 : Kebutuhan, UI/UX, Navigasi, Data Lokal
+        Minggu 8 : UTS
     section CPMK-3 s.d. CPMK-5 (M9-M16)
-        Minggu 9-12 : REST API, Integrasi SI, Fitur Perangkat : Keamanan
-        Minggu 13-16 : Testing, Project Akhir, UAS
+        Minggu 9-12 : REST API, Integrasi SI, Fitur Perangkat, Keamanan
+        Minggu 13-15 : Testing, Project Akhir, Presentasi
+        Minggu 16 : UAS
 ```
 
 ---
@@ -75,13 +77,13 @@ Setelah mengikuti pertemuan ini, mahasiswa mampu:
 | 3 | Menggambarkan ekosistem dan arsitektur dasar aplikasi bergerak | Mahasiswa dapat menggambar diagram alur aplikasi mobile dengan backend |
 | 4 | Menjelaskan posisi Flutter dan Dart dalam pengembangan aplikasi bergerak | Mahasiswa dapat membedakan Flutter, Dart, SDK, dan framework |
 | 5 | Menyiapkan lingkungan pengembangan Flutter | Mahasiswa dapat menyelesaikan `flutter doctor` tanpa error penghambat |
-| 6 | Membuat dan menjalankan project Flutter pertama | Mahasiswa dapat menjalankan aplikasi `counter` bawaan pada emulator atau perangkat |
+| 6 | Membuat dan menjalankan project Flutter pertama | Mahasiswa dapat menjalankan aplikasi `counter` bawaan pada target web, emulator, atau perangkat fisik |
 
 ---
 
 ## 3. Pemantik Kasus: Aplikasi Layanan Akademik di Ponsel
 
-Bayangkan Anda membuka **aplikasi layanan akademik** kampus dari ponsel:
+Perhatikan skenario berikut ketika Anda membuka **aplikasi layanan akademik** kampus dari ponsel:
 
 1. Anda login dengan NIM dan password.
 2. Halaman menampilkan jadwal kuliah dan notifikasi pengumuman.
@@ -95,7 +97,7 @@ Pertanyaan pemantik:
 
 ```mermaid
 flowchart LR
-    A["📱 Aplikasi Mobile<br>(Mahasiswa)"] -->|"1. Login & request KRS"| B["🖥️ Server Backend<br>(Sistem Informasi Akademik)"]
+    A["📱 Aplikasi Mobile<br>(Mahasiswa)"] -->|"1. Login dan request KRS"| B["🖥️ Server Backend<br>(Sistem Informasi Akademik)"]
     B -->|"2. Validasi NIM + password"| C[("🗄️ Database Akademik")]
     C -->|"3. Data jadwal"| B
     B -->|"4. Response: jadwal, kuota"| A
@@ -103,7 +105,7 @@ flowchart LR
     B -->|"6. Simpan KRS"| C
 ```
 
-Semua pertanyaan di atas akan terjawab sepanjang semester: aplikasi bergerak adalah **pintu depan** Sistem Informasi yang hadir di ponsel, dan backend SI (yang dipelajari pada mata kuliah Prak-backend) adalah **otak pemroses** di baliknya.
+Pertanyaan tersebut akan dibahas secara bertahap sepanjang semester. Aplikasi bergerak menyediakan antarmuka pada perangkat pengguna, sedangkan backend SI — yang dipelajari pada mata kuliah Prak-backend — memproses permintaan, menerapkan aturan bisnis, dan mengelola data.
 
 ---
 
@@ -234,7 +236,7 @@ Apa yang terjadi ketika aplikasi Flutter dijalankan:
 flowchart LR
     A["Kode Dart<br>(main.dart)"] -->|"flutter run"| B["Compiler Dart<br>(debug build)"]
     B --> C["Flutter Engine<br>(rendering)"]
-    C --> D["Aplikasi berjalan<br>di emulator/perangkat"]
+    C --> D["Aplikasi berjalan<br>di target yang dipilih"]
     D -->|"hot reload"| A
 ```
 
@@ -258,7 +260,7 @@ Beberapa istilah yang akan sering muncul sepanjang semester:
 | **Emulator/AVD** | Perangkat Android virtual yang dijalankan di komputer |
 | **Hot reload** | Menerapkan perubahan kode tanpa mengulang aplikasi |
 
-> **Catatan:** Pada Pertemuan 1 kita belum memasang package tambahan — praktik npm/`pub` intensif dimulai saat dibutuhkan (Penyimpanan Lokal pada Minggu 7 dan REST API pada Minggu 9). Komponen di atas diperkenalkan lebih dulu agar struktur project yang dihasilkan `flutter create` dapat dibaca.
+> **Catatan:** Pada Pertemuan 1 kita belum memasang package tambahan — penggunaan `pub` secara intensif dimulai saat package diperlukan untuk penyimpanan lokal pada Minggu 7 dan REST API pada Minggu 9. Komponen di atas diperkenalkan lebih dulu agar struktur project yang dihasilkan `flutter create` dapat dibaca.
 
 ---
 
@@ -287,13 +289,13 @@ Studi kasus ini akan menjadi **project paralel sepanjang semester**: Minggu 4 (k
 
 ## 11. Demo: Project Flutter Pertama
 
-Kita buktikan bahwa seluruh toolchain sudah berjalan dengan membuat project Flutter pertama. Kode lengkap ada di [`code/pertemuan-01/main.dart`](./code/pertemuan-01/main.dart).
+Kita buktikan bahwa seluruh toolchain sudah berjalan dengan membuat project Flutter pertama. Kode lengkap ada di [`code/pertemuan-01/main.dart`](../code/pertemuan-01/main.dart).
 
 ```mermaid
 flowchart LR
     A["flutter create app_pertama"] --> B["Buka folder di VS Code"]
     B --> C["flutter devices"]
-    C --> D["Pilih emulator / perangkat"]
+    C --> D["Pilih Chrome, emulator, atau perangkat"]
     D --> E["flutter run"]
     E --> F["Aplikasi tampil<br>coba hot reload"]
 ```
@@ -303,8 +305,9 @@ Langkah demo:
 ```bash
 flutter create app_pertama
 cd app_pertama
-flutter devices          # pastikan ada target (emulator/perangkat)
-flutter run              # jalankan pada target terpilih
+flutter devices          # periksa target yang tersedia
+flutter run -d chrome    # target web untuk tahap awal
+# Alternatif: flutter run untuk emulator atau perangkat fisik
 ```
 
 Struktur project yang dihasilkan (bagian yang penting):
@@ -409,10 +412,10 @@ Bentuk kelompok 3–4 orang, kerjakan menggunakan app diagram digital:
 
 ## 14. Latihan Individu
 
-Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./code/pertemuan-01/main.dart) (bagian komentar terbimbing) dan [`Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md).
+Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](../code/pertemuan-01/main.dart) (bagian komentar terbimbing) dan [Panduan Lengkap PAB](../Requirements/Panduan-Lengkap-PAB.md).
 
 1. **Verifikasi lingkungan** — Jalankan `flutter doctor`, catat hasilnya, dan selesaikan satu isu yang muncul (mis. license Android belum diterima). Lihat [`Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md) bagian *Mengatasi Error Umum* (Bagian IV).
-2. **Buat project pertama** — Jalankan `flutter create pab_p1_<nim>`, buka di VS Code, jalankan dengan `flutter run`.
+2. **Buat project pertama** — Jalankan `flutter create pab_p1_<nim>`, buka di VS Code, lalu jalankan dengan `flutter run -d chrome`. Emulator atau perangkat fisik dapat digunakan sebagai alternatif.
 3. **Identifikasi struktur** — Temukan dan catat letak: `main.dart`, `pubspec.yaml`, dan folder `android/`/`ios/`.
 4. **Hot reload** — Ubah `title` pada `MaterialApp` dan teks pada widget `Text`, simpan, amati hasilnya. Catat perbedaan *hot reload* dengan *hot restart* (`Shift+R` di terminal).
 5. **Refleksi singkat** — Tulis 3 kalimat: karakteristik mobile apa yang paling memengaruhi desain aplikasi SI yang Anda rencanakan, dan mengapa?
@@ -433,7 +436,7 @@ Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./c
 
 **❌ Jangan gunakan AI untuk:**
 
-- Menuliskan **seluruh** Tugas 1 — identifikasi masalah, pemilihan fitur, dan justifikasi adalah inti yang dinilai dari pemahamanmu
+- Menuliskan **seluruh** Tugas 1 — identifikasi masalah, pemilihan fitur, dan justifikasi merupakan bagian utama yang dinilai dari pemahaman Anda
 - Menyalin tabel kebutuhan tanpa mampu menjelaskan alasannya
 - Menjawab kuis formatif — kuis mengukur pemahaman **Anda**, bukan kemampuan AI
 
@@ -448,7 +451,7 @@ Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./c
    // Perbaikan: pastikan Android SDK terpasang melalui Android Studio,
    // lalu jalankan `flutter doctor` kembali untuk memverifikasi.
    ```
-3. AI = **asisten**, bukan **pengganti**. Pemahaman dasar mengenai karakteristik aplikasi bergerak dan arsitektur client–server harus Anda kuasai sendiri, bukan hanya berhenti di layar.
+3. AI = **asisten**, bukan **pengganti**. Anda tetap harus memahami karakteristik aplikasi bergerak dan arsitektur client–server serta memverifikasi setiap hasil yang digunakan.
 
 
 ---
@@ -474,7 +477,7 @@ Pilih **satu** domain Sistem Informasi: perpustakaan, laboratorium, akademik, ab
 1. **Deskripsi sistem** — 1 paragraf: siapa penggunanya, apa masalahnya, dan mengapa solusinya berbentuk **aplikasi mobile** (kaitkan dengan minimal 2 karakteristik aplikasi bergerak).
 2. **Diagram arsitektur** — gambarkan alur `Aplikasi Mobile → HTTP Request → Backend SI → Database → HTTP Response → Aplikasi Mobile` menggunakan **tool diagram digital** — disarankan [Excalidraw](https://excalidraw.com/) (gratis, tanpa install); alternatif: [draw.io / diagrams.net](https://app.diagrams.net/) atau [Mermaid Live Editor](https://mermaid.live/). Ekspor sebagai PNG/SVG, dan sertakan juga **file sumbernya** (`.excalidraw` / `.drawio` / kode `.mmd`) agar mudah direvisi.
 3. **Tabel kebutuhan** — minimal **6 kebutuhan**, berisi: permintaan, pengguna, karakteristik mobile yang terkait, fitur aplikasi, dan perkiraan materi pemenuh (Minggu berapa).
-4. **Bukti environment siap** — tangkapan layar `flutter doctor -v` **sebelum dan sesudah** perbaikan, serta tangkapan layar aplikasi counter berjalan di emulator/perangkat.
+4. **Bukti environment siap** — tangkapan layar `flutter doctor -v` **sebelum dan sesudah** perbaikan, serta tangkapan layar aplikasi counter berjalan pada target web, emulator, atau perangkat fisik.
 5. **Refleksi** — 3 kalimat: fitur perangkat (kamera/lokasi/notifikasi) apa yang paling relevan untuk domain yang Anda pilih, dan mengapa?
 
 ### Cara Pengumpulan — Push ke Repository GitHub Kelas
@@ -572,6 +575,6 @@ timeline
 
 | File | Keterangan |
 |:-----|:-----------|
-| [`code/pertemuan-01/main.dart`](./code/pertemuan-01/main.dart) | Project Flutter pertama: struktur aplikasi minimal + komentar terbimbing untuk latihan individu |
+| [`code/pertemuan-01/main.dart`](../code/pertemuan-01/main.dart) | Project Flutter pertama: struktur aplikasi minimal + komentar terbimbing untuk latihan individu |
 | [`Requirements/Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md) | Panduan lengkap: skenario instalasi, setup tool, alur praktikum Flutter, dan penanganan error umum |
 | [`contoh-tugas-1-mahasiswa.md`](./contoh-tugas-1-mahasiswa.md) | Panduan pengerjaan Tugas 1 untuk mahasiswa: definisi komponen, struktur tabel, dan cara menguji jawaban sendiri |

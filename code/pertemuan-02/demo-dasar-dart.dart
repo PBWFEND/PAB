@@ -39,7 +39,7 @@ void main() {
   final materiGabungan = daftarMateri.join(', ');
 
   print('\n=== Penggabungan String ===');
-  print('Materi hari ini: $materiGabungan.');
+  print('Materi pertemuan ini: $materiGabungan.');
 
   // ------------------------------------------------------------------
   // 3. Tipe data dan konversi

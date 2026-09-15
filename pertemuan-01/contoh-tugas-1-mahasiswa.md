@@ -69,7 +69,7 @@ Siapkan tiga tangkapan layar:
 |:------|:-----|
 | `flutter doctor -v` sebelum perbaikan (ada tanda ✗) | `flutter-doctor/sebelum.png` |
 | `flutter doctor -v` sesudah perbaikan (bersih) | `flutter-doctor/sesudah.png` |
-| Aplikasi counter berjalan di emulator/perangkat | `aplikasi.png` |
+| Aplikasi counter berjalan pada target web, emulator, atau perangkat fisik | `aplikasi.png` |
 
 ### 2.5 Refleksi (3 kalimat)
 

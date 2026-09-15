@@ -361,7 +361,7 @@ Pertanyaan untuk dibahas bersama:
 4. **Bagaimana cara menentukan predikat** berdasarkan total skor? (petunjuk: pakai `if/else if/else`.)
 5. **Bagaimana menampilkan hasil** dalam format yang rapi?
 
-Kode penyelesaian tersedia di [`code/pertemuan-02/solusi-dasar-dart.dart`](./code/pertemuan-02/solusi-dasar-dart.dart). Kerjakan latihan individu terlebih dahulu, baru bandingkan dengan solusi.
+Kode penyelesaian tersedia di [`code/pertemuan-02/solusi-dasar-dart.dart`](../code/pertemuan-02/solusi-dasar-dart.dart). Kerjakan latihan individu terlebih dahulu, baru bandingkan dengan solusi.
 
 ```mermaid
 flowchart LR
@@ -387,7 +387,7 @@ Bentuk kelompok 3–4 orang:
 
 ## 13. Latihan Individu
 
-Kerjakan setelah demo; kerangka TODO terbimbing ada di [`code/pertemuan-02/latihan-dasar-dart.dart`](./code/pertemuan-02/latihan-dasar-dart.dart). Kasus: **skema penilaian mata kuliah PAB**.
+Kerjakan setelah demo; kerangka TODO terbimbing ada di [`code/pertemuan-02/latihan-dasar-dart.dart`](../code/pertemuan-02/latihan-dasar-dart.dart). Kasus: **skema penilaian mata kuliah PAB**.
 
 1. **TODO 1** — Deklarasikan konstanta jumlah komponen dan variabel nama kuliah.
 2. **TODO 2** — Tulis fungsi `predikat(int nilai)` dengan rentang yang benar.
@@ -537,7 +537,7 @@ timeline
 
 | File | Keterangan |
 |:-----|:-----------|
-| [`code/pertemuan-02/demo-dasar-dart.dart`](./code/pertemuan-02/demo-dasar-dart.dart) | Demo live: variabel, konstanta, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi |
-| [`code/pertemuan-02/latihan-dasar-dart.dart`](./code/pertemuan-02/latihan-dasar-dart.dart) | Kerangka latihan individu dengan TODO terbimbing (kasus skema penilaian) |
-| [`code/pertemuan-02/solusi-dasar-dart.dart`](./code/pertemuan-02/solusi-dasar-dart.dart) | Solusi referensi CBL: skema penilaian mata kuliah (untuk dosen) |
+| [`code/pertemuan-02/demo-dasar-dart.dart`](../code/pertemuan-02/demo-dasar-dart.dart) | Demo live: variabel, konstanta, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi |
+| [`code/pertemuan-02/latihan-dasar-dart.dart`](../code/pertemuan-02/latihan-dasar-dart.dart) | Kerangka latihan individu dengan TODO terbimbing (kasus skema penilaian) |
+| [`code/pertemuan-02/solusi-dasar-dart.dart`](../code/pertemuan-02/solusi-dasar-dart.dart) | Solusi referensi CBL: skema penilaian mata kuliah (untuk dosen) |
 | [`contoh-tugas-2-mahasiswa.md`](./contoh-tugas-2-mahasiswa.md) | Panduan pengerjaan Tugas 2 untuk mahasiswa: definisi komponen, struktur, dan cara menguji jawaban sendiri |

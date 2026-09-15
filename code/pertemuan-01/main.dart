@@ -12,12 +12,13 @@
 //      (lihat Requirements/Panduan-Lengkap-PAB.md untuk langkah pembuatan project).
 //   2. Jalankan dari folder project:
 //        flutter run
-//   3. Amati aplikasi di emulator/perangkat, lalu kerjakan TODO di bawah.
+//      Untuk tahap awal, gunakan target web dengan `flutter run -d chrome`.
+//   3. Amati aplikasi pada target yang dipilih, lalu kerjakan TODO di bawah.
 //
 // Konsep yang ditunjukkan (Pertemuan 1):
 //   - main()        : titik masuk aplikasi Dart.
 //   - runApp()      : memasang widget akar ke layar.
-//   - StatelessWidget : widget tanpa keadaan yang berubah (detail Pertemuan 3).
+//   - StatefulWidget  : widget dengan keadaan yang dapat berubah (detail Pertemuan 3).
 //   - MaterialApp   : kerangka aplikasi dengan Material Design.
 //   - Scaffold      : struktur dasar halaman (appBar, body, dan lainnya).
 //   - Text          : widget untuk menampilkan teks.
