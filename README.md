@@ -11,8 +11,8 @@
 |:---:|:--------|:----------|
 | 01 | [Timeline Pertemuan — `TIMELINE.md`](./TIMELINE.md) | Rencana 16 pertemuan untuk kelas SI-VIIB dan SI-VIIA: CPMK, materi, aktivitas, dan output/asesmen |
 | 02 | [Milestone — `MILESTONE.md`](./MILESTONE.md) | Tahapan project M0–M10, deliverable, dan kriteria selesai |
-| 03 | [Panduan Lengkap — `Requirements/Panduan-Lengkap-PAB.md`](./Requirements/Panduan-Lengkap-PAB.md) | Dokumen terpadu: skenario instalasi (ringan/standar/lengkap), target web tanpa emulator, tautan unduhan tool, syarat minimum laptop, alur praktikum Flutter, hot reload, serta troubleshooting |
-| 04 | [Glosarium — `Requirements/Glosarium.md`](./Requirements/Glosarium.md) | Definisi istilah Flutter, Dart, IDE, SDK, emulator, iOS Simulator, API, dan runtime |
+| 03 | [Panduan Lengkap — `panduan/Panduan-Lengkap-PAB.md`](./panduan/Panduan-Lengkap-PAB.md) | Dokumen terpadu: skenario instalasi (ringan/standar/lengkap), target web tanpa emulator, tautan unduhan tool, syarat minimum laptop, alur praktikum Flutter, hot reload, serta troubleshooting |
+| 04 | [Glosarium — `panduan/Glosarium.md`](./panduan/Glosarium.md) | Definisi istilah Flutter, Dart, IDE, SDK, emulator, iOS Simulator, API, dan runtime |
 | 05 | [Pertemuan 1 — `pertemuan-01/01-Pertemuan-1.md`](./pertemuan-01/01-Pertemuan-1.md) | Konsep aplikasi bergerak dalam SI, Flutter, Dart, arsitektur client–server, setup environment, CBL, kuis, dan Tugas 1 |
 | 06 | Kode praktikum Pertemuan 1 — [`code/pertemuan-01/`](./code/pertemuan-01/) | Project Flutter pertama dan latihan terbimbing |
 | 07 | [Pertemuan 2 — `pertemuan-02/02-Pertemuan-2.md`](./pertemuan-02/02-Pertemuan-2.md) | Dasar pemrograman Dart: variabel, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi |

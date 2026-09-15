@@ -412,9 +412,9 @@ Bentuk kelompok 3–4 orang, kerjakan menggunakan app diagram digital:
 
 ## 14. Latihan Individu
 
-Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](../code/pertemuan-01/main.dart) (bagian komentar terbimbing) dan [Panduan Lengkap PAB](../Requirements/Panduan-Lengkap-PAB.md).
+Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](../code/pertemuan-01/main.dart) (bagian komentar terbimbing) dan [Panduan Lengkap PAB](../panduan/Panduan-Lengkap-PAB.md).
 
-1. **Verifikasi lingkungan** — Jalankan `flutter doctor`, catat hasilnya, dan selesaikan satu isu yang muncul (mis. license Android belum diterima). Lihat [`Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md) bagian *Mengatasi Error Umum* (Bagian IV).
+1. **Verifikasi lingkungan** — Jalankan `flutter doctor`, catat hasilnya, dan selesaikan satu isu yang muncul (mis. license Android belum diterima). Lihat [`Panduan-Lengkap-PAB.md`](../panduan/Panduan-Lengkap-PAB.md) bagian *Mengatasi Error Umum* (Bagian IV).
 2. **Buat project pertama** — Jalankan `flutter create pab_p1_<nim>`, buka di VS Code, lalu jalankan dengan `flutter run -d chrome`. Emulator atau perangkat fisik dapat digunakan sebagai alternatif.
 3. **Identifikasi struktur** — Temukan dan catat letak: `main.dart`, `pubspec.yaml`, dan folder `android/`/`ios/`.
 4. **Hot reload** — Ubah `title` pada `MaterialApp` dan teks pada widget `Text`, simpan, amati hasilnya. Catat perbedaan *hot reload* dengan *hot restart* (`Shift+R` di terminal).
@@ -590,5 +590,5 @@ timeline
 | File | Keterangan |
 |:-----|:-----------|
 | [`code/pertemuan-01/main.dart`](../code/pertemuan-01/main.dart) | Project Flutter pertama: struktur aplikasi minimal + komentar terbimbing untuk latihan individu |
-| [`Requirements/Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md) | Panduan lengkap: skenario instalasi, setup tool, alur praktikum Flutter, dan penanganan error umum |
+| [`panduan/Panduan-Lengkap-PAB.md`](../panduan/Panduan-Lengkap-PAB.md) | Panduan lengkap: skenario instalasi, setup tool, alur praktikum Flutter, dan penanganan error umum |
 | [`contoh-tugas-1-mahasiswa.md`](./contoh-tugas-1-mahasiswa.md) | Panduan pengerjaan Tugas 1 untuk mahasiswa: definisi komponen, struktur tabel, dan cara menguji jawaban sendiri |

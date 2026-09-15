@@ -9,7 +9,7 @@
 //
 // Cara menjalankan:
 //   1. Salin file ini ke lib/main.dart pada project hasil `flutter create`
-//      (lihat Requirements/Panduan-Lengkap-PAB.md untuk langkah pembuatan project).
+//      (lihat panduan/Panduan-Lengkap-PAB.md untuk langkah pembuatan project).
 //   2. Jalankan dari folder project:
 //        flutter run
 //      Untuk tahap awal, gunakan target web dengan `flutter run -d chrome`.

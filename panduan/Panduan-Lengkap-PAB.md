@@ -8,7 +8,7 @@
 | **Semester** | 2026/2027 Gasal |
 | **Platform** | Flutter (stable) + Dart |
 
-Dokumen ini adalah panduan utama untuk memilih lingkungan kerja, memasang tool, membuka project, dan menjalankan kode praktikum PAB. Folder `Requirements/` digunakan untuk menyimpan dokumen kebutuhan dan panduan teknis yang berlaku untuk seluruh pertemuan.
+Dokumen ini adalah panduan utama untuk memilih lingkungan kerja, memasang tool, membuka project, dan menjalankan kode praktikum PAB. Folder `panduan/` digunakan untuk menyimpan panduan teknis dan glosarium yang berlaku untuk seluruh pertemuan.
 
 ## Cara Menggunakan Panduan Ini
 
