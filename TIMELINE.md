@@ -4,7 +4,8 @@
 [![Stack](https://img.shields.io/badge/Stack-Flutter%20%2B%20Dart-02569B?style=for-the-badge&logo=flutter)](https://)
 [![Pertemuan](https://img.shields.io/badge/Pertemuan-16%20Minggu-purple?style=for-the-badge)](https://)
 
-Tanggal menyesuaikan kalender akademik institusi. Materi dan urutan pembelajaran kedua kelas tetap sama.
+
+
 
 ## SI-VIIB — Rabu
 

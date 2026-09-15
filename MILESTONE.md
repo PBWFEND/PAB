@@ -2,6 +2,8 @@
 
 Milestone disusun berdasarkan [`TIMELINE.md`](./TIMELINE.md), RPS OBE, dan tahapan project aplikasi mobile untuk kelas SI-VIIB dan SI-VIIA. Tanggal target berbeda sesuai jadwal kelas, sedangkan capaian dan deliverable tetap sama.
 
+> **Catatan setup:** pada tahap awal, mahasiswa dapat menggunakan DartPad, Dart SDK, atau target web (`flutter run -d chrome`). Emulator dan perangkat fisik bersifat opsional untuk materi dasar dan menjadi kebutuhan utama pada fase fitur perangkat serta pengujian runtime.
+
 ## Ringkasan Milestone
 
 | Milestone | Fase | Minggu | Target SI-VIIB | Target SI-VIIA | CPMK | Deliverable Utama |
@@ -33,7 +35,7 @@ Milestone disusun berdasarkan [`TIMELINE.md`](./TIMELINE.md), RPS OBE, dan tahap
 ### Kriteria Selesai
 - Domain project sesuai kebutuhan Sistem Informasi.
 - Masalah dan target pengguna dijelaskan dengan jelas.
-- Project Flutter dapat dijalankan pada emulator atau perangkat.
+- Project Flutter dapat dijalankan pada target web atau perangkat; emulator bersifat opsional pada tahap awal.
 
 ## M1 — Analisis Kebutuhan (CPMK-2)
 
@@ -121,7 +123,7 @@ Milestone disusun berdasarkan [`TIMELINE.md`](./TIMELINE.md), RPS OBE, dan tahap
 - [ ] Penjelasan hubungan fitur dengan proses bisnis.
 
 ### Kriteria Selesai
-- Fitur berjalan pada emulator atau perangkat yang mendukungnya.
+- Fitur berjalan pada target web, emulator, atau perangkat yang mendukungnya.
 - Permission dan kondisi penolakan ditangani dengan baik.
 - Fitur tidak ditambahkan tanpa justifikasi kebutuhan.
 

@@ -9,7 +9,7 @@
 //
 // Cara menjalankan:
 //   1. Salin file ini ke lib/main.dart pada project hasil `flutter create`
-//      (lihat panduan.md untuk langkah pembuatan project).
+//      (lihat Requirements/Panduan-Lengkap-PAB.md untuk langkah pembuatan project).
 //   2. Jalankan dari folder project:
 //        flutter run
 //   3. Amati aplikasi di emulator/perangkat, lalu kerjakan TODO di bawah.

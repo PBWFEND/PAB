@@ -409,9 +409,9 @@ Bentuk kelompok 3–4 orang, kerjakan menggunakan app diagram digital:
 
 ## 14. Latihan Individu
 
-Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./code/pertemuan-01/main.dart) (bagian komentar terbimbing) dan [`panduan.md`](./panduan.md).
+Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./code/pertemuan-01/main.dart) (bagian komentar terbimbing) dan [`Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md).
 
-1. **Verifikasi lingkungan** — Jalankan `flutter doctor`, catat hasilnya, dan selesaikan satu isu yang muncul (mis. license Android belum diterima). Lihat [`panduan.md`](./panduan.md) bagian *Mengatasi Error Umum*.
+1. **Verifikasi lingkungan** — Jalankan `flutter doctor`, catat hasilnya, dan selesaikan satu isu yang muncul (mis. license Android belum diterima). Lihat [`Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md) bagian *Mengatasi Error Umum* (Bagian IV).
 2. **Buat project pertama** — Jalankan `flutter create pab_p1_<nim>`, buka di VS Code, jalankan dengan `flutter run`.
 3. **Identifikasi struktur** — Temukan dan catat letak: `main.dart`, `pubspec.yaml`, dan folder `android/`/`ios/`.
 4. **Hot reload** — Ubah `title` pada `MaterialApp` dan teks pada widget `Text`, simpan, amati hasilnya. Catat perbedaan *hot reload* dengan *hot restart* (`Shift+R` di terminal).
@@ -467,9 +467,9 @@ Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](./c
 
 ## 17. Output Pembelajaran — Tugas 1
 
-**Tugas 1 — Identifikasi Kebutuhan Aplikasi Bergerak** (dikumpulkan sebelum Pertemuan 2).
+**Tugas 1 — Identifikasi Kebutuhan Aplikasi Bergerak** (dikumpulkan sebelum Pertemuan 2). Panduan pengerjaan tersedia di [`contoh-tugas-1-mahasiswa.md`](./contoh-tugas-1-mahasiswa.md).
 
-Pilih **satu** domain Sistem Informasi: perpustakaan, laboratorium, kantin kampus, absensi organisasi, atau usaha mikro. Kerjakan:
+Pilih **satu** domain Sistem Informasi: perpustakaan, laboratorium, akademik, absensi organisasi, atau usaha mikro. Kerjakan:
 
 1. **Deskripsi sistem** — 1 paragraf: siapa penggunanya, apa masalahnya, dan mengapa solusinya berbentuk **aplikasi mobile** (kaitkan dengan minimal 2 karakteristik aplikasi bergerak).
 2. **Diagram arsitektur** — gambarkan alur `Aplikasi Mobile → HTTP Request → Backend SI → Database → HTTP Response → Aplikasi Mobile` menggunakan **tool diagram digital** — disarankan [Excalidraw](https://excalidraw.com/) (gratis, tanpa install); alternatif: [draw.io / diagrams.net](https://app.diagrams.net/) atau [Mermaid Live Editor](https://mermaid.live/). Ekspor sebagai PNG/SVG, dan sertakan juga **file sumbernya** (`.excalidraw` / `.drawio` / kode `.mmd`) agar mudah direvisi.
@@ -548,11 +548,11 @@ Dengan demikian, proses pembelajaran kita berlangsung secara bertahap:
 
 ```mermaid
 timeline
-    title Roadmap pengembangan aplikasi
-    Minggu 1 : Konsep & Environment : Project pertama (hari ini)
+    title Peta perkembangan aplikasi
+    Minggu 1 : Konsep dan environment : project Flutter pertama
     Minggu 2 : Dasar Dart : variabel, fungsi, collection
-    Minggu 3 : Widget & Struktur Flutter : MaterialApp, Scaffold, widget tree
-    Minggu 4 : Analisis Kebutuhan : user flow
+    Minggu 3 : Widget dan struktur Flutter : MaterialApp, Scaffold, widget tree
+    Minggu 4 : Analisis kebutuhan : user flow
 ```
 - Minggu 1 — Memahami
   Mahasiswa memahami konsep aplikasi bergerak dalam SI dan berhasil menjalankan project Flutter pertama.
@@ -573,5 +573,5 @@ timeline
 | File | Keterangan |
 |:-----|:-----------|
 | [`code/pertemuan-01/main.dart`](./code/pertemuan-01/main.dart) | Project Flutter pertama: struktur aplikasi minimal + komentar terbimbing untuk latihan individu |
-| [`panduan.md`](./panduan.md) | Panduan instalasi Flutter SDK, emulator, dan penanganan error umum |
-|
+| [`Requirements/Panduan-Lengkap-PAB.md`](../Requirements/Panduan-Lengkap-PAB.md) | Panduan lengkap: skenario instalasi, setup tool, alur praktikum Flutter, dan penanganan error umum |
+| [`contoh-tugas-1-mahasiswa.md`](./contoh-tugas-1-mahasiswa.md) | Panduan pengerjaan Tugas 1 untuk mahasiswa: definisi komponen, struktur tabel, dan cara menguji jawaban sendiri |
