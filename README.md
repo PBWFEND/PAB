@@ -19,6 +19,21 @@
 | 08 | Kode praktikum Pertemuan 2 — [`code/pertemuan-02/`](./code/pertemuan-02/) | `demo-dasar-dart.dart`, `latihan-dasar-dart.dart` (TODO terbimbing), dan solusi referensi |
 | 09 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
+## Referensi dan Materi Pendukung Dart
+
+Dokumentasi resmi Dart disediakan untuk membantu mahasiswa memperdalam topik tertentu. Mahasiswa cukup mempelajari bagian yang berkaitan dengan materi perkuliahan.
+
+| Rentang Minggu | Fokus sesuai `TIMELINE.md` | Cakupan Dart yang diperlukan | Referensi pendukung |
+|:---------------|:---------------------------|:-----------------------------|:--------------------|
+| 1 | Konsep aplikasi bergerak, Flutter, Dart, setup | Pengenalan Dart, `main()`, menjalankan project, dan hubungan Flutter SDK dengan Dart SDK | [Build your first app](https://dart.dev/learn/tutorial/first-app) |
+| 2 | Dasar pemrograman Dart | Variabel, tipe data, operator, kontrol alur, fungsi, null safety dasar, `List`, `Set`, dan `Map` | [Interactivity](https://dart.dev/learn/tutorial/interactivity) |
+| 3–8 | Widget, kebutuhan, UI/UX, navigasi, data lokal, UTS | Menerapkan sintaks Dart pada widget, state, form, navigasi, dan model data sesuai kebutuhan project | [Dart Language Tour](https://dart.dev/guides/language/language-tour) |
+| 9–10 | REST API dan integrasi proses bisnis SI | `Future`, `async`/`await`, package `http`, `Uri`, JSON, parsing, dan request/response | [Async](https://dart.dev/learn/tutorial/async), [Data and JSON](https://dart.dev/learn/tutorial/data-and-json), [Fetch data](https://dart.dev/learn/tutorial/fetch-data) |
+| 11–12 | Fitur perangkat, validasi, dan keamanan | Asynchronous flow, validasi input, permission, dan penggunaan package sesuai kebutuhan | [Error handling](https://dart.dev/learn/tutorial/error-handling) |
+| 13–16 | Testing, project, presentasi, dan UAS | Testing, debugging, refactoring, dokumentasi, dan penguatan konsep yang digunakan project | [Testing](https://dart.dev/learn/tutorial/testing), [Logging](https://dart.dev/learn/tutorial/logging) |
+
+Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON, dan logging, dipelajari hanya jika diperlukan oleh project dan jadwal perkuliahan. Topik di luar RPS dan `TIMELINE.md` tidak menjadi kewajiban mahasiswa.
+
 ## Referensi Terkait
 
 ### 01-Pertemuan-1.md — Konsep Aplikasi Bergerak, Flutter & Dart

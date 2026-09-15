@@ -9,6 +9,8 @@
 | **Stack** | Dart (Flutter SDK) |
 
 > **Catatan penting:** Pertemuan 2 membahas **sintaks dan fitur dasar Dart**, yaitu variabel dan konstanta, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi (`List`, `Set`, `Map`). Seluruh materi ini akan digunakan kembali di Pertemuan 3 (struktur Flutter dan widget) hingga akhir semester — setiap baris kode Flutter yang Anda tulis nanti ditulis dengan Dart. Oleh karena itu, penguasaan sintaks dasar pada pertemuan ini menjadi syarat mengikuti praktikum widget di Pertemuan 3.
+>
+> **Batas cakupan:** Pertemuan 2 berfokus pada materi dasar sesuai CPMK-1, RPS, dan urutan `TIMELINE.md`. Dokumentasi resmi Dart dapat digunakan untuk memperdalam variabel, tipe data, kontrol alur, fungsi, dan koleksi. Materi `async`/`await`, JSON, testing, package, dan topik lanjutan dipelajari pada pertemuan berikutnya sesuai kebutuhan REST API, validasi, testing, dan project.
 
 ---
 
