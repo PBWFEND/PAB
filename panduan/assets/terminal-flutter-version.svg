@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-label="Terminal menampilkan hasil perintah flutter --version dan dart --version">
+  <!-- Window chrome (Windows Terminal style) -->
+  <rect x="0" y="0" width="960" height="300" rx="10" ry="10" fill="#0c0c0c" stroke="#3b3b3b" stroke-width="1"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="960" height="34" rx="10" ry="10" fill="#1a1a1a"/>
+  <rect x="0" y="18" width="960" height="16" fill="#1a1a1a"/>
+  <text x="16" y="22" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#cccccc">Windows PowerShell</text>
+  <!-- window buttons -->
+  <line x1="900" y1="17" x2="916" y2="17" stroke="#888888" stroke-width="1.5"/>
+  <line x1="928" y1="9" x2="944" y2="25" stroke="#888888" stroke-width="1.5"/>
+  <line x1="944" y1="9" x2="928" y2="25" stroke="#888888" stroke-width="1.5"/>
+
+  <!-- Prompt area -->
+  <g font-family="Consolas, 'Cascadia Code', monospace" font-size="15">
+    <!-- PS prompt -->
+    <text x="20" y="62" fill="#4ec9b0">PS D:\&gt;</text>
+    <text x="80" y="62" fill="#cccccc">flutter --version</text>
+
+    <!-- Output -->
+    <text x="20" y="88"  fill="#cccccc">Flutter 3.47.4 • channel stable • https://github.com/flutter/flutter.git</text>
+    <text x="20" y="112" fill="#cccccc">Framework • revision 9584c6713b (8 days ago) • 2026-09-10 15:25:10 -0700</text>
+    <text x="20" y="136" fill="#cccccc">Engine • hash 0e228ec8c8d2abc9fcf1d053e8a40665bb859ec7 (revision 06a2e2a110) • 2026-09-03</text>
+    <text x="20" y="160" fill="#cccccc">Tools • Dart 3.13.3 • DevTools 2.60.0</text>
+
+    <!-- Blank line, second prompt -->
+    <text x="20" y="192" fill="#4ec9b0">PS D:\&gt;</text>
+    <text x="80" y="192" fill="#cccccc">dart --version</text>
+    <text x="20" y="218" fill="#cccccc">Dart SDK version: 3.13.3 (stable) (Tue Sep 1 01:07:17 2026 -0700) on "windows_x64"</text>
+
+    <!-- Third prompt, verify source -->
+    <text x="20" y="250" fill="#4ec9b0">PS D:\&gt;</text>
+    <text x="80" y="250" fill="#cccccc">(Get-Command flutter).Source</text>
+    <text x="20" y="276" fill="#e0c050">D:\flutter\flutter\bin\flutter.bat</text>
+  </g>
+</svg>

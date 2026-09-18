@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Dialog Environment Variables Windows: menambah D:\flutter\flutter\bin ke variabel user Path">
+  <!-- Dialog background -->
+  <rect x="0" y="0" width="960" height="540" rx="8" ry="8" fill="#f0f0f0" stroke="#c8c8c8" stroke-width="1"/>
+
+  <!-- Dialog title bar -->
+  <rect x="0" y="0" width="960" height="30" rx="8" ry="8" fill="#ffffff"/>
+  <rect x="0" y="15" width="960" height="15" fill="#ffffff"/>
+  <text x="14" y="20" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#333333">Environment Variables for "yys"</text>
+  <line x1="918" y1="8" x2="934" y2="24" stroke="#999" stroke-width="1.4"/>
+  <line x1="934" y1="8" x2="918" y2="24" stroke="#999" stroke-width="1.4"/>
+
+  <!-- Two sections -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13">
+    <!-- USER variables (top) -->
+    <text x="16" y="48" fill="#333333">User variables for yys</text>
+    <rect x="16" y="58" width="600" height="150" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+    <!-- table rows -->
+    <g font-size="13">
+      <text x="24" y="80">Variable name</text>
+      <text x="320" y="80">Variable value</text>
+      <line x1="16" y1="90" x2="616" y2="90" stroke="#e0e0e0"/>
+      <text x="24" y="112">PATHEXT</text>
+      <text x="320" y="112">.COM;.BAT;.CMD;.VBS;...</text>
+      <line x1="16" y1="122" x2="616" y2="122" stroke="#f0f0f0"/>
+      <!-- Path row selected/highlighted -->
+      <rect x="17" y="124" width="598" height="22" fill="#cce8ff"/>
+      <text x="24" y="140" font-weight="600">Path</text>
+      <text x="320" y="140">C:\Users\yys\.config\herd\bin\nvm;...</text>
+      <line x1="16" y1="148" x2="616" y2="148" stroke="#f0f0f0"/>
+      <text x="24" y="170">TEMP</text>
+      <text x="320" y="170">C:\Users\yys\AppData\Local\Temp</text>
+      <line x1="16" y1="180" x2="616" y2="180" stroke="#f0f0f0"/>
+      <text x="24" y="200">TMP</text>
+      <text x="320" y="200">C:\Users\yys\AppData\Local\Temp</text>
+    </g>
+
+    <!-- buttons under user table -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="12">
+      <rect x="16" y="216" width="72" height="26" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="34" y="233">Edit...</text>
+      <rect x="96" y="216" width="72" height="26" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="110" y="233">New...</text>
+      <rect x="176" y="216" width="72" height="26" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="190" y="233">Delete</text>
+      <rect x="256" y="216" width="72" height="26" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="272" y="233">Restore</text>
+    </g>
+
+    <!-- SYSTEM variables (bottom) -->
+    <text x="16" y="262" fill="#333333">System variables for DESKTOP-XXX</text>
+    <rect x="16" y="272" width="600" height="120" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+    <text x="24" y="294">Variable name</text>
+    <text x="320" y="294">Variable value</text>
+    <line x1="16" y1="304" x2="616" y2="304" stroke="#e0e0e0"/>
+    <text x="24" y="326">ComSpec</text>
+    <text x="320" y="326">C:\WINDOWS\system32\cmd.exe</text>
+    <line x1="16" y1="336" x2="616" y2="336" stroke="#f0f0f0"/>
+    <text x="24" y="358">Path</text>
+    <text x="320" y="358">C:\WINDOWS\system32;C:\WINDOWS;...</text>
+    <line x1="16" y1="368" x2="616" y2="368" stroke="#f0f0f0"/>
+    <text x="24" y="390">windir</text>
+    <text x="320" y="390">C:\WINDOWS</text>
+
+    <!-- dialog buttons -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="13">
+      <rect x="650" y="216" width="88" height="30" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="672" y="235">OK</text>
+      <rect x="650" y="254" width="88" height="30" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="672" y="273">Cancel</text>
+      <rect x="650" y="292" width="88" height="30" rx="2" fill="#ffffff" stroke="#c4c4c4"/><text x="672" y="311">Help</text>
+    </g>
+  </g>
+
+  <!-- Inset: "Edit environment variable" dialog (Path list view) shown as floating card on the right -->
+  <g>
+    <rect x="640" y="44" width="300" height="300" rx="6" ry="6" fill="#ffffff" stroke="#999" stroke-width="1.5"/>
+    <rect x="640" y="44" width="300" height="30" rx="6" ry="6" fill="#1a1a1a"/>
+    <rect x="640" y="58" width="300" height="16" fill="#1a1a1a"/>
+    <text x="652" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#fff">Edit environment variable — Path</text>
+
+    <!-- list of path entries -->
+    <rect x="656" y="86" width="268" height="150" fill="#ffffff" stroke="#cccccc"/>
+    <g font-family="Consolas, monospace" font-size="11" fill="#333333">
+      <!-- highlight new entry at top -->
+      <rect x="657" y="92" width="266" height="20" fill="#cce8ff"/>
+      <text x="664" y="106" font-weight="700">D:\flutter\flutter\bin</text>
+      <line x1="657" y1="112" x2="923" y2="112" stroke="#e0e0e0"/>
+      <text x="664" y="130">C:\Users\yys\.config\herd\bin\nvm</text>
+      <line x1="657" y1="138" x2="923" y2="138" stroke="#f2f2f2"/>
+      <text x="664" y="156">C:\Program Files\nodejs</text>
+      <line x1="657" y1="164" x2="923" y2="164" stroke="#f2f2f2"/>
+      <text x="664" y="182">C:\Program Files\Git\cmd</text>
+      <line x1="657" y1="190" x2="923" y2="190" stroke="#f2f2f2"/>
+      <text x="664" y="208">C:\WINDOWS\system32</text>
+      <line x1="657" y1="216" x2="923" y2="216" stroke="#f2f2f2"/>
+      <text x="664" y="234">C:\WINDOWS</text>
+    </g>
+
+    <!-- buttons -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="11">
+      <rect x="656" y="248" width="70" height="22" rx="2" fill="#fff" stroke="#c4c4c4"/><text x="666" y="263">New</text>
+      <rect x="734" y="248" width="70" height="22" rx="2" fill="#fff" stroke="#c4c4c4"/><text x="744" y="263">Edit</text>
+      <rect x="812" y="248" width="70" height="22" rx="2" fill="#fff" stroke="#c4c4c4"/><text x="822" y="263">Delete</text>
+      <rect x="656" y="276" width="70" height="22" rx="2" fill="#fff" stroke="#c4c4c4"/><text x="662" y="291">Move Up</text>
+      <rect x="734" y="276" width="70" height="22" rx="2" fill="#fff" stroke="#c4c4c4"/><text x="742" y="291">Move Down</text>
+    </g>
+
+    <!-- OK/Cancel inside the inset -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="12">
+      <rect x="656" y="316" width="72" height="26" rx="2" fill="#cce8ff" stroke="#3397f0"/><text x="672" y="333" font-weight="600">OK</text>
+      <rect x="736" y="316" width="72" height="26" rx="2" fill="#fff" stroke="#c4c4c4"/><text x="752" y="333">Cancel</text>
+    </g>
+  </g>
+
+  <!-- Annotation arrow -->
+  <g>
+    <line x1="640" y1="110" x2="630" y2="140" stroke="#d32f2f" stroke-width="2"/>
+    <polygon points="630,140 624,130 636,132" fill="#d32f2f"/>
+    <text x="560" y="470" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d32f2f" font-weight="600">Tambah D:\flutter\flutter\bin lalu Move Up ke atas, klik OK</text>
+  </g>
+</svg>

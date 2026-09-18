@@ -12,15 +12,16 @@
 | 01 | [Timeline Pertemuan — `TIMELINE.md`](./TIMELINE.md) | Rencana 16 pertemuan untuk kelas SI-VIIB dan SI-VIIA: CPMK, materi, aktivitas, dan output/asesmen |
 | 02 | [Milestone — `MILESTONE.md`](./MILESTONE.md) | Tahapan project M0–M10, deliverable, dan kriteria selesai |
 | 03 | [Panduan Lengkap — `panduan/Panduan-Lengkap-PAB.md`](./panduan/Panduan-Lengkap-PAB.md) | Dokumen terpadu: skenario instalasi (ringan/standar/lengkap), target web tanpa emulator, tautan unduhan tool, syarat minimum laptop, alur praktikum Flutter, hot reload, serta troubleshooting |
-| 04 | [Glosarium — `panduan/Glosarium.md`](./panduan/Glosarium.md) | Definisi istilah Flutter, Dart, IDE, SDK, emulator, iOS Simulator, API, dan runtime |
-| 05 | [Pertemuan 1 — `pertemuan-01/01-Pertemuan-1.md`](./pertemuan-01/01-Pertemuan-1.md) | Konsep aplikasi bergerak dalam SI, Flutter, Dart, arsitektur client–server, setup environment, CBL, kuis, dan Tugas 1 |
-| 06 | Kode praktikum Pertemuan 1 — [`code/pertemuan-01/`](./code/pertemuan-01/) | Project Flutter pertama dan latihan terbimbing |
-| 07 | [Pertemuan 2 — `pertemuan-02/02-Pertemuan-2.md`](./pertemuan-02/02-Pertemuan-2.md) | Dasar pemrograman Dart: variabel, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi |
-| 08 | Kode praktikum Pertemuan 2 — [`code/pertemuan-02/`](./code/pertemuan-02/) | `demo-dasar-dart.dart`, `latihan-dasar-dart.dart` (TODO terbimbing), dan solusi referensi |
-| 09 | [Pertemuan 3 — `pertemuan-03/03-Pertemuan-3.md`](./pertemuan-03/03-Pertemuan-3.md) | Struktur Flutter dan widget: `MaterialApp`, `Scaffold`, widget tree, layout dasar, dan dua jalur verifikasi (DartPad & Flutter SDK) |
-| 10 | Kode praktikum Pertemuan 3 — [`code/pertemuan-03/`](./code/pertemuan-03/) | `demo-struktur-flutter.dart`, `latihan-widget-flutter.dart` (TODO terbimbing), dan solusi referensi |
-| 11 | [Pertemuan 4 — `pertemuan-04/04-Pertemuan-4.md`](./pertemuan-04/04-Pertemuan-4.md) | Analisis kebutuhan dan user flow: user persona, kebutuhan fungsional/nonfungsional, prioritas MoSCoW, user flow Mermaid, template dokumen, dan Tugas 4 |
-| 12 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 04 | [Instalasi Flutter SDK (Windows) — `panduan/Instalasi-Flutter-SDK-Windows.md`](./panduan/Instalasi-Flutter-SDK-Windows.md) | Tutorial langkah-demi-langkah skenario Standar dengan screenshot: unduh bundle, ekstrak, konfigurasi User PATH, verifikasi `flutter`/`dart`, `flutter doctor`, `flutter devices` |
+| 05 | [Glosarium — `panduan/Glosarium.md`](./panduan/Glosarium.md) | Definisi istilah Flutter, Dart, IDE, SDK, emulator, iOS Simulator, API, dan runtime |
+| 06 | [Pertemuan 1 — `pertemuan-01/01-Pertemuan-1.md`](./pertemuan-01/01-Pertemuan-1.md) | Konsep aplikasi bergerak dalam SI, Flutter, Dart, arsitektur client–server, setup environment, CBL, kuis, dan Tugas 1 |
+| 07 | Kode praktikum Pertemuan 1 — [`code/pertemuan-01/`](./code/pertemuan-01/) | Project Flutter pertama dan latihan terbimbing |
+| 08 | [Pertemuan 2 — `pertemuan-02/02-Pertemuan-2.md`](./pertemuan-02/02-Pertemuan-2.md) | Dasar pemrograman Dart: variabel, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi |
+| 09 | Kode praktikum Pertemuan 2 — [`code/pertemuan-02/`](./code/pertemuan-02/) | `demo-dasar-dart.dart`, `latihan-dasar-dart.dart` (TODO terbimbing), dan solusi referensi |
+| 10 | [Pertemuan 3 — `pertemuan-03/03-Pertemuan-3.md`](./pertemuan-03/03-Pertemuan-3.md) | Struktur Flutter dan widget: `MaterialApp`, `Scaffold`, widget tree, layout dasar, dan dua jalur verifikasi (DartPad & Flutter SDK) |
+| 11 | Kode praktikum Pertemuan 3 — [`code/pertemuan-03/`](./code/pertemuan-03/) | `demo-struktur-flutter.dart`, `latihan-widget-flutter.dart` (TODO terbimbing), dan solusi referensi |
+| 12 | [Pertemuan 4 — `pertemuan-04/04-Pertemuan-4.md`](./pertemuan-04/04-Pertemuan-4.md) | Analisis kebutuhan dan user flow: user persona, kebutuhan fungsional/nonfungsional, prioritas MoSCoW, user flow Mermaid, template dokumen, dan Tugas 4 |
+| 13 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 

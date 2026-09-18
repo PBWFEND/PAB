@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-label="File Explorer menunjukkan struktur folder setelah Flutter SDK diekstrak ke D:\flutter\flutter">
+  <!-- Window background -->
+  <rect x="0" y="0" width="960" height="430" rx="8" ry="8" fill="#f3f3f3" stroke="#d0d0d0" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="960" height="32" rx="8" ry="8" fill="#ffffff"/>
+  <rect x="0" y="16" width="960" height="16" fill="#ffffff"/>
+  <text x="14" y="21" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#444444">D:\flutter - File Explorer</text>
+
+  <!-- Breadcrumb toolbar -->
+  <rect x="0" y="32" width="960" height="34" fill="#fbfbfb"/>
+  <line x1="0" y1="66" x2="960" y2="66" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- breadcrumb items -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#333333">
+    <rect x="12" y="40" width="46" height="20" rx="3" fill="#eaeaea"/>
+    <text x="18" y="54" font-size="12" fill="#555555">Home</text>
+    <text x="64" y="54" fill="#8a8a8a">›</text>
+    <text x="80" y="54">This PC</text>
+    <text x="132" y="54" fill="#8a8a8a">›</text>
+    <!-- Data (D:) -->
+    <rect x="148" y="40" width="90" height="20" rx="3" fill="#eaeaea"/>
+    <text x="156" y="54" font-size="12" fill="#555555">Data (D:)</text>
+    <text x="252" y="54" fill="#8a8a8a">›</text>
+    <!-- flutter (selected) -->
+    <rect x="268" y="38" width="78" height="24" rx="3" fill="#cfe4f7" stroke="#99ccff" stroke-width="1"/>
+    <text x="278" y="54" font-size="12" fill="#0b5aa8" font-weight="600">flutter</text>
+    <text x="352" y="54" fill="#8a8a8a">›</text>
+    <!-- inner flutter (auto-created by zip) -->
+    <rect x="368" y="38" width="78" height="24" rx="3" fill="#f7f7f7" stroke="#cccccc" stroke-width="1"/>
+    <text x="378" y="54" font-size="12" fill="#555555">flutter</text>
+  </g>
+
+  <!-- Left nav pane -->
+  <rect x="0" y="66" width="210" height="364" fill="#ffffff"/>
+  <line x1="210" y1="66" x2="210" y2="430" stroke="#e0e0e0" stroke-width="1"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#222222">
+    <text x="40" y="92">Quick access</text>
+    <text x="32" y="116" fill="#555555">▼</text>
+    <text x="48" y="116">Desktop</text>
+    <text x="48" y="138">Documents</text>
+    <text x="48" y="160">Downloads</text>
+    <line x1="16" y1="178" x2="196" y2="178" stroke="#e5e5e5" stroke-width="1"/>
+    <text x="40" y="200">This PC</text>
+    <text x="48" y="224" fill="#0b5aa8">Data (D:)</text>
+    <text x="48" y="246">Local Disk (C:)</text>
+  </g>
+
+  <!-- File pane -->
+  <rect x="210" y="66" width="750" height="364" fill="#ffffff"/>
+  <line x1="210" y1="86" x2="960" y2="86" stroke="#ececec" stroke-width="1"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#777777">
+    <text x="224" y="80">Name</text>
+    <text x="680" y="80">Date modified</text>
+    <text x="820" y="80">Size</text>
+  </g>
+
+  <!-- folder row: flutter -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#222222">
+    <text x="224" y="112">📁 flutter</text>
+    <text x="680" y="112" fill="#888888" font-size="12">9/18/2026 11:02 PM</text>
+    <text x="840" y="112" fill="#888888" font-size="12">—</text>
+  </g>
+
+  <!-- Detail hint box: the extracted content -->
+  <rect x="250" y="150" width="660" height="230" rx="6" ry="6" fill="#f6f9fc" stroke="#cfe0f2" stroke-width="1"/>
+  <text x="266" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#0b5aa8" font-weight="600">Isi folder setelah ekstraksi (D:\flutter)</text>
+
+  <g font-family="Consolas, monospace" font-size="13" fill="#222222">
+    <text x="280" y="204">flutter\</text>
+    <text x="330" y="204" fill="#888888">← folder root yang dibuat otomatis oleh ZIP</text>
+    <text x="330" y="226">├── bin\</text>
+    <text x="390" y="226" fill="#888888">← masukkan ke PATH (D:\flutter\flutter\bin)</text>
+    <text x="362" y="248">└── flutter.bat, dart.bat</text>
+    <text x="330" y="270">├── cache\</text>
+    <text x="330" y="292">├── packages\</text>
+    <text x="330" y="314">└── ...\</text>
+  </g>
+
+  <!-- Highlight the bin path -->
+  <rect x="266" y="330" width="630" height="40" rx="5" ry="5" fill="#fff6d6" stroke="#e0c565" stroke-width="1"/>
+  <text x="280" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#6b5300" font-weight="600">Penting: perhatikan subfolder ganda</text>
+  <text x="280" y="363" font-family="Consolas, monospace" font-size="13" fill="#6b5300">PATH yang benar  =  D:\flutter\flutter\bin   (bukan D:\flutter\bin)</text>
+</svg>
