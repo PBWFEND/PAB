@@ -554,6 +554,5 @@ timeline
 |:-----|:-----------|
 | [`code/pertemuan-03/demo-struktur-flutter.dart`](../code/pertemuan-03/demo-struktur-flutter.dart) | Demo live: `MaterialApp`, `Scaffold`, widget tree, `ListView.builder`, TODO 1–3 |
 | [`code/pertemuan-03/latihan-widget-flutter.dart`](../code/pertemuan-03/latihan-widget-flutter.dart) | Kerangka latihan individu dengan TODO terbimbing (halaman perpustakaan) |
-| [`code/pertemuan-03/solusi-widget-flutter.dart`](../code/pertemuan-03/solusi-widget-flutter.dart) | Solusi referensi CBL: halaman perpustakaan lengkap (untuk dosen) |
 | [`contoh-tugas-3-mahasiswa.md`](./contoh-tugas-3-mahasiswa.md) | Panduan pengerjaan Tugas 3 untuk mahasiswa: definisi komponen, struktur, dan cara menguji jawaban sendiri |
 | [`panduan/Panduan-Lengkap-PAB.md`](../panduan/Panduan-Lengkap-PAB.md) | Skenario instalasi, tautan unduhan, alur `flutter run`, dan troubleshooting |

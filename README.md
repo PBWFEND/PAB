@@ -19,7 +19,8 @@
 | 08 | Kode praktikum Pertemuan 2 — [`code/pertemuan-02/`](./code/pertemuan-02/) | `demo-dasar-dart.dart`, `latihan-dasar-dart.dart` (TODO terbimbing), dan solusi referensi |
 | 09 | [Pertemuan 3 — `pertemuan-03/03-Pertemuan-3.md`](./pertemuan-03/03-Pertemuan-3.md) | Struktur Flutter dan widget: `MaterialApp`, `Scaffold`, widget tree, layout dasar, dan dua jalur verifikasi (DartPad & Flutter SDK) |
 | 10 | Kode praktikum Pertemuan 3 — [`code/pertemuan-03/`](./code/pertemuan-03/) | `demo-struktur-flutter.dart`, `latihan-widget-flutter.dart` (TODO terbimbing), dan solusi referensi |
-| 11 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 11 | [Pertemuan 4 — `pertemuan-04/04-Pertemuan-4.md`](./pertemuan-04/04-Pertemuan-4.md) | Analisis kebutuhan dan user flow: user persona, kebutuhan fungsional/nonfungsional, prioritas MoSCoW, user flow Mermaid, template dokumen, dan Tugas 4 |
+| 12 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -64,6 +65,15 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [Flutter — ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html) — referensi API `ListView` dan `ListView.builder`
 - [Flutter — Widgets in Action (Cookbook)](https://docs.flutter.dev/cookbook) — contoh praktis per widget
 
+
+### 04-Pertemuan-4.md — Analisis Kebutuhan dan User Flow
+
+- [Atlassian — MoSCoW method](https://www.atlassian.com/agile/prioritization/moscow-method) — definisi dan praktik prioritas Must/Should/Could/Won't have
+- [Interaction Design Foundation — Personas](https://www.interaction-design.org/literature/topics/personas) — cara menyusun user persona dan komponennya
+- [Mermaid — Flowchart](https://mermaid.js.org/syntax/flowchart.html) — sintaks diagram alur yang dipakai pada template user flow
+- [Mermaid Live Editor](https://mermaid.live/) — alat daring untuk menggambar dan mengekspor diagram Mermaid
+- [Nielsen Norman Group — User Goals](https://www.nngroup.com/articles/user-goals-tasks/) — hubungan tujuan pengguna dengan rancangan alur
+- [Excalidraw](https://excalidraw.com/) — alternatif penggambar diagram alur berbentuk gambar
 
 ### Repositori Kelas
 
