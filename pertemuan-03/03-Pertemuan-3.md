@@ -421,7 +421,6 @@ Jalankan melalui [Jalur 1](#16-verifikasi-kode--dua-jalur) atau [Jalur 2](#16-ve
 5. Gambarkan widget tree dari `runApp` hingga widget `Text` di dalam `body` `Scaffold` (4 tingkat cukup).
 6. Apa perbedaan `child` (tunggal) dan `children` (jamak) pada widget Flutter?
 
-> Kunci jawaban kuis tersedia di folder repository (di luar materi mahasiswa) — dokumen pengampu; tidak disertakan di folder pertemuan.
 
 ---
 
