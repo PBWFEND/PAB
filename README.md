@@ -17,7 +17,9 @@
 | 06 | Kode praktikum Pertemuan 1 — [`code/pertemuan-01/`](./code/pertemuan-01/) | Project Flutter pertama dan latihan terbimbing |
 | 07 | [Pertemuan 2 — `pertemuan-02/02-Pertemuan-2.md`](./pertemuan-02/02-Pertemuan-2.md) | Dasar pemrograman Dart: variabel, tipe data, operator, percabangan, perulangan, fungsi, dan koleksi |
 | 08 | Kode praktikum Pertemuan 2 — [`code/pertemuan-02/`](./code/pertemuan-02/) | `demo-dasar-dart.dart`, `latihan-dasar-dart.dart` (TODO terbimbing), dan solusi referensi |
-| 09 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 09 | [Pertemuan 3 — `pertemuan-03/03-Pertemuan-3.md`](./pertemuan-03/03-Pertemuan-3.md) | Struktur Flutter dan widget: `MaterialApp`, `Scaffold`, widget tree, layout dasar, dan dua jalur verifikasi (DartPad & Flutter SDK) |
+| 10 | Kode praktikum Pertemuan 3 — [`code/pertemuan-03/`](./code/pertemuan-03/) | `demo-struktur-flutter.dart`, `latihan-widget-flutter.dart` (TODO terbimbing), dan solusi referensi |
+| 11 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -53,4 +55,18 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [Dart — null safety](https://dart.dev/null-safety) — aturan null safety dan konvensinya
 - [Dart API Documentation](https://api.dart.dev/) — referensi library inti Dart
 
+### 03-Pertemuan-3.md — Struktur Flutter dan Widget
 
+- [Flutter — Widgets](https://docs.flutter.dev/ui/widgets) — daftar dan penjelasan widget Flutter
+- [Flutter — Widget tree](https://docs.flutter.dev/resources/architectural-overview) — struktur aplikasi dari `MaterialApp` hingga widget anak
+- [Flutter — Layouts](https://docs.flutter.dev/ui/layout) — `Column`, `Row`, `Stack`, `Padding`, `ListView`, dan aturan layout
+- [Flutter — Scaffold](https://api.flutter.dev/flutter/material/Scaffold-class.html) — referensi API `Scaffold` dan komponennya
+- [Flutter — ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html) — referensi API `ListView` dan `ListView.builder`
+- [Flutter — Widgets in Action (Cookbook)](https://docs.flutter.dev/cookbook) — contoh praktis per widget
+
+
+### Repositori Kelas
+
+- https://github.com/PBWFEND/SI-VIIA-Mobile
+
+- https://github.com/PBWFEND/SI-VIIB-Mobile
