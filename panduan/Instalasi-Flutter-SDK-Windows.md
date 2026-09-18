@@ -223,7 +223,7 @@ Apabila kedua perintah di atas menampilkan lokasi folder `bin` yang sesuai, bera
 flutter doctor
 ```
 
-Contoh hasil pada mesin contoh:
+Contoh keluaran `flutter doctor` adalah sebagai berikut:
 
 ![flutter doctor](./assets/terminal-flutter-doctor.png)
 
@@ -258,7 +258,7 @@ Tanda `[X]` pada baris-baris di atas tidak menghalangi praktikum pada Skenario S
 flutter devices
 ```
 
-Contoh hasil pada mesin contoh:
+Contoh keluaran `flutter devices` adalah sebagai berikut:
 
 ![flutter devices](./assets/terminal-flutter-devices.svg)
 
