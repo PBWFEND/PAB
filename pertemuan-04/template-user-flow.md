@@ -16,13 +16,13 @@ Template ini digunakan pada Latihan Individu dan Tugas 4 (Pertemuan 4). Diagram 
 
 ## 2. Diagram User Flow
 
-> Ketentuan minimal Tugas 4: **8 langkah**, **2 titik keputusan**, setiap keputusan memiliki **cabang gagal**. Simbol: `([ ])` titik mulai/tujuan, `[ ]` proses/layar, `{ }` keputusan.
+> Ketentuan minimal Tugas 4: **8 langkah**, **2 titik keputusan**, setiap keputusan memiliki **cabang gagal**. Simbol: `([ ])` titik mulai/tujuan, `[ ]` proses/halaman, `{ }` keputusan.
 
 ```mermaid
 flowchart TD
-    S(["Mulai: [pengguna membuka aplikasi]"]) --> A["[Layar 1: isi sesuai aplikasi Anda]"]
-    A --> B["[Layar 2]"]
-    B --> C["[Layar 3: form/input]"]
+    S(["Mulai: [pengguna membuka aplikasi]"]) --> A["[Halaman 1: isi sesuai aplikasi Anda]"]
+    A --> B["[Halaman 2]"]
+    B --> C["[Halaman 3: form/input]"]
     C --> D{"[Data valid?]"}
     D -- "Tidak" --> E["[Tampilkan pesan kesalahan]"]
     E --> C
@@ -38,10 +38,10 @@ flowchart TD
 
 > Menuliskan langkah dalam bentuk tabel memudahkan pemeriksaan jumlah langkah dan cabang. Baris keputusan wajib mencantumkan kedua cabangnya.
 
-| No. | Jenis | Langkah/Layar | Bila gagal |
+| No. | Jenis | Langkah/Halaman | Bila gagal |
 |:---:|:------|:--------------|:-----------|
 | 1 | Mulai | [...] | — |
-| 2 | Layar | [...] | — |
+| 2 | Halaman | [...] | — |
 | 3 | Keputusan | [Data valid?] | Kembali ke form dengan pesan kesalahan |
 | ... | ... | [...] | [...] |
 

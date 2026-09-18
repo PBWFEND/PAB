@@ -62,7 +62,7 @@ Pilih kategori yang benar-benar berpengaruh pada aplikasi Anda (kegunaan, kinerj
 
 ### 1.7 Pemetaan Kebutuhan ke Antarmuka
 
-Tabel yang menautkan: setiap kebutuhan fungsional → layar yang memenuhinya → widget yang direncanakan dari materi Pertemuan 3. Kolom widget bukan keputusan final — diperhalus pada Pertemuan 5.
+Tabel yang menautkan: setiap kebutuhan fungsional → halaman yang memenuhinya → widget yang direncanakan dari materi Pertemuan 3. Kolom widget bukan keputusan final — diperhalus pada Pertemuan 5.
 
 ### 1.8 Refleksi dan Deklarasi AI
 
@@ -102,6 +102,6 @@ Sebelum mengumpulkan, periksa kembali jawaban Anda dengan pertanyaan berikut:
 - [ ] Seluruh kebutuhan fungsional berprioritas MoSCoW; Must have ≤ 5; setiap kategori beralasan?
 - [ ] User flow minimal 8 langkah dan 2 keputusan, semua keputusan memiliki cabang gagal?
 - [ ] Diagram dapat ditelusuri tanpa penjelasan lisan — sudah dites pada satu teman sekelas?
-- [ ] Tabel pemetaan memuat setiap kebutuhan fungsional beserta layar dan widgetnya?
+- [ ] Tabel pemetaan memuat setiap kebutuhan fungsional beserta halaman dan widgetnya?
 - [ ] Refleksi tepat 3 kalimat dan menyebut bagian spesifik (bukan pernyataan umum)?
 - [ ] Deklarasi penggunaan AI tercantum bila AI digunakan?

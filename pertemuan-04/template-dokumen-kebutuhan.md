@@ -64,9 +64,9 @@ Template ini digunakan pada Latihan Individu dan Tugas 4 (Pertemuan 4). Ganti se
 
 ## 6. Pemetaan Kebutuhan ke Antarmuka
 
-> Setiap kebutuhan fungsional dipetakan ke layar dan widget yang direncanakan dari materi Pertemuan 3 (`Scaffold`, `AppBar`, `Column`, `Row`, `ListView.builder`, `ListTile`, `Card`). Widget bukan keputusan final — diperhalus pada Pertemuan 5.
+> Setiap kebutuhan fungsional dipetakan ke halaman dan widget yang direncanakan dari materi Pertemuan 3 (`Scaffold`, `AppBar`, `Column`, `Row`, `ListView.builder`, `ListTile`, `Card`). Widget bukan keputusan final — diperhalus pada Pertemuan 5.
 
-| ID Kebutuhan | Rumusan (ringkas) | Prioritas | Layar/Halaman yang Memenuhi | Widget yang Direncanakan (P3) |
+| ID Kebutuhan | Rumusan (ringkas) | Prioritas | Halaman yang Memenuhi | Widget yang Direncanakan (P3) |
 |:-------------|:------------------|:----------|:----------------------------|:------------------------------|
 | F-01 | [...] | Must | [Halaman form pengajuan] | [`Scaffold` + `Column`] |
 | F-02 | [...] | Must | [...] | [`ListView.builder` + `ListTile`] |

@@ -84,7 +84,7 @@ Setelah mengikuti pertemuan ini, mahasiswa mampu:
 | 3 | Menuliskan kebutuhan fungsional yang terukur | Merumuskan kebutuhan dengan pola aktor–aksi–hasil yang dapat diverifikasi |
 | 4 | Menetapkan prioritas fitur dengan kriteria yang jelas | Mengelompokkan fitur ke dalam MoSCoW (Must/Should/Could/Won't) beserta alasannya |
 | 5 | Merancang user flow alur utama aplikasi | Menggambarkan diagram user flow minimal 8 langkah dari titik masuk hingga tujuan tercapai |
-| 6 | Memetakan kebutuhan ke antarmuka yang direncanakan | Menautkan setiap kebutuhan fungsional ke layar/halaman yang akan memenuhinya |
+| 6 | Memetakan kebutuhan ke antarmuka yang direncanakan | Menautkan setiap kebutuhan fungsional ke halaman yang akan memenuhinya |
 
 ---
 
@@ -92,20 +92,20 @@ Setelah mengikuti pertemuan ini, mahasiswa mampu:
 
 Perhatikan kutipan diskusi kelompok mahasiswa pada semester sebelumnya:
 
-> "Kami langsung membuat aplikasi di Flutter karena ingin cepat selesai. Setelah tiga minggu, dosen bertanya: layar ini untuk siapa? Fitur ini menyelesaikan masalah apa? Kami tidak dapat menjawabnya, dan ternyata fitur yang kami bangun bukan fitur yang dibutuhkan pengguna."
+> "Kami langsung membuat aplikasi di Flutter karena ingin cepat selesai. Setelah tiga minggu, dosen bertanya: halaman ini digunakan oleh siapa dan untuk menyelesaikan kebutuhan apa? Fitur ini menyelesaikan masalah apa? Kami tidak dapat menjawabnya, dan ternyata fitur yang kami bangun bukan fitur yang dibutuhkan pengguna."
 
 Akibat yang umum terjadi ketika aplikasi dibangun tanpa analisis kebutuhan:
 
 | Gejala | Akar masalah | Konsekuensi |
 |:-------|:-------------|:------------|
-| Layar banyak tetapi tidak ada yang dipakai pengguna | Fitur dibuat berdasarkan asumsi pembuat, bukan kebutuhan pengguna | Usaha implementasi tidak menghasilkan nilai |
+| Aplikasi memiliki banyak halaman, tetapi tidak mendukung tugas utama pengguna | Fitur dibuat berdasarkan asumsi pembuat, bukan kebutuhan pengguna | Usaha implementasi tidak menghasilkan nilai |
 | Alur penggunaan berbelit dan membingungkan | User flow tidak dirancang sebelum antarmuka dibuat | Pengguna kesulitan menyelesaikan tugas utama |
 | Fitur terus berubah di tengah pengerjaan | Kebutuhan tidak terdokumentasi sehingga tidak ada acuan | Waktu habis untuk mengerjakan ulang |
 | Aplikasi sulit diuji | Kebutuhan tidak terukur sehingga keberhasilan tidak dapat dinilai | Pengujian menjadi subjektif |
 
 Pertanyaan pemantik:
 
-- Mengapa pertanyaan "layar ini untuk siapa?" dapat menggugurkan banyak fitur sekaligus?
+- Mengapa pertanyaan "halaman ini digunakan oleh siapa dan untuk menyelesaikan kebutuhan apa?" dapat menunjukkan bahwa beberapa fitur tidak diperlukan?
 - Apa perbedaan antara fitur yang *menarik dibuat* dan fitur yang *dibutuhkan pengguna*?
 - Jika waktu implementasi terbatas dalam proyek selama 16 minggu ini, bagaimana cara memutuskan fitur mana yang dikerjakan lebih dahulu?
 - Bagaimana cara memastikan alur aplikasi memungkinkan pengguna menyelesaikan tugasnya tanpa hambatan?
@@ -221,14 +221,14 @@ flowchart LR
 
 ## 7. User Flow
 
-**User flow** adalah diagram yang menggambarkan urutan langkah pengguna dari titik masuk hingga tujuan tercapai, termasuk percabangan keputusan dan kondisi gagal. User flow dirancang **sebelum** antarmuka dibuat, karena layar yang dirancang tanpa alur cenderung tidak saling terhubung dengan logis.
+**User flow** adalah diagram yang menggambarkan urutan langkah pengguna dari titik masuk hingga tujuan tercapai, termasuk percabangan keputusan dan kondisi gagal. User flow dirancang **sebelum** antarmuka dibuat, karena halaman yang dirancang tanpa alur cenderung tidak saling terhubung secara logis.
 
 ### 7.1 Notasi Diagram User Flow
 
 | Simbol | Bentuk | Kegunaan |
 |:-------|:-------|:---------|
 | Titik mulai | Lingkaran | Kondisi awal pengguna memasuki alur |
-| Proses | Persegi panjang | Langkah atau layar yang dilihat pengguna |
+| Proses | Persegi panjang | Langkah atau halaman yang dilihat pengguna |
 | Keputusan | Belah ketupat | Pertanyaan ya/tidak yang menentukan cabang alur |
 | Tujuan tercapai | Persegi panjang sudut ganda (atau lingkaran ganda) | Akhir alur ketika tugas pengguna selesai |
 
@@ -264,16 +264,16 @@ Cara membaca diagram: pengguna memulai dari halaman utama, memilih ruang, mengis
 
 ## 8. Pemetaan Kebutuhan ke Antarmuka
 
-Tahap terakhir analisis adalah menautkan setiap kebutuhan fungsional ke layar yang akan memenuhinya. Pemetaan ini menjadi dokumen penghubung menuju prototype UI/UX pada Pertemuan 5.
+Tahap terakhir analisis adalah menautkan setiap kebutuhan fungsional ke halaman yang akan memenuhinya. Pemetaan ini menjadi dokumen penghubung menuju prototype UI/UX pada Pertemuan 5.
 
-| ID Kebutuhan | Rumusan (ringkas) | Prioritas | Layar/Halaman yang Memenuhi | Widget yang Direncanakan (P3) |
+| ID Kebutuhan | Rumusan (ringkas) | Prioritas | Halaman yang Memenuhi | Widget yang Direncanakan (P3) |
 |:-------------|:------------------|:----------|:----------------------------|:------------------------------|
 | F-01 | Mengajukan peminjaman (tanggal, jam, durasi) | Must | Halaman form pengajuan | `Scaffold` + `Column` (form; detail pada Minggu 6) |
 | F-02 | Menyetujui/menolak pengajuan | Must | Halaman daftar pengajuan (laboran) | `ListView.builder` + `ListTile` |
 | F-03 | Melihat status pengajuan | Must | Halaman utama mahasiswa | `ListView.builder` + `Text` status berwarna |
 | F-04 | Mencari ruang berdasarkan nama | Should | Halaman utama + kolom pencarian | `ListView.builder` + `where` (P2) |
 
-Perhatikan kolom terakhir: widget yang direncanakan mengacu pada materi Pertemuan 3. Pemetaan ini menunjukkan bahwa **setiap layar pada prototype harus dapat dijelaskan dari kebutuhan** — bukan sebaliknya. Layar yang tidak memenuhi kebutuhan mana pun pada tabel ini patut dipertanyakan keberadaannya.
+Perhatikan kolom terakhir: widget yang direncanakan mengacu pada materi Pertemuan 3. Pemetaan ini menunjukkan bahwa **setiap halaman pada prototype harus dapat dijelaskan dari kebutuhan** — bukan sebaliknya. Halaman yang tidak memenuhi kebutuhan mana pun pada tabel ini patut dipertanyakan keberadaannya.
 
 > **Keterkaitan ke pertemuan berikutnya:** kolom "Widget yang Direncanakan" bukanlah desain final. Pada Pertemuan 5 (UI/UX), rancangan ini diperhalus menjadi wireframe dan prototype yang memperhatikan ukuran layar, interaksi sentuh, dan umpan balik pengguna.
 
@@ -327,7 +327,7 @@ Kerjakan setelah pembahasan CBL, menggunakan domain Sistem Informasi yang telah 
 2. **Langkah 2** — Rumuskan minimal 6 kebutuhan fungsional (pola aktor–aksi–hasil, bernomor F-01 dst.) dan minimal 2 kebutuhan nonfungsional yang terukur.
 3. **Langkah 3** — Berikan prioritas MoSCoW pada seluruh kebutuhan fungsional; kategori Must have maksimal 5, disertai alasan.
 4. **Langkah 4** — Gambar user flow alur utama pengguna utama (minimal 8 langkah, minimal 2 keputusan, setiap keputusan memiliki cabang gagal).
-5. **Langkah 5** — Susun tabel pemetaan: setiap kebutuhan fungsional → layar yang memenuhinya → widget yang direncanakan dari materi Pertemuan 3.
+5. **Langkah 5** — Susun tabel pemetaan: setiap kebutuhan fungsional → halaman yang memenuhinya → widget yang direncanakan dari materi Pertemuan 3.
 6. **Langkah 6** — Periksa hasil Anda menggunakan daftar pemeriksaan pada [Bagian 16](#16-verifikasi-hasil--artefak-analisis), lalu minta satu teman sekelas menelusuri user flow Anda tanpa penjelasan lisan.
 
 ---
@@ -386,7 +386,7 @@ Gunakan **domain Sistem Informasi yang sama** dengan Tugas 1–3. Kerjakan:
    - Minimal **2 user persona** (2 peran berbeda) dengan lima komponen lengkap.
    - Minimal **6 kebutuhan fungsional** (pola aktor–aksi–hasil, bernomor `F-01` dst.) dan **2 kebutuhan nonfungsional** terukur (kategori bebas, bernomor `NF-01` dst.).
    - Tabel prioritas **MoSCoW** seluruh kebutuhan fungsional beserta alasannya (Must have maksimal 5).
-   - Tabel **pemetaan kebutuhan ke antarmuka** (kebutuhan → layar → widget yang direncanakan dari materi Pertemuan 3).
+  - Tabel **pemetaan kebutuhan ke antarmuka** (kebutuhan → halaman → widget yang direncanakan dari materi Pertemuan 3).
 2. **Sertakan diagram user flow** — di dalam `dokumen-kebutuhan.md` dan/atau sebagai berkas `user-flow.png`, memuat:
    - Diagram user flow alur utama pengguna utama: minimal **8 langkah** dan **2 titik keputusan**, setiap keputusan memiliki cabang gagal.
    - Diagram dibuat dengan Mermaid atau Excalidraw, kemudian diekspor/ditempelkan agar dapat dilihat tanpa alat tambahan.
@@ -460,7 +460,7 @@ Periksa dokumen Anda dengan daftar berikut sebelum dikumpulkan:
 | 4 | Kebutuhan nonfungsional memiliki kriteria terukur | Ganti kata umum ("cepat", "mudah") dengan angka atau kondisi yang dapat diamati |
 | 5 | Seluruh kebutuhan fungsional berprioritas MoSCoW; Must have ≤ 5 | Tetapkan prioritas; pindahkan kebutuhan dari Must ke Should |
 | 6 | Setiap titik keputusan pada user flow memiliki cabang gagal | Tambahkan cabang dan tindak lanjutnya |
-| 7 | Setiap kebutuhan fungsional muncul pada tabel pemetaan | Tambahkan baris pemetaan; layar tanpa kebutuhan dipertanyakan |
+| 7 | Setiap kebutuhan fungsional muncul pada tabel pemetaan | Tambahkan baris pemetaan; halaman tanpa kebutuhan dipertanyakan |
 | 8 | Diagram dapat ditelusuri tanpa penjelasan lisan | Perbaiki label langkah hingga pembaca luar memahami |
 
 ### Jalur 2: Peer Review
@@ -485,7 +485,7 @@ Pada pertemuan ini, mahasiswa telah mempelajari **analisis kebutuhan dan user fl
 **Persiapan:**
 
 - Pastikan `dokumen-kebutuhan.md` (Tugas 4) telah di-push sebelum pertemuan — dokumen ini menjadi masukan utama aktivitas Pertemuan 5.
-- Baca kembali tabel pemetaan kebutuhan → layar yang Anda susun; tandai dua layar yang menjadi bagian alur utama (Must have).
+- Baca kembali tabel pemetaan kebutuhan → halaman yang Anda susun; tandai dua halaman yang menjadi bagian alur utama (Must have).
 - Tinjau materi Pertemuan 3 (`Column`, `Row`, `ListView`, `Scaffold`) — perancangan prototype pada Pertemuan 5 menerjemahkan hasil analisis ke dalam widget tersebut.
 - Opsional: pelajari pengenalan [Figma](https://www.figma.com/) atau tetap gunakan Excalidraw untuk wireframe — keduanya memadai untuk kebutuhan praktikum.
 
