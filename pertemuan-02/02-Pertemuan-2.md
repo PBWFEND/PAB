@@ -445,7 +445,6 @@ Setelah selesai, jalankan `dart latihan-dasar-dart.dart` dan pastikan keluaran s
 5. Apa perbedaan `List` dan `Set`? Kapan Anda memilih `Set`?
 6. Tuliskan satu baris kode untuk menjumlahkan seluruh elemen `List<int>` menggunakan `reduce`.
 
-> Kunci jawaban kuis tersedia di folder repository (di luar materi mahasiswa) — dokumen pengampu; tidak disertakan di folder pertemuan.
 
 ---
 
