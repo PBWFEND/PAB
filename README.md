@@ -2,8 +2,8 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-stable-02569B?logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-stable-0175C2?logo=dart&logoColor=white)](https://dart.dev/)
-[![Semester](https://img.shields.io/badge/Semester-2026%2F2027%20Gasal-blue)](https://)
-[![Pertemuan](https://img.shields.io/badge/Pertemuan-16%20Minggu-purple)](https://)
+[![Semester](https://img.shields.io/badge/Semester-2026%2F2027%20Gasal-blue)](./TIMELINE.md)
+[![Pertemuan](https://img.shields.io/badge/Pertemuan-16%20Minggu-purple)](./TIMELINE.md)
 
 ## Daftar Isi
 
@@ -28,7 +28,7 @@ Dokumentasi resmi Dart disediakan untuk membantu mahasiswa memperdalam topik ter
 
 | Rentang Minggu | Fokus sesuai `TIMELINE.md` | Cakupan Dart yang diperlukan | Referensi pendukung |
 |:---------------|:---------------------------|:-----------------------------|:--------------------|
-| 1 | Konsep aplikasi bergerak, Flutter, Dart, setup | Pengenalan Dart, `main()`, menjalankan project, dan hubungan Flutter SDK dengan Dart SDK | [Build your first app](https://dart.dev/learn/tutorial/first-app) |
+| 1 | Konsep aplikasi bergerak, Flutter, Dart, setup | Pengenalan Dart, `main()`, menjalankan project, dan hubungan Flutter SDK dengan Dart SDK | [Dart and Flutter Getting Started pathway](https://docs.flutter.dev/get-started/codelab) |
 | 2 | Dasar pemrograman Dart | Variabel, tipe data, operator, kontrol alur, fungsi, null safety dasar, `List`, `Set`, dan `Map` | [Interactivity](https://dart.dev/learn/tutorial/interactivity) |
 | 3–8 | Widget, kebutuhan, UI/UX, navigasi, data lokal, UTS | Menerapkan sintaks Dart pada widget, state, form, navigasi, dan model data sesuai kebutuhan project | [Dart Language Tour](https://dart.dev/guides/language/language-tour) |
 | 9–10 | REST API dan integrasi proses bisnis SI | `Future`, `async`/`await`, package `http`, `Uri`, JSON, parsing, dan request/response | [Async](https://dart.dev/learn/tutorial/async), [Data and JSON](https://dart.dev/learn/tutorial/data-and-json), [Fetch data](https://dart.dev/learn/tutorial/fetch-data) |
@@ -42,7 +42,7 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 ### 01-Pertemuan-1.md — Konsep Aplikasi Bergerak, Flutter & Dart
 
 - [Flutter — Get Started](https://docs.flutter.dev/get-started/install) — instalasi Flutter SDK dan setup environment
-- [Flutter — Create your first app](https://docs.flutter.dev/get-started/try-your-first-app) — membuat dan menjalankan project Flutter pertama
+- [Flutter — Getting Started pathway](https://docs.flutter.dev/get-started/codelab) — menyiapkan environment dan membuat aplikasi Flutter pertama
 - [Flutter — Widget tree](https://docs.flutter.dev/resources/architectural-overview) — konsep widget, `MaterialApp`, `Scaffold`, dan struktur aplikasi
 - [Dart — Language Tour](https://dart.dev/guides/language/language-tour) — sintaks dasar Dart: variabel, tipe data, fungsi, dan kontrol alur
 - [Material Design — Material 3](https://m3.material.io/) — prinsip dan komponen antarmuka Material yang digunakan Flutter
@@ -68,11 +68,11 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 
 ### 04-Pertemuan-4.md — Analisis Kebutuhan dan User Flow
 
-- [Atlassian — MoSCoW method](https://www.atlassian.com/agile/prioritization/moscow-method) — definisi dan praktik prioritas Must/Should/Could/Won't have
-- [Interaction Design Foundation — Personas](https://www.interaction-design.org/literature/topics/personas) — cara menyusun user persona dan komponennya
+- [ProductPlan — MoSCoW Prioritization](https://www.productplan.com/glossary/moscow-prioritization/) — definisi dan praktik prioritas Must/Should/Could/Won't have
+- [IxDF — Personas](https://ixdf.org/literature/topics/personas) — cara menyusun user persona dan komponennya
 - [Mermaid — Flowchart](https://mermaid.js.org/syntax/flowchart.html) — sintaks diagram alur yang dipakai pada template user flow
 - [Mermaid Live Editor](https://mermaid.live/) — alat daring untuk menggambar dan mengekspor diagram Mermaid
-- [Nielsen Norman Group — User Goals](https://www.nngroup.com/articles/user-goals-tasks/) — hubungan tujuan pengguna dengan rancangan alur
+- [Nielsen Norman Group — Task Analysis](https://www.nngroup.com/articles/task-analysis/) — hubungan tugas dan tujuan pengguna dengan rancangan alur
 - [Excalidraw](https://excalidraw.com/) — alternatif penggambar diagram alur berbentuk gambar
 
 ### Repositori Kelas
