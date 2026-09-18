@@ -39,7 +39,17 @@ Skenario Standar menginstal Flutter SDK beserta Dart SDK. Dart SDK terpasang sec
 
 ## 1. Diagram Alur Instalasi (Skenario Standar)
 
-![Diagram alur instalasi Flutter SDK](./assets/diagram-alur-instalasi.svg)
+```mermaid
+flowchart TD
+    A([Mulai: Skenario Standar]) --> B[1. Unduh bundle .zip dari SDK archive resmi]
+    B --> C[2. Ekstrak ke folder tujuan, mis. D:\flutter]
+    C --> D[3. Tambahkan D:\flutter\flutter\bin ke User PATH]
+    D --> E[4. Buka terminal baru, verifikasi flutter dan dart]
+    E --> F{flutter --version berhasil?}
+    F -- Ya --> G([Instalasi selesai: lanjut ke project pertama])
+    F -- Tidak --> H[Troubleshooting: periksa User PATH, ulangi verifikasi]
+    H --> E
+```
 
 Empat langkah utama:
 
@@ -319,7 +329,7 @@ Untuk penjelasan lebih lanjut tentang pembuatan project dan *hot reload*, lihat 
 
 | Gambar | Lokasi | Isi |
 |:---|:---|:---|
-| Diagram alur instalasi | [`assets/diagram-alur-instalasi.svg`](./assets/diagram-alur-instalasi.svg) | Alur empat langkah dan keputusan verifikasi |
+| Diagram alur instalasi | *(Mermaid flowchart pada Bagian 1)* | Alur empat langkah dan keputusan verifikasi |
 | Struktur File Explorer | [`assets/explorer-flutter-structure.svg`](./assets/explorer-flutter-structure.svg) | Struktur `D:\flutter\flutter` dan peringatan folder ganda |
 | Alasan struktur `bin` | [`assets/diagram-folder-bin.svg`](./assets/diagram-folder-bin.svg) | Mengapa PATH = `D:\flutter\flutter\bin` |
 | Dialog Environment Variables | [`assets/dialog-environment-variables.svg`](./assets/dialog-environment-variables.svg) | Menambah User PATH melalui GUI Windows |
