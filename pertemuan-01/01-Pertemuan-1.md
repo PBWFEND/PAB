@@ -32,7 +32,7 @@
   - [14. Latihan Individu](#14-latihan-individu)
   - [15. Pemanfaatan AI sebagai Coding Assistant](#15-pemanfaatan-ai-sebagai-coding-assistant)
   - [16. Kuis Formatif](#16-kuis-formatif)
-  - [17. Output Pembelajaran — Tugas 1](#17-output-pembelajaran--tugas-1)
+  - [17. Keluaran Pembelajaran — Tugas 1](#17-keluaran-pembelajaran--tugas-1)
     - [Cara Pengumpulan — Push ke Repository GitHub Kelas](#cara-pengumpulan--push-ke-repository-github-kelas)
   - [18. Rubrik Tugas 1](#18-rubrik-tugas-1)
   - [19. Persiapan menuju Pertemuan 2](#19-persiapan-menuju-pertemuan-2)
@@ -404,7 +404,7 @@ Bentuk kelompok 3–4 orang, kerjakan menggunakan app diagram digital:
 
 1. **Bedah kasus (15 menit)** — Pilih satu aplikasi mobile yang sering dipakai (Shopee/Tokopedia/BRImo/MyTelkomsel). Identifikasi minimal **5 fitur**, lalu petakan: fitur itu menyelesaikan masalah SI apa, dan karakteristik mobile apa yang terlibat.
 2. **Analisis kebutuhan (20 menit)** — Dari skenario CBL di atas, lengkapi tabel analisis: tambahkan minimal **2 permintaan tambahan** dari sudut pandang petugas atau kepala perpustakaan, tentukan fitur aplikasi dan materi pemenuhnya.
-3. **Presentasi kilat (5 menit/kelompok)** — Satu kelompok terpilih memaparkan hasilnya; kelompok lain menanggapi: adakah kebutuhan yang sebenarnya adalah tugas backend, bukan aplikasi mobile? Adakah fitur yang tidak realistis di perangkat mobile?
+3. **Presentasi singkat (5 menit/kelompok)** — Satu kelompok terpilih memaparkan hasilnya; kelompok lain menanggapi: adakah kebutuhan yang sebenarnya adalah tugas backend, bukan aplikasi mobile? Adakah fitur yang tidak realistis di perangkat mobile?
 
 **Target:** tiap kelompok menghasilkan tabel kebutuhan yang membedakan dengan jelas pekerjaan **aplikasi mobile** dan pekerjaan **backend SI**.
 
@@ -468,7 +468,7 @@ Kerjakan setelah demo; urutan langkah ada di [`code/pertemuan-01/main.dart`](../
 
 ---
 
-## 17. Output Pembelajaran — Tugas 1
+## 17. Keluaran Pembelajaran — Tugas 1
 
 **Tugas 1 — Identifikasi Kebutuhan Aplikasi Bergerak** (dikumpulkan sebelum Pertemuan 2). Panduan pengerjaan tersedia di [`contoh-tugas-1-mahasiswa.md`](./contoh-tugas-1-mahasiswa.md).
 

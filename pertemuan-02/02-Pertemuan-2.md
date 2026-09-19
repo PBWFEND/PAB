@@ -36,7 +36,7 @@
   - [13. Latihan Individu](#13-latihan-individu)
   - [14. Pemanfaatan AI sebagai Coding Assistant](#14-pemanfaatan-ai-sebagai-coding-assistant)
   - [15. Kuis Formatif](#15-kuis-formatif)
-  - [16. Output Pembelajaran — Tugas 2](#16-output-pembelajaran--tugas-2)
+  - [16. Keluaran Pembelajaran — Tugas 2](#16-keluaran-pembelajaran--tugas-2)
     - [Cara Pengumpulan — Push ke Repository GitHub Kelas](#cara-pengumpulan--push-ke-repository-github-kelas)
   - [17. Rubrik Tugas 2](#17-rubrik-tugas-2)
   - [18. Persiapan menuju Pertemuan 3](#18-persiapan-menuju-pertemuan-3)
@@ -448,7 +448,7 @@ Setelah selesai, jalankan `dart latihan-dasar-dart.dart` dan pastikan keluaran s
 
 ---
 
-## 16. Output Pembelajaran — Tugas 2
+## 16. Keluaran Pembelajaran — Tugas 2
 
 **Tugas 2 — Modul Hitung Nilai (dikumpulkan sebelum Pertemuan 3).** Panduan pengerjaan tersedia di [`contoh-tugas-2-mahasiswa.md`](./contoh-tugas-2-mahasiswa.md).
 

@@ -8,7 +8,7 @@
 | **Model Pembelajaran** | Case Based Learning / Problem Based Learning |
 | **Stack** | Flutter + Dart |
 
-> **Catatan penting:** Pertemuan 3 membahas **struktur aplikasi Flutter dan widget**: `MaterialApp`, `Scaffold`, widget tree, serta layout dasar (`Column`, `Row`, `Padding`, `ListView`). Materi ini membangun langsung di atas sintaks Pertemuan 2 — setiap widget ditulis dengan fungsi, konstanta, dan ekspresi Dart. Output pertemuan ini adalah **halaman aplikasi sederhana** yang dapat ditunjukkan pada target web (Chrome) melalui DartPad atau `flutter run -d chrome`.
+> **Catatan penting:** Pertemuan 3 membahas **struktur aplikasi Flutter dan widget**: `MaterialApp`, `Scaffold`, widget tree, serta layout dasar (`Column`, `Row`, `Padding`, `ListView`). Materi ini membangun langsung di atas sintaks Pertemuan 2 — setiap widget ditulis dengan fungsi, konstanta, dan ekspresi Dart. Keluaran pertemuan ini adalah **halaman aplikasi sederhana** yang dapat ditunjukkan pada target web (Chrome) melalui DartPad atau `flutter run -d chrome`.
 >
 > **Batas cakupan:** Pertemuan 3 berfokus pada struktur Flutter dan widget sesuai CPMK-1, RPS, dan urutan `TIMELINE.md`. Materi `StatefulWidget` dan `setState` dibahas pada pertemuan berikutnya saat form dan navigasi (minggu 6) mulai dipraktikkan. Dokumentasi resmi Flutter dapat digunakan untuk memperdalam widget, layout, dan komposisi.
 
@@ -36,7 +36,7 @@
   - [11. Latihan Individu](#11-latihan-individu)
   - [12. Pemanfaatan AI sebagai Coding Assistant](#12-pemanfaatan-ai-sebagai-coding-assistant)
   - [13. Kuis Formatif](#13-kuis-formatif)
-  - [14. Output Pembelajaran — Tugas 3](#14-output-pembelajaran--tugas-3)
+  - [14. Keluaran Pembelajaran — Tugas 3](#14-keluaran-pembelajaran--tugas-3)
     - [Cara Pengumpulan — Push ke Repository GitHub Kelas](#cara-pengumpulan--push-ke-repository-github-kelas)
   - [15. Rubrik Tugas 3](#15-rubrik-tugas-3)
   - [16. Verifikasi Kode — Dua Jalur](#16-verifikasi-kode--dua-jalur)
@@ -424,7 +424,7 @@ Jalankan melalui [Jalur 1](#16-verifikasi-kode--dua-jalur) atau [Jalur 2](#16-ve
 
 ---
 
-## 14. Output Pembelajaran — Tugas 3
+## 14. Keluaran Pembelajaran — Tugas 3
 
 **Tugas 3 — Halaman Aplikasi Sederhana (dikumpulkan sebelum Pertemuan 4).** Panduan pengerjaan tersedia di [`contoh-tugas-3-mahasiswa.md`](./contoh-tugas-3-mahasiswa.md).
 
