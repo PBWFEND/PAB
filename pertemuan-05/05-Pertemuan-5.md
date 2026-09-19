@@ -8,7 +8,7 @@
 | **Model Pembelajaran** | Case Based Learning / Problem Based Learning |
 | **Stack** | Flutter (tema dan komponen visual) + alat wireframe (Excalidraw/Figma) |
 
-> **Catatan penting:** Pertemuan 5 membahas **UI/UX mobile**: information architecture, wireframe, prinsip antarmuka mobile (ukuran layar, target sentuh, hierarki visual, feedback), serta implementasi rancangan menjadi halaman Flutter. Pertemuan ini menerjemahkan hasil analisis Pertemuan 4 — tabel pemetaan kebutuhan ke antarmuka — menjadi rancangan visual dan implementasi halaman utama. Keluaran pertemuan ini adalah **prototype UI/UX** (information architecture, wireframe, dan halaman utama Flutter) untuk domain Sistem Informasi yang telah dipilih sejak Tugas 1.
+> **Catatan penting:** Pertemuan 5 membahas **UI/UX mobile**: information architecture, wireframe, prinsip antarmuka mobile (ukuran layar, target sentuh, hierarki visual, feedback), serta implementasi rancangan menjadi layar Flutter. Pertemuan ini menerjemahkan hasil analisis Pertemuan 4 — tabel pemetaan kebutuhan ke antarmuka — menjadi rancangan visual dan implementasi layar utama. Keluaran pertemuan ini adalah **prototype UI/UX** (information architecture, wireframe, dan layar utama Flutter) untuk domain Sistem Informasi yang telah dipilih sejak Tugas 1.
 >
 > **Batas cakupan:** Pertemuan 5 berfokus pada perancangan dan implementasi **satu halaman** sesuai CPMK-2, RPS, dan urutan `TIMELINE.md`. Materi routing dan `Navigator` tidak dibahas pada pertemuan ini — navigasi antarlayar, form, dan feedback interaksi menjadi fokus **Pertemuan 6** sehingga prototype fungsional (M3) tersusun berurutan. Widget yang digunakan tetap seputar materi Pertemuan 3 (`Scaffold`, `Column`, `Row`, `ListView.builder`, `ListTile`) ditambah tema dan komponen visual (`ThemeData`, `Card`, `FilledButton`).
 
@@ -26,7 +26,7 @@
   - [6. Wireframe](#6-wireframe)
   - [7. Tema dan Komponen Visual Flutter](#7-tema-dan-komponen-visual-flutter)
   - [8. Dari Wireframe ke Widget](#8-dari-wireframe-ke-widget)
-  - [9. Case Based Learning: Halaman Utama Aplikasi Peminjaman Ruang Laboratorium](#9-case-based-learning-halaman-utama-aplikasi-peminjaman-ruang-laboratorium)
+   - [9. Case Based Learning: Layar Utama Aplikasi Peminjaman Ruang Laboratorium](#9-case-based-learning-layar-utama-aplikasi-peminjaman-ruang-laboratorium)
   - [10. Aktivitas Kelompok](#10-aktivitas-kelompok)
   - [11. Latihan Individu](#11-latihan-individu)
   - [12. Pemanfaatan AI sebagai Coding Assistant](#12-pemanfaatan-ai-sebagai-coding-assistant)
@@ -44,7 +44,7 @@
 
 ## 1. Keterkaitan Pertemuan dengan RPS OBE
 
-Pertemuan 5 melanjutkan capaian **CPMK-2** — mahasiswa mampu menganalisis kebutuhan pengguna dan merancang solusi aplikasi bergerak yang sesuai dengan proses bisnis Sistem Informasi. Pada pertemuan ini, pembelajaran berfokus pada **perancangan dan implementasi antarmuka**: menyusun struktur halaman dari hasil analisis kebutuhan, menggambar wireframe, menerapkan prinsip antarmuka mobile, dan mengimplementasikan halaman utama di Flutter.
+Pertemuan 5 melanjutkan capaian **CPMK-2** — mahasiswa mampu menganalisis kebutuhan pengguna dan merancang solusi aplikasi bergerak yang sesuai dengan proses bisnis Sistem Informasi. Pada pertemuan ini, pembelajaran berfokus pada **perancangan dan implementasi antarmuka**: menyusun struktur layar dari hasil analisis kebutuhan, menggambar wireframe, menerapkan prinsip antarmuka mobile, dan mengimplementasikan layar utama di Flutter.
 
 > Kebutuhan yang tidak diterjemahkan menjadi antarmuka yang dapat dilihat belum membuktikan apa pun. Sebaliknya, antarmuka yang menarik tetapi tidak memenuhi kebutuhan hanya menghasilkan layar yang indah namun tidak terpakai. Pertemuan ini menautkan kedua sisi tersebut: setiap elemen rancangan harus dapat dijelaskan dari kebutuhan (Pertemuan 4), dan setiap widget yang ditulis harus dapat dijelaskan dari rancangan.
 
@@ -75,7 +75,7 @@ Setelah mengikuti pertemuan ini, mahasiswa mampu:
 | 1 | Menyusun information architecture dari hasil analisis kebutuhan | Mendaftarkan layar aplikasi dari tabel pemetaan Tugas 4 dan menggambarkan hubungan antarlayar dalam satu diagram |
 | 2 | Menggambar wireframe layar utama aplikasi | Membuat wireframe minimal 2 layar dengan anotasi fungsi setiap area |
 | 3 | Menerapkan prinsip antarmuka mobile | Menilai dan memperbaiki rancangan berdasarkan target sentuh, hierarki visual, feedback, dan konsistensi |
-| 4 | Mengimplementasikan wireframe menjadi halaman Flutter | Menulis halaman utama dengan tema terpusat dan komponen visual yang sesuai rancangan |
+| 4 | Mengimplementasikan wireframe menjadi layar Flutter | Menulis layar utama dengan tema terpusat dan komponen visual yang sesuai rancangan |
 | 5 | Mendokumentasikan keputusan UI/UX | Menuliskan catatan keputusan (warna, hierarki, komponen) beserta alasan yang merujuk pada kebutuhan atau persona |
 
 ---
@@ -84,7 +84,7 @@ Setelah mengikuti pertemuan ini, mahasiswa mampu:
 
 Perhatikan kutipan diskusi kelompok mahasiswa pada semester sebelumnya:
 
-> "Aplikasi kami ditolak saat review. Dosen membuka halaman utama dan menemukan sembilan tombol, teks kecil berdempetan, dan tidak ada petunjuk mana yang harus dibuka lebih dahulu. Ketika ditanya mana tombol untuk tugas utama pengguna, kami sendiri bingung menjawabnya."
+> "Aplikasi kami ditolak saat review. Dosen membuka layar utama dan menemukan sembilan tombol, teks kecil berdempetan, dan tidak ada petunjuk mana yang harus dibuka lebih dahulu. Ketika ditanya mana tombol untuk tugas utama pengguna, kami sendiri bingung menjawabnya."
 
 Akibat yang umum terjadi ketika antarmuka dirancang tanpa prinsip UI mobile:
 
@@ -117,7 +117,7 @@ Pertemuan ini menjawab pertanyaan tersebut melalui information architecture, pri
 
 Langkah menyusun IA pada praktikum PAB:
 
-1. **Ambil inventaris layar** dari tabel pemetaan kebutuhan ke antarmuka (Tugas 4) — kolom "Layar/Halaman yang Memenuhi".
+1. **Ambil inventaris layar** dari tabel pemetaan kebutuhan ke antarmuka (Tugas 4) — kolom "Layar yang Memenuhi".
 2. **Tetapkan layar utama** — layar yang memenuhi kebutuhan *Must have* dan menjadi titik masuk pengguna.
 3. **Kelompokkan layar pendukung** di bawah layar utama berdasarkan tugas, bukan berdasarkan jenis fitur.
 4. **Gambarkan peta layar** — setiap layar disebut dengan nama yang sama persis dengan tabel pemetaan agar dokumen tetap konsisten.
@@ -126,10 +126,10 @@ Contoh IA aplikasi peminjaman ruang laboratorium (hasil analisis Pertemuan 4):
 
 ```mermaid
 flowchart TD
-    H["Halaman utama mahasiswa:<br>daftar pengajuan saya"] --> D["Form pengajuan:<br>tanggal, jam, durasi"]
+   H["Layar utama mahasiswa:<br>daftar pengajuan saya"] --> D["Form pengajuan:<br>tanggal, jam, durasi"]
     H --> R["Cari ruang:<br>daftar ruang + kolom pencarian"]
     R --> I["Detail ruang:<br>info dan jadwal terpakai"]
-    L["Halaman laboran:<br>daftar pengajuan menunggu"] --> V["Peninjauan pengajuan:<br>setujui / tolak + catatan"]
+   L["Layar laboran:<br>daftar pengajuan menunggu"] --> V["Peninjauan pengajuan:<br>setujui / tolak + catatan"]
 ```
 
 > **Kesalahan umum:** membuat IA berdasarkan struktur menu yang diinginkan pembuat, bukan berdasarkan kebutuhan. Setiap layar pada IA harus dapat ditelusuri kembali ke satu baris tabel pemetaan; layar tanpa kebutuhan dipindahkan ke kategori *Won't have* atau dihapus.
@@ -159,7 +159,7 @@ Prinsip-prinsip ini bukan hiasan: pada rubrik Tugas 5, penerapan prinsip dinilai
 | Jenis | Kandungan | Kapan digunakan pada PAB |
 |:------|:----------|:--------------------------|
 | Low fidelity | Kotak, garis, dan blok abu-abu; anotasi fungsi per area | Pertemuan 5 — saat struktur layar masih berubah |
-| High fidelity | Warna, ikon, teks final mendekati tampilan nyata | Opsional setelah implementasi halaman berjalan |
+| High fidelity | Warna, ikon, teks final mendekati tampilan nyata | Opsional setelah implementasi layar berjalan |
 
 Isi minimal setiap wireframe pada Tugas 5:
 
@@ -215,7 +215,7 @@ MaterialApp(
 
 ## 8. Dari Wireframe ke Widget
 
-Implementasi halaman utama adalah penerjemahan langsung wireframe. Tabel berikut menjadi pola penerjemahan yang digunakan pada praktikum, CBL, dan Tugas 5:
+Implementasi layar utama adalah penerjemahan langsung wireframe. Tabel berikut menjadi pola penerjemahan yang digunakan pada praktikum, CBL, dan Tugas 5:
 
 | Area pada wireframe | Widget Flutter | Keterangan |
 |:--------------------|:---------------|:-----------|
@@ -231,9 +231,9 @@ Implementasi halaman utama adalah penerjemahan langsung wireframe. Tabel berikut
 
 ---
 
-## 9. Case Based Learning: Halaman Utama Aplikasi Peminjaman Ruang Laboratorium
+## 9. Case Based Learning: Layar Utama Aplikasi Peminjaman Ruang Laboratorium
 
-**Konteks (lanjutan kasus Pertemuan 4):** dokumen kebutuhan telah menetapkan empat kebutuhan teratas — F-01 mengajukan peminjaman (Must), F-02 menyetujui/menolak (Must), F-03 melihat status pengajuan (Must), dan F-04 mencari ruang (Should). Tugas Anda sekarang merancang dan mengimplementasikan **halaman utama mahasiswa** yang memenuhi F-03 dan menjadi titik masuk menuju F-01.
+**Konteks (lanjutan kasus Pertemuan 4):** dokumen kebutuhan telah menetapkan empat kebutuhan teratas — F-01 mengajukan peminjaman (Must), F-02 menyetujui/menolak (Must), F-03 melihat status pengajuan (Must), dan F-04 mencari ruang (Should). Tugas Anda sekarang merancang dan mengimplementasikan **layar utama mahasiswa** yang memenuhi F-03 dan menjadi titik masuk menuju F-01.
 
 **Data pendukung dari observasi (sama dengan Pertemuan 4):**
 
@@ -248,7 +248,7 @@ Pertanyaan untuk dibahas bersama:
 
 1. **Area mana yang wajib ada** pada layar utama berdasarkan F-03, dan area mana yang boleh ditunda karena hanya memenuhi F-04 (Should)?
 2. **Bagaimana status "menunggu", "disetujui", dan "ditolak"** ditampilkan agar dibedakan tanpa membaca teksnya? (Petunjuk: `Chip` atau `Text` berwarna dengan ternary dari materi P2.)
-3. **Di mana tombol "Ajukan" ditempatkan** dan mengapa bentuknya `FloatingActionButton.extended` alih-alih tautan teks? (Petunjuk: target sentuh dan aksi utama.)
+3. **Di bagian mana tombol "Ajukan" ditempatkan** dan mengapa bentuknya `FloatingActionButton.extended` alih-alih tautan teks? (Petunjuk: target sentuh dan aksi utama.)
 4. **Apa yang tampil ketika daftar pengajuan masih kosong?** (Petunjuk: keadaan kosong — pengguna baru tidak boleh melihat layar putih.)
 
 Kode penyelesaian tersedia di [`code/pertemuan-05/demo-ui-flutter.dart`](../code/pertemuan-05/demo-ui-flutter.dart). Kerjakan latihan individu terlebih dahulu, kemudian bandingkan hasilnya dengan kode tersebut.
@@ -269,7 +269,7 @@ Bentuk kelompok yang terdiri atas 3–4 mahasiswa:
 
 ## 11. Latihan Individu
 
-Kerjakan setelah demonstrasi; kerangka TODO terbimbing tersedia di [`code/pertemuan-05/latihan-ui-flutter.dart`](../code/pertemuan-05/latihan-ui-flutter.dart). Kasus: **halaman utama perpustakaan dengan tema dan komponen visual**.
+Kerjakan setelah demonstrasi; kerangka TODO terbimbing tersedia di [`code/pertemuan-05/latihan-ui-flutter.dart`](../code/pertemuan-05/latihan-ui-flutter.dart). Kasus: **layar utama perpustakaan dengan tema dan komponen visual**.
 
 1. **Langkah 1** — Susun IA kecil (3–5 layar) untuk domain aplikasi Anda dari tabel pemetaan Tugas 4; tetapkan layar utama.
 2. **Langkah 2** — Gambar wireframe low fidelity layar utama (dengan anotasi kebutuhan) menggunakan Excalidraw atau Figma.
@@ -341,7 +341,7 @@ Gunakan **domain Sistem Informasi yang sama** dengan Tugas 1–4. Kerjakan:
    - `Scaffold` + `AppBar` + daftar `ListView.builder` dengan `Card` + `ListTile`.
    - Status berwarna (ternary), satu aksi utama (`FloatingActionButton.extended` atau `FilledButton`), dan keadaan kosong.
    - Tanpa `Navigator` — navigasi menjadi materi Pertemuan 6.
-4. **Tangkap layar hasil** pada target web (Chrome) atau DartPad; simpan sebagai `screenshot-halaman.png`.
+4. **Ambil tangkapan layar hasil** pada target web (Chrome) atau DartPad; simpan sebagai `screenshot-halaman.png`.
 5. **Buat file `catatan-keputusan-ui.md`** — tabel keputusan (warna benih, bentuk status, posisi aksi utama, hierarki teks) beserta alasan yang merujuk pada kebutuhan atau persona.
 6. **Deklarasi penggunaan AI** (bila ada) sesuai format pada [Bagian 12](#12-pemanfaatan-ai-sebagai-coding-assistant).
 7. **Refleksi** — 3 kalimat: bagian mana yang paling sulit dipertahankan konsistensinya antara wireframe, kode, dan catatan keputusan — dan mengapa?
@@ -385,7 +385,7 @@ Langkah pengumpulan:
 |:---------|:-----:|:----------------|:---------|:----------|:--------------------|
 | Information architecture | 15% | Peta layar lengkap; setiap layar tertelusur ke kebutuhan; layar utama beralasan | Peta layar lengkap; penelusuran sebagian | Peta layar ada, sebagian layar tanpa kebutuhan | Tidak ada IA |
 | Wireframe | 20% | ≥ 2 layar, anotasi kebutuhan lengkap, keadaan kosong ada | 2 layar, anotasi sebagian | 1 layar atau tanpa anotasi | Tidak ada wireframe |
-| Implementasi halaman Flutter | 25% | Tema terpusat, komponen sesuai rancangan, keadaan kosong ada, tanpa error | Tema ada, 1–2 komponen menyimpang dari wireframe | Halaman jalan tetapi tidak mengikuti wireframe | Tidak ada kode |
+| Implementasi layar Flutter | 25% | Tema terpusat, komponen sesuai rancangan, keadaan kosong ada, tanpa error | Tema ada, 1–2 komponen menyimpang dari wireframe | Layar berjalan tetapi tidak mengikuti wireframe | Tidak ada kode |
 | Penerapan prinsip UI mobile | 15% | Kelima prinsip terpenuhi dan dijelaskan pada catatan keputusan | 3–4 prinsip terpenuhi | 1–2 prinsip terpenuhi | Prinsip tidak terlihat |
 | Catatan keputusan UI/UX | 15% | Seluruh keputusan beralasan dan merujuk kebutuhan/persona | Keputusan lengkap, alasan sebagian | Catatan parsial tanpa alasan | Tidak ada catatan |
 | Refleksi dan ketepatan waktu | 10% | Refleksi 3 kalimat logis, tepat waktu | Refleksi ada, kurang mendalam | Refleksi kurang dari 3 kalimat | Tidak ada / terlambat |
@@ -401,7 +401,7 @@ Kode praktikum dan Tugas 5 diverifikasi melalui dua jalur berikut — sama denga
 ### Jalur 1: DartPad (tanpa instalasi)
 
 1. Buka [DartPad](https://dartpad.dev/?template=app).
-2. Ganti seluruh isi dengan kode halaman Anda.
+2. Ganti seluruh isi dengan kode layar Anda.
 3. Tekan **Run** dan amati hasil pada panel kanan.
 
 ### Jalur 2: Flutter SDK (sesuai Panduan Lengkap)
@@ -443,14 +443,14 @@ timeline
     Minggu 2 : Dasar Dart : variabel, fungsi, collection
     Minggu 3 : Widget dan struktur Flutter : MaterialApp, Scaffold, layout
     Minggu 4 : Analisis kebutuhan : user flow
-    Minggu 5 : UI/UX : wireframe dan halaman utama (pertemuan ini)
+   Minggu 5 : UI/UX : wireframe dan layar utama (pertemuan ini)
     Minggu 6 : Navigasi : Navigator, form, feedback
 ```
 
 - **Pertemuan 2** — Menguasai sintaks dan fitur dasar Dart sebagai bahasa aplikasi Flutter.
-- **Pertemuan 3** — Menggunakan widget untuk membangun halaman aplikasi.
+- **Pertemuan 3** — Menggunakan widget untuk membangun layar aplikasi.
 - **Pertemuan 4** — Menganalisis kebutuhan dan menyusun user flow aplikasi SI.
-- **Pertemuan 5** — Merancang dan mengimplementasikan halaman utama berdasarkan dokumen kebutuhan.
+- **Pertemuan 5** — Merancang dan mengimplementasikan layar utama berdasarkan dokumen kebutuhan.
 - **Pertemuan 6** — Menghubungkan layar dengan navigasi dan merespons interaksi pengguna.
 
 ---
@@ -459,8 +459,8 @@ timeline
 
 | Berkas | Keterangan |
 |:-------|:-----------|
-| [`demo-ui-flutter.dart`](../code/pertemuan-05/demo-ui-flutter.dart) | Penyelesaian CBL: halaman utama peminjaman ruang lab dengan tema terpusat, kartu daftar, status berwarna, dan aksi utama |
-| [`latihan-ui-flutter.dart`](../code/pertemuan-05/latihan-ui-flutter.dart) | Latihan TODO terbimbing: halaman perpustakaan dengan tema dan komponen visual (6 TODO) |
+| [`demo-ui-flutter.dart`](../code/pertemuan-05/demo-ui-flutter.dart) | Penyelesaian CBL: layar utama peminjaman ruang lab dengan tema terpusat, kartu daftar, status berwarna, dan aksi utama |
+| [`latihan-ui-flutter.dart`](../code/pertemuan-05/latihan-ui-flutter.dart) | Latihan TODO terbimbing: layar perpustakaan dengan tema dan komponen visual (6 TODO) |
 | [`contoh-tugas-5-mahasiswa.md`](./contoh-tugas-5-mahasiswa.md) | Panduan pengerjaan Tugas 5 untuk mahasiswa: definisi komponen, struktur dokumen, dan daftar pemeriksaan mandiri |
 | [`panduan/Panduan-Lengkap-PAB.md`](../panduan/Panduan-Lengkap-PAB.md) | Skenario instalasi dan peta kebutuhan environment per pertemuan (Bagian 2.1) — Minggu 5 cukup dengan skenario ringan/standar (target web) |
 | [`../MILESTONE.md`](../MILESTONE.md) | Milestone M2 — UI/UX Prototype: deliverable dan kriteria selesai yang menjadi target pertemuan ini |

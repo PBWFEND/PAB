@@ -22,7 +22,9 @@
 | 11 | Kode praktikum Pertemuan 3 — [`code/pertemuan-03/`](./code/pertemuan-03/) | `demo-struktur-flutter.dart`, `latihan-widget-flutter.dart` (TODO terbimbing), dan solusi referensi |
 | 12 | [Pertemuan 4 — `pertemuan-04/04-Pertemuan-4.md`](./pertemuan-04/04-Pertemuan-4.md) | Analisis kebutuhan dan user flow: user persona, kebutuhan fungsional/nonfungsional, prioritas MoSCoW, user flow Mermaid, template dokumen, dan Tugas 4 |
 | 13 | [Pertemuan 5 — `pertemuan-05/05-Pertemuan-5.md`](./pertemuan-05/05-Pertemuan-5.md) | UI/UX mobile: information architecture, wireframe, prinsip antarmuka, tema dan komponen visual Flutter, serta Tugas 5 |
-| 14 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 14 | [Pertemuan 6 — `pertemuan-06/06-Pertemuan-6.md`](./pertemuan-06/06-Pertemuan-6.md) | Navigasi dan interaksi: route bernama, `Navigator`, data antarlayar, form dengan validasi, `SnackBar`, serta Tugas 6 |
+| 15 | Kode praktikum Pertemuan 6 — [`code/pertemuan-06/`](./code/pertemuan-06/) | `demo-navigasi-flutter.dart`, `latihan-navigasi-flutter.dart` (TODO terbimbing) |
+| 16 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -88,6 +90,15 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [Nielsen Norman Group — Wireframes](https://www.nngroup.com/articles/wireframes/) — fungsi wireframe dan tingkat fidelitasnya
 - [Excalidraw](https://excalidraw.com/) — alat penggambar wireframe low fidelity berbasis peramban
 - [Figma](https://www.figma.com/) — alternatif alat wireframe dan prototype daring
+
+### 06-Pertemuan-6.md — Navigasi dan Interaksi
+
+- [Flutter — Navigation & routing overview](https://docs.flutter.dev/ui/navigation) — konsep route, `Navigator`, dan perpindahan antarlayar
+- [Flutter — Navigate to a new screen and back](https://docs.flutter.dev/cookbook/navigation/navigation-basics) — `push`, `pop`, dan pengiriman data antarlayar
+- [Flutter — Return data from a screen](https://docs.flutter.dev/cookbook/navigation/returning-data) — membaca data dari layar yang ditutup
+- [Flutter — Build a form with validation](https://docs.flutter.dev/cookbook/forms/validation) — `Form`, `GlobalKey<FormState>`, dan validator
+- [Flutter — Navigator API](https://api.flutter.dev/flutter/widgets/Navigator-class.html) — referensi API `Navigator`, `pushNamed`, dan `pop`
+- [Flutter — SnackBar API](https://api.flutter.dev/flutter/material/SnackBar-class.html) — referensi API `SnackBar` dan `ScaffoldMessenger`
 
 ### Repositori Kelas
 
