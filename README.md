@@ -21,7 +21,8 @@
 | 10 | [Pertemuan 3 — `pertemuan-03/03-Pertemuan-3.md`](./pertemuan-03/03-Pertemuan-3.md) | Struktur Flutter dan widget: `MaterialApp`, `Scaffold`, widget tree, layout dasar, dan dua jalur verifikasi (DartPad & Flutter SDK) |
 | 11 | Kode praktikum Pertemuan 3 — [`code/pertemuan-03/`](./code/pertemuan-03/) | `demo-struktur-flutter.dart`, `latihan-widget-flutter.dart` (TODO terbimbing), dan solusi referensi |
 | 12 | [Pertemuan 4 — `pertemuan-04/04-Pertemuan-4.md`](./pertemuan-04/04-Pertemuan-4.md) | Analisis kebutuhan dan user flow: user persona, kebutuhan fungsional/nonfungsional, prioritas MoSCoW, user flow Mermaid, template dokumen, dan Tugas 4 |
-| 13 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 13 | [Pertemuan 5 — `pertemuan-05/05-Pertemuan-5.md`](./pertemuan-05/05-Pertemuan-5.md) | UI/UX mobile: information architecture, wireframe, prinsip antarmuka, tema dan komponen visual Flutter, serta Tugas 5 |
+| 14 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -75,6 +76,18 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [Mermaid Live Editor](https://mermaid.live/) — alat daring untuk menggambar dan mengekspor diagram Mermaid
 - [Nielsen Norman Group — Task Analysis](https://www.nngroup.com/articles/task-analysis/) — hubungan tugas dan tujuan pengguna dengan rancangan alur
 - [Excalidraw](https://excalidraw.com/) — alternatif penggambar diagram alur berbentuk gambar
+
+### 05-Pertemuan-5.md — UI/UX Mobile
+
+- [Material Design 3 — Color system](https://m3.material.io/styles/color/system) — skema warna Material 3 yang dipakai `ColorScheme.fromSeed`
+- [Flutter — Themes](https://docs.flutter.dev/cookbook/design/themes) — penggunaan `ThemeData` dan akses warna/teks dari tema
+- [Flutter — Card](https://api.flutter.dev/flutter/material/Card-class.html) — referensi API `Card` untuk item daftar
+- [Flutter — ListTile](https://api.flutter.dev/flutter/material/ListTile-class.html) — referensi API `ListTile` dan variasinya
+- [Flutter — Chip](https://api.flutter.dev/flutter/material/Chip-class.html) — referensi API `Chip` untuk label status
+- [Material Design — Accessibility](https://m3.material.io/foundations/accessible-design/overview) — target sentuh, kontras, dan aksesibilitas pada Material
+- [Nielsen Norman Group — Wireframes](https://www.nngroup.com/articles/wireframes/) — fungsi wireframe dan tingkat fidelitasnya
+- [Excalidraw](https://excalidraw.com/) — alat penggambar wireframe low fidelity berbasis peramban
+- [Figma](https://www.figma.com/) — alternatif alat wireframe dan prototype daring
 
 ### Repositori Kelas
 
