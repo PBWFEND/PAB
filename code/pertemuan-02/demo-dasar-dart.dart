@@ -137,8 +137,8 @@ void main() {
     'semester': 7,
   };
   print('Detail MK: ${detailMk['nama']} (SKS ${detailMk['sks']}).');
-  for (final (kunci, nilai) in detailMk.entries) {
-    print('- $kunci: $nilai');
+  for (final entri in detailMk.entries) {
+    print('- ${entri.key}: ${entri.value}');
   }
 }
 

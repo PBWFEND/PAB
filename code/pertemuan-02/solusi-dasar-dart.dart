@@ -28,7 +28,7 @@ void main() {
   // TODO 3
   for (var i = 0; i < daftarKomponen.length; i++) {
     final komponen = daftarKomponen[i];
-    final capaian = (komponen['skor'] as int / komponen['bobot'] as int * 100).round();
+    final capaian = ((komponen['skor'] as int) / (komponen['bobot'] as int) * 100).round();
     print('${komponen['nama']}: bobot ${komponen['bobot']}, skor ${komponen['skor']}, capaian ${capaian}%');
   }
 

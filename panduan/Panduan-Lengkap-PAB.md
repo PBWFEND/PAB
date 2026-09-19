@@ -76,6 +76,7 @@ Jika menemukan istilah teknis yang belum dipahami, lihat [Glosarium PAB](./Glosa
     - [Build pertama lambat atau terhenti](#build-pertama-lambat-atau-terhenti)
     - [`Unable to locate Android SDK`](#unable-to-locate-android-sdk)
     - [Hot reload tidak menerapkan perubahan](#hot-reload-tidak-menerapkan-perubahan)
+    - [Kode contoh ditandai warning oleh extension Dart](#kode-contoh-ditandai-warning-oleh-extension-dart)
   - [16. Troubleshooting Kapasitas](#16-troubleshooting-kapasitas)
   - [17. Catatan Penting](#17-catatan-penting)
   - [18. Catatan untuk Pengelola Kelas / Lab](#18-catatan-untuk-pengelola-kelas--lab)
@@ -609,6 +610,33 @@ Android SDK belum terpasang. Instal Android Studio (yang menyertakan SDK) atau p
 ### Hot reload tidak menerapkan perubahan
 
 Pastikan aplikasi dijalankan melalui `flutter run` atau `F5` (bukan aplikasi yang sudah di-install sebelumnya), dan berkas yang diubah sudah tersimpan. Jika perubahan terkait `main()` atau variabel global, gunakan hot restart (`R`) karena hot reload tidak menjalankan ulang `main()`.
+
+### Kode contoh ditandai warning oleh extension Dart
+
+Folder `PAB/code/pertemuan-01/` sampai `PAB/code/pertemuan-05/` berisi berkas contoh, bukan satu project Flutter. Berkas tersebut sengaja disimpan terpisah agar dapat digunakan sebagai bahan praktikum. Jika folder `PAB` dibuka langsung di VS Code, extension Dart akan menganalisis setiap berkas tanpa menemukan `pubspec.yaml`. Akibatnya, kode Flutter dapat ditandai dengan banyak error semu, misalnya `package:flutter/material.dart` tidak ditemukan dan widget Flutter dianggap tidak dikenal.
+
+Extension Dart tidak perlu dicopot. Buat dan buka project Flutter terlebih dahulu:
+
+```bash
+flutter create pab_p1_<nim>
+cd pab_p1_<nim>
+```
+
+Kemudian gunakan kode Pertemuan 1 atau 3/5 sebagai isi `lib/main.dart`, lalu jalankan:
+
+```bash
+flutter analyze
+flutter run -d chrome
+```
+
+Untuk kode Dart dasar pada Pertemuan 2, jalankan berkas secara langsung dari folder kodenya:
+
+```bash
+dart analyze demo-dasar-dart.dart
+dart demo-dasar-dart.dart
+```
+
+Bedakan jenis temuan pada panel **Problems**: `error` perlu diperbaiki, sedangkan `info` atau lint seperti penggunaan `print` dan nama file contoh biasanya merupakan saran kualitas kode. Jangan menyimpulkan ada kerusakan hanya dari jumlah warning sebelum kode dianalisis dalam konteks project yang memiliki `pubspec.yaml`.
 
 ## 16. Troubleshooting Kapasitas
 
