@@ -25,7 +25,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Widget akar.
+/// Aplikasi utama.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

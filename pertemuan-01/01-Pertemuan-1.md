@@ -350,7 +350,7 @@ class MyApp extends StatelessWidget {
 
 Perhatikan empat hal saat demo:
 
-1. `main()` adalah titik masuk; `runApp()` memasang widget akar (`MyApp`) ke layar.
+1. `main()` adalah titik masuk; `runApp()` memasang widget utama (`MyApp`) ke layar.
 2. `MaterialApp` dan `Scaffold` menyediakan struktur halaman dasar — detailnya dibahas Pertemuan 3.
 3. `Text` adalah widget; segala sesuatu yang tampil di layar adalah widget.
 4. Ubah teks `Halo, Flutter!` lalu simpan — aplikasi diperbarui tanpa diulang (*hot reload*).

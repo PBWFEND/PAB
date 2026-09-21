@@ -24,7 +24,9 @@
 | 13 | [Pertemuan 5 — `pertemuan-05/05-Pertemuan-5.md`](./pertemuan-05/05-Pertemuan-5.md) | UI/UX mobile: information architecture, wireframe, prinsip antarmuka, tema dan komponen visual Flutter, serta Tugas 5 |
 | 14 | [Pertemuan 6 — `pertemuan-06/06-Pertemuan-6.md`](./pertemuan-06/06-Pertemuan-6.md) | Navigasi dan interaksi: route bernama, `Navigator`, data antarlayar, form dengan validasi, `SnackBar`, serta Tugas 6 |
 | 15 | Kode praktikum Pertemuan 6 — [`code/pertemuan-06/`](./code/pertemuan-06/) | `demo-navigasi-flutter.dart`, `latihan-navigasi-flutter.dart` (TODO terbimbing) |
-| 16 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 16 | [Pertemuan 7 — `pertemuan-07/07-Pertemuan-7.md`](./pertemuan-07/07-Pertemuan-7.md) | Pengelolaan data lokal: model data, state dengan `StatefulWidget` dan `setState`, CRUD lokal, serta persistensi dasar `shared_preferences` |
+| 17 | Kode praktikum Pertemuan 7 — [`code/pertemuan-07/`](./code/pertemuan-07/) | `demo-data-lokal-flutter.dart`, `demo-persistensi-flutter.dart`, `latihan-data-lokal-flutter.dart` (TODO terbimbing) |
+| 18 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -99,6 +101,15 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [Flutter — Build a form with validation](https://docs.flutter.dev/cookbook/forms/validation) — `Form`, `GlobalKey<FormState>`, dan validator
 - [Flutter — Navigator API](https://api.flutter.dev/flutter/widgets/Navigator-class.html) — referensi API `Navigator`, `pushNamed`, dan `pop`
 - [Flutter — SnackBar API](https://api.flutter.dev/flutter/material/SnackBar-class.html) — referensi API `SnackBar` dan `ScaffoldMessenger`
+
+### 07-Pertemuan-7.md — Pengelolaan Data Lokal
+
+- [Flutter — StatefulWidget API](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html) — referensi API `StatefulWidget` dan `State`
+- [Flutter — setState API](https://api.flutter.dev/flutter/widgets/State/setState.html) — referensi API `setState` dan kapan memanggilnya
+- [Flutter — ListView.builder API](https://api.flutter.dev/flutter/widgets/ListView/ListView.builder.html) — referensi API `ListView.builder` untuk daftar dinamis
+- [Flutter — AlertDialog API](https://api.flutter.dev/flutter/material/AlertDialog-class.html) — referensi API `AlertDialog` untuk konfirmasi aksi
+- [shared_preferences — pub.dev](https://pub.dev/packages/shared_preferences) — package penyimpanan pasangan kunci-nilai untuk persistensi dasar
+- [Dart — JSON support](https://dart.dev/guides/json) — `jsonEncode` dan `jsonDecode` untuk menyimpan data model sebagai teks
 
 ### Repositori Kelas
 

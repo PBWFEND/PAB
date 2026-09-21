@@ -42,7 +42,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Widget akar. Peta layar didefinisikan sekali di sini — setiap layar
+/// Aplikasi utama. Peta layar didefinisikan sekali di sini — setiap layar
 /// dirujuk melalui namanya, bukan melalui konstruktor tersebar.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

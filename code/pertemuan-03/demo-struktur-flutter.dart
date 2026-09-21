@@ -19,7 +19,7 @@
 //      Untuk target web: flutter run -d chrome
 //
 // Konsep yang ditunjukkan (Pertemuan 3):
-//   - runApp        : memasang widget akar ke layar.
+//   - runApp        : memasang widget utama ke layar.
 //   - MaterialApp   : kerangka aplikasi Material Design; mengatur tema
 //                    dan halaman awal (home).
 //   - Scaffold      : struktur dasar satu halaman; menyediakan appBar, body,
@@ -39,7 +39,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Widget akar aplikasi. MaterialApp mengatur tema dan halaman awal.
+/// Aplikasi utama. MaterialApp mengatur tema dan halaman awal.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

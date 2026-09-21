@@ -41,7 +41,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Widget akar. Tema didefinisikan sekali di sini — seluruh halaman
+/// Aplikasi utama. Tema didefinisikan sekali di sini — seluruh halaman
 /// mengambil warna dari [colorScheme] hasil benih indigo.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

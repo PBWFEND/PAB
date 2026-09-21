@@ -4,7 +4,7 @@
 //
 // Tujuan:
 //   Menunjukkan struktur aplikasi Flutter minimal: titik masuk (main),
-//   widget akar (MyApp), MaterialApp, Scaffold, dan widget Text.
+//   widget utama (MyApp), MaterialApp, Scaffold, dan widget Text.
 //   File ini juga menjadi kerangka latihan individu dengan TODO terbimbing.
 //
 // Cara menjalankan:
@@ -17,7 +17,7 @@
 //
 // Konsep yang ditunjukkan (Pertemuan 1):
 //   - main()        : titik masuk aplikasi Dart.
-//   - runApp()      : memasang widget akar ke layar.
+//   - runApp()      : memasang widget utama ke layar.
 //   - StatefulWidget  : widget dengan keadaan yang dapat berubah (detail Pertemuan 3).
 //   - MaterialApp   : kerangka aplikasi dengan Material Design.
 //   - Scaffold      : struktur dasar halaman (appBar, body, dan lainnya).
@@ -33,7 +33,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Widget akar aplikasi. MaterialApp mengatur tema dan halaman awal.
+/// Aplikasi utama. MaterialApp mengatur tema dan halaman awal.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
