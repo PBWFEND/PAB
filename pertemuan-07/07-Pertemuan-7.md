@@ -22,9 +22,23 @@
   - [2. Capaian Pembelajaran Pertemuan](#2-capaian-pembelajaran-pertemuan)
   - [3. Pemantik Kasus: Data yang Hilang Setelah Aplikasi Ditutup](#3-pemantik-kasus-data-yang-hilang-setelah-aplikasi-ditutup)
   - [4. Model Data](#4-model-data)
+    - [4.1 Mendefinisikan Model](#41-mendefinisikan-model)
+    - [4.2 Representasi Teks](#42-representasi-teks)
+    - [4.3 Model Dibanding Data Statis](#43-model-dibanding-data-statis)
   - [5. State dan setState](#5-state-dan-setstate)
+    - [5.1 StatefulWidget dan State](#51-statefulwidget-dan-state)
+    - [5.2 setState](#52-setstate)
+    - [5.3 Kapan setState Diperlukan](#53-kapan-setstate-diperlukan)
   - [6. CRUD Lokal](#6-crud-lokal)
-  - [7. Persistensi dengan shared_preferences](#7-persistensi-dengan-shared_preferences)
+    - [6.1 Create — Menambah Data](#61-create--menambah-data)
+    - [6.2 Read — Menampilkan Data](#62-read--menampilkan-data)
+    - [6.3 Update — Mengubah Data](#63-update--mengubah-data)
+    - [6.4 Delete — Menghapus Data](#64-delete--menghapus-data)
+    - [6.5 Ringkasan CRUD](#65-ringkasan-crud)
+  - [7. Persistensi dengan shared\_preferences](#7-persistensi-dengan-shared_preferences)
+    - [7.1 Menambahkan Package](#71-menambahkan-package)
+    - [7.2 Menyimpan dan Memuat Data](#72-menyimpan-dan-memuat-data)
+    - [7.3 Kapan Persistensi Diperlukan](#73-kapan-persistensi-diperlukan)
   - [8. Dari Form ke Data Lokal](#8-dari-form-ke-data-lokal)
   - [9. Case Based Learning: MVP Pengajuan Peminjaman Ruang Laboratorium](#9-case-based-learning-mvp-pengajuan-peminjaman-ruang-laboratorium)
   - [10. Aktivitas Kelompok](#10-aktivitas-kelompok)
@@ -35,10 +49,11 @@
     - [Cara Pengumpulan — Push ke Repository GitHub Kelas](#cara-pengumpulan--push-ke-repository-github-kelas)
   - [15. Rubrik Tugas 7](#15-rubrik-tugas-7)
   - [16. Verifikasi Kode — Dua Jalur](#16-verifikasi-kode--dua-jalur)
+    - [Peta File ke Jalur Verifikasi](#peta-file-ke-jalur-verifikasi)
     - [Jalur 1: DartPad (tanpa instalasi)](#jalur-1-dartpad-tanpa-instalasi)
     - [Jalur 2: Flutter SDK (sesuai Panduan Lengkap)](#jalur-2-flutter-sdk-sesuai-panduan-lengkap)
   - [17. Persiapan ke Pertemuan 8 (UTS)](#17-persiapan-ke-pertemuan-8-uts)
-  - [📎 Lampiran: Kode Praktikum](#-lampiran-kode-praktikum)
+    - [📎 Lampiran: Kode Praktikum](#-lampiran-kode-praktikum)
 
 ---
 
@@ -605,6 +620,19 @@ Langkah pengumpulan:
 
 Kode praktikum dan Tugas 7 diverifikasi melalui dua jalur berikut — sama dengan Pertemuan 3, 5, dan 6, tanpa emulator.
 
+### Peta File ke Jalur Verifikasi
+
+Tidak semua file kode dapat dijalankan pada kedua jalur. Perbedaan ini berasal dari package `shared_preferences` yang **tidak tersedia di DartPad** — file yang mengimpornya hanya dapat diverifikasi pada Flutter SDK.
+
+| Berkas | Jalur 1 (DartPad) | Jalur 2 (Flutter SDK) | Keterangan |
+|:-------|:-----------------:|:---------------------:|:-----------|
+| `demo-data-lokal-flutter.dart` | ✅ Dapat dijalankan | ✅ Dapat dijalankan | CRUD in-memory tanpa package tambahan |
+| `demo-persistensi-flutter.dart` | ❌ Tidak dapat | ✅ **Wajib** | Mengimpor `shared_preferences` — hanya berjalan di SDK |
+| `latihan-data-lokal-flutter.dart` | ✅ Dapat dijalankan | ✅ Dapat dijalankan | CRUD in-memory tanpa package tambahan |
+| Tugas 7 Anda (`crud-lokal.dart`) | ✅ Dapat dijalankan | ✅ Dapat dijalankan | Tanpa package tambahan (persistensi opsional) |
+
+> **Aturan praktis:** jika kode Anda mengimpor `shared_preferences`, verifikasi **wajib** melalui Jalur 2 (Flutter SDK). Jika tidak, kedua jalur dapat digunakan — pilih Jalur 1 (DartPad) untuk pemeriksaan cepat tanpa instalasi.
+
 ### Jalur 1: DartPad (tanpa instalasi)
 
 1. Buka [DartPad](https://dartpad.dev/?template=app).
@@ -614,7 +642,7 @@ Kode praktikum dan Tugas 7 diverifikasi melalui dua jalur berikut — sama denga
 ### Jalur 2: Flutter SDK (sesuai Panduan Lengkap)
 
 1. Gunakan kode tersebut sebagai dasar pada `lib/main.dart` project hasil `flutter create`.
-2. Tambahkan `shared_preferences` pada `pubspec.yaml` dan jalankan `flutter pub get` (hanya bila menerapkan persistensi).
+2. Tambahkan `shared_preferences` pada `pubspec.yaml` dan jalankan `flutter pub get` (hanya bila menerapkan persistensi — wajib untuk `demo-persistensi-flutter.dart`).
 3. Jalankan dari folder project:
    ```bash
    flutter run -d chrome
@@ -665,11 +693,11 @@ timeline
 
 ### 📎 Lampiran: Kode Praktikum
 
-| Berkas | Keterangan |
-|:-------|:-----------|
-| [`demo-data-lokal-flutter.dart`](../code/pertemuan-07/demo-data-lokal-flutter.dart) | Penyelesaian CBL: MVP pengajuan peminjaman ruang lab dengan model data, state, dan CRUD lokal (in-memory — berjalan di DartPad) |
-| [`demo-persistensi-flutter.dart`](../code/pertemuan-07/demo-persistensi-flutter.dart) | Persistensi dengan `shared_preferences` (Jalur 2 — Flutter SDK): simpan dan muat data setelah aplikasi ditutup |
-| [`latihan-data-lokal-flutter.dart`](../code/pertemuan-07/latihan-data-lokal-flutter.dart) | Latihan TODO terbimbing: aplikasi perpustakaan dengan data lokal — CRUD buku (6 TODO) |
-| [`contoh-tugas-7-mahasiswa.md`](./contoh-tugas-7-mahasiswa.md) | Panduan pengerjaan Tugas 7 untuk mahasiswa: definisi komponen, struktur dokumen, dan daftar pemeriksaan mandiri |
-| [`panduan/Panduan-Lengkap-PAB.md`](../panduan/Panduan-Lengkap-PAB.md) | Skenario instalasi dan peta kebutuhan environment per pertemuan (Bagian 2.1) — Minggu 7 cukup dengan skenario standar (target web) |
-| [`../MILESTONE.md`](../MILESTONE.md) | Milestone M3 (tuntas — MVP awal) dan M4 (UTS project review) sebagai target pertemuan ini |
+| Berkas | Keterangan | Jalur verifikasi |
+|:-------|:-----------|:-----------------|
+| [`demo-data-lokal-flutter.dart`](../code/pertemuan-07/demo-data-lokal-flutter.dart) | Penyelesaian CBL: MVP pengajuan peminjaman ruang lab dengan model data, state, dan CRUD lokal (in-memory) | Jalur 1 (DartPad) atau Jalur 2 (SDK) |
+| [`demo-persistensi-flutter.dart`](../code/pertemuan-07/demo-persistensi-flutter.dart) | Persistensi dengan `shared_preferences`: simpan dan muat data setelah aplikasi ditutup | **Wajib Jalur 2 (Flutter SDK)** — tidak berjalan di DartPad |
+| [`latihan-data-lokal-flutter.dart`](../code/pertemuan-07/latihan-data-lokal-flutter.dart) | Latihan TODO terbimbing: aplikasi perpustakaan dengan data lokal — CRUD buku (6 TODO) | Jalur 1 (DartPad) atau Jalur 2 (SDK) |
+| [`contoh-tugas-7-mahasiswa.md`](./contoh-tugas-7-mahasiswa.md) | Panduan pengerjaan Tugas 7 untuk mahasiswa: definisi komponen, struktur dokumen, dan daftar pemeriksaan mandiri | — |
+| [`panduan/Panduan-Lengkap-PAB.md`](../panduan/Panduan-Lengkap-PAB.md) | Skenario instalasi dan peta kebutuhan environment per pertemuan (Bagian 2.1) — Minggu 7 cukup dengan skenario standar (target web) | — |
+| [`../MILESTONE.md`](../MILESTONE.md) | Milestone M3 (tuntas — MVP awal) dan M4 (UTS project review) sebagai target pertemuan ini | — |
