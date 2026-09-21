@@ -124,6 +124,7 @@ AGENTS.md
 _kunci-jawaban-kuis-per-01.md
 _kunci-jawaban-kuis-per-*.md
 _contoh-tugas-1-per-01.md
+_contoh-tugas-*-per-*.md
 _referensi.md
 
 # Solusi referensi CBL: halaman perpustakaan lengkap (untuk dosen) |
@@ -131,3 +132,7 @@ _referensi.md
 code/pertemuan-03/solusi-widget-flutter.dart
 code/pertemuan-03/_solusi-widget-flutter.dart
 code/pertemuan-03/_fix-solusi-widget-fluter.dart
+code/pertemuan-07/contoh-tugas-7-lengkap.dart
+
+# Solusi referensi Tugas 7: project Flutter contoh (untuk d)
+code/pertemuan-07/contoh-tugas-7/
