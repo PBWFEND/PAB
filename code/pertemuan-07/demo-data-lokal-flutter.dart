@@ -28,6 +28,13 @@
 // `shared_preferences` ditunjukkan pada file terpisah:
 //   code/pertemuan-07/demo-persistensi-flutter.dart
 //
+// Pola state yang digunakan:
+//   Layar daftar memegang state (source of truth). Layar form dan detail
+//   TIDAK mencari state tersebut — layar daftar mengirim callback (fungsi)
+//   ke layar form/detail melalui konstruktor saat berpindah layar. Layar
+//   tujuan memanggil callback untuk meminta perubahan data; layar daftar
+//   yang membungkus perubahannya dengan `setState`.
+//
 // Eksperimen:
 //   Tambah pengajuan dari form, amati daftar bertambah. Ubah status pada
 //   detail, amati daftar diperbarui. Hapus pengajuan dengan konfirmasi.
@@ -39,6 +46,7 @@
 //   - CRUD lokal             : add, itemCount/itemBuilder, indexWhere, removeWhere
 //   - id unik                : kunci operasi update dan delete
 //   - AlertDialog            : konfirmasi sebelum hapus
+//   - Callback melalui konstruktor: layar tujuan tidak mencari state layar daftar
 // ============================================================================
 
 import 'package:flutter/material.dart';
@@ -47,8 +55,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/// Aplikasi utama. Peta layar didefinisikan sekali di sini — setiap layar
-/// dirujuk melalui namanya, bukan melalui konstruktor tersebar.
+/// Aplikasi utama.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -61,12 +68,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const HalamanDaftarPengajuan(),
-        '/form': (context) => const FormPengajuan(),
-        '/detail': (context) => const DetailPengajuan(),
-      },
+      home: const HalamanDaftarPengajuan(),
     );
   }
 }
@@ -90,10 +92,23 @@ class DataPengajuan {
 
   @override
   String toString() => 'Pengajuan $ruang — $tanggal ($jam)';
+
+  /// Membuat salinan objek dengan field baru — digunakan pada Update.
+  DataPengajuan salinDengan({String? status}) {
+    return DataPengajuan(
+      id: id,
+      ruang: ruang,
+      tanggal: tanggal,
+      jam: jam,
+      status: status ?? this.status,
+    );
+  }
 }
 
 /// Layar daftar pengajuan — StatefulWidget karena menyimpan data yang
-/// berubah (daftar pengajuan) pada state.
+/// berubah (daftar pengajuan) pada state. Layar ini adalah satu-satunya
+/// pemilik state `_daftar`; layar form dan detail memintanya mengubah
+/// data melalui callback yang dikirim lewat konstruktor.
 class HalamanDaftarPengajuan extends StatefulWidget {
   const HalamanDaftarPengajuan({super.key});
 
@@ -132,54 +147,92 @@ class _HalamanDaftarPengajuanState extends State<HalamanDaftarPengajuan> {
               },
             ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => Navigator.pushNamed(context, '/form'),
+        onPressed: _bukaForm,
         icon: const Icon(Icons.add),
         label: const Text('Ajukan'),
       ),
     );
   }
 
-  /// Membuka detail — data dikirim melalui arguments (Pertemuan 6).
-  void _bukaDetail(DataPengajuan pengajuan) {
-    Navigator.pushNamed(context, '/detail', arguments: pengajuan);
+  /// Membuka form — mengirim callback `tambahPengajuan` yang dapat
+  /// dipanggil layar form untuk menyimpan data baru.
+  void _bukaForm() {
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (context) =>
+            FormPengajuan(onKirim: (pengajuan) => tambahPengajuan(pengajuan)),
+      ),
+    );
   }
 
-  /// Create — menambah pengajuan dari form (dipanggil layar form).
+  /// Membuka detail — mengirim callback ubah status dan hapus yang dapat
+  /// dipanggil layar detail untuk meminta perubahan data.
+  void _bukaDetail(DataPengajuan pengajuan) {
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (context) => DetailPengajuan(
+          pengajuan: pengajuan,
+          onUbahStatus: (status) => ubahStatus(pengajuan.id, status),
+          onHapus: () => _konfirmasiHapus(pengajuan),
+        ),
+      ),
+    );
+  }
+
+  /// Create — menambah pengajuan dari form (callback layar form).
   void tambahPengajuan(DataPengajuan pengajuan) {
     setState(() {
       _daftar.add(pengajuan);
     });
   }
 
-  /// Update — mengubah status pengajuan (dipanggil layar detail).
+  /// Update — mengubah status pengajuan (callback layar detail).
   void ubahStatus(String id, String statusBaru) {
     setState(() {
       final index = _daftar.indexWhere((p) => p.id == id);
       if (index != -1) {
-        final lama = _daftar[index];
-        _daftar[index] = DataPengajuan(
-          id: lama.id,
-          ruang: lama.ruang,
-          tanggal: lama.tanggal,
-          jam: lama.jam,
-          status: statusBaru,
-        );
+        _daftar[index] = _daftar[index].salinDengan(status: statusBaru);
       }
     });
   }
 
-  /// Delete — menghapus pengajuan berdasarkan id.
-  void hapusPengajuan(String id) {
+  Future<bool> _konfirmasiHapus(DataPengajuan pengajuan) async {
+    final yakin = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Hapus pengajuan?'),
+        content: Text('Pengajuan ${pengajuan.ruang} akan dihapus.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Batal'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Hapus'),
+          ),
+        ],
+      ),
+    );
+    if (yakin != true) {
+      return false;
+    }
     setState(() {
-      _daftar.removeWhere((p) => p.id == id);
+      _daftar.removeWhere((p) => p.id == pengajuan.id);
     });
+    return true;
   }
 }
 
 /// Form pengajuan — validasi (Pertemuan 6) dilanjutkan dengan penyimpanan
-/// ke daftar melalui callback yang diterima dari layar daftar.
+/// ke daftar melalui callback `onKirim` yang diterima dari layar daftar.
 class FormPengajuan extends StatefulWidget {
-  const FormPengajuan({super.key});
+  const FormPengajuan({super.key, required this.onKirim});
+
+  /// Callback yang dipanggil saat data valid — diisi layar daftar.
+  final void Function(DataPengajuan pengajuan) onKirim;
 
   @override
   State<FormPengajuan> createState() => _FormPengajuanState();
@@ -203,13 +256,7 @@ class _FormPengajuanState extends State<FormPengajuan> {
     if (!_formKey.currentState!.validate()) {
       return;
     }
-    // Membaca layar daftar dari stack Navigator untuk memanggil callback.
-    final daftarState = context
-        .findAncestorStateOfType<_HalamanDaftarPengajuanState>();
-    if (daftarState == null) {
-      return;
-    }
-    daftarState.tambahPengajuan(
+    widget.onKirim(
       DataPengajuan(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
         ruang: _ruangController.text.trim(),
@@ -278,10 +325,7 @@ class _FormPengajuanState extends State<FormPengajuan> {
                 },
               ),
               const SizedBox(height: 16),
-              FilledButton(
-                onPressed: _kirim,
-                child: const Text('Kirim'),
-              ),
+              FilledButton(onPressed: _kirim, child: const Text('Kirim')),
             ],
           ),
         ),
@@ -291,22 +335,43 @@ class _FormPengajuanState extends State<FormPengajuan> {
 }
 
 /// Detail pengajuan — read-only (Pertemuan 6) ditambah aksi ubah status
-/// dan hapus yang memanggil callback layar daftar.
+/// dan hapus. Perubahan data diminta melalui callback ke layar daftar;
+/// konfirmasi hapus ditampilkan di layar daftar (pemilik state).
 class DetailPengajuan extends StatelessWidget {
-  const DetailPengajuan({super.key});
+  const DetailPengajuan({
+    super.key,
+    required this.pengajuan,
+    required this.onUbahStatus,
+    required this.onHapus,
+  });
+
+  final DataPengajuan pengajuan;
+
+  /// Callback ubah status — diisi layar daftar.
+  final void Function(String status) onUbahStatus;
+
+  /// Callback hapus (menampilkan konfirmasi, menghapus bila disetujui).
+  /// Menghasilkan true bila data dihapus — layar detail menutup dirinya
+  /// hanya pada kondisi tersebut; bila dibatalkan, detail tetap tampil.
+  final Future<bool> Function() onHapus;
+
+  void _ubahStatus(BuildContext context, String status) {
+    onUbahStatus(status);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Status "${pengajuan.ruang}" menjadi $status.')),
+    );
+    Navigator.pop(context);
+  }
+
+  Future<void> _mintaHapus(BuildContext context) async {
+    final dihapus = await onHapus();
+    if (dihapus && context.mounted) {
+      Navigator.pop(context);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)?.settings.arguments;
-    final pengajuan = args is DataPengajuan ? args : null;
-
-    if (pengajuan == null) {
-      return Scaffold(
-        appBar: AppBar(title: const Text('Detail Pengajuan')),
-        body: const Center(child: Text('Data tidak tersedia.')),
-      );
-    }
-
     return Scaffold(
       appBar: AppBar(title: const Text('Detail Pengajuan')),
       body: Padding(
@@ -314,7 +379,10 @@ class DetailPengajuan extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(pengajuan.ruang, style: Theme.of(context).textTheme.headlineSmall),
+            Text(
+              pengajuan.ruang,
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
             const SizedBox(height: 8),
             Text('${pengajuan.tanggal} — ${pengajuan.jam}'),
             const SizedBox(height: 8),
@@ -323,19 +391,19 @@ class DetailPengajuan extends StatelessWidget {
             Row(
               children: [
                 FilledButton(
-                  onPressed: () => _ubahStatus(context, pengajuan, 'disetujui'),
+                  onPressed: () => _ubahStatus(context, 'disetujui'),
                   child: const Text('Setujui'),
                 ),
                 const SizedBox(width: 8),
                 OutlinedButton(
-                  onPressed: () => _ubahStatus(context, pengajuan, 'ditolak'),
+                  onPressed: () => _ubahStatus(context, 'ditolak'),
                   child: const Text('Tolak'),
                 ),
                 const Spacer(),
                 IconButton(
                   tooltip: 'Hapus',
                   icon: const Icon(Icons.delete_outline),
-                  onPressed: () => _konfirmasiHapus(context, pengajuan),
+                  onPressed: () => _mintaHapus(context),
                 ),
               ],
             ),
@@ -343,43 +411,6 @@ class DetailPengajuan extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _ubahStatus(BuildContext context, DataPengajuan pengajuan, String status) {
-    final daftarState = context
-        .findAncestorStateOfType<_HalamanDaftarPengajuanState>();
-    daftarState?.ubahStatus(pengajuan.id, status);
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Status "${pengajuan.ruang}" menjadi $status.')),
-    );
-    Navigator.pop(context);
-  }
-
-  Future<void> _konfirmasiHapus(
-      BuildContext context, DataPengajuan pengajuan) async {
-    final yakin = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Hapus pengajuan?'),
-        content: Text('Pengajuan ${pengajuan.ruang} akan dihapus.'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text('Batal'),
-          ),
-          FilledButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: const Text('Hapus'),
-          ),
-        ],
-      ),
-    );
-    if (yakin == true) {
-      final daftarState = context
-          .findAncestorStateOfType<_HalamanDaftarPengajuanState>();
-      daftarState?.hapusPengajuan(pengajuan.id);
-      Navigator.pop(context);
-    }
   }
 }
 

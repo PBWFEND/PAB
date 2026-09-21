@@ -105,13 +105,15 @@ class _HalamanDaftarPengajuanState extends State<HalamanDaftarPengajuan> {
     setState(() {
       _daftar.clear();
       _daftar.addAll(
-        data.map((item) => DataPengajuan(
-              id: item['id'] as String,
-              ruang: item['ruang'] as String,
-              tanggal: item['tanggal'] as String,
-              jam: item['jam'] as String,
-              status: item['status'] as String,
-            )),
+        data.map(
+          (item) => DataPengajuan(
+            id: item['id'] as String,
+            ruang: item['ruang'] as String,
+            tanggal: item['tanggal'] as String,
+            jam: item['jam'] as String,
+            status: item['status'] as String,
+          ),
+        ),
       );
     });
   }
@@ -121,13 +123,15 @@ class _HalamanDaftarPengajuanState extends State<HalamanDaftarPengajuan> {
     final prefs = await SharedPreferences.getInstance();
     final teks = jsonEncode(
       _daftar
-          .map((p) => {
-                'id': p.id,
-                'ruang': p.ruang,
-                'tanggal': p.tanggal,
-                'jam': p.jam,
-                'status': p.status,
-              })
+          .map(
+            (p) => {
+              'id': p.id,
+              'ruang': p.ruang,
+              'tanggal': p.tanggal,
+              'jam': p.jam,
+              'status': p.status,
+            },
+          )
           .toList(),
     );
     await prefs.setString('daftar_pengajuan', teks);
