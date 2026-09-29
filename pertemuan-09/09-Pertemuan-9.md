@@ -844,12 +844,12 @@ tugas-9/
 
 1. Masuk ke repository lokal, pastikan berada pada branch `<nim>`, dan buat direktori tugas:
   **SI-VIIB:**
-   ```bash
+  ```bash
   git clone https://github.com/PBWFEND/SI-VIIB-Mobile.git
   cd SI-VIIB-Mobile
   git checkout <nim>
   mkdir -p tugas-9
-   ```
+  ```
   **SI-VIIA:**
   ```bash
   git clone https://github.com/PBWFEND/SI-VIIA-Mobile.git
@@ -866,10 +866,10 @@ tugas-9/
   git push origin <nim>
    ```
 5. Buat Pull Request dari branch tugas ke `main`:
-  ```bash
-  gh pr create --base main --head <nim> --title "Tugas 9: Integrasi REST API - <nama> <nim>" --body "Pengumpulan Tugas 9 dan refleksi."
-  ```
-  Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
+```bash
+gh pr create --base main --head <nim> --title "Tugas 9: Integrasi REST API - <nama> <nim>" --body "Pengumpulan Tugas 9 dan refleksi."
+```
+Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
 6. Buka Pull Request di browser dan pastikan folder tugas serta seluruh berkas dapat dibaca sebelum tenggat.
 
 ---

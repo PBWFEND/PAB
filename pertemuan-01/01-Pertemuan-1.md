@@ -530,9 +530,9 @@ Langkah pengumpulan:
   git push --set-upstream origin <nim>
     ```
 4. Buat Pull Request dari branch tugas ke `main`:
-  ```bash
-  gh pr create --base main --head <nim> --title "Tugas 1: Identifikasi Kebutuhan Aplikasi Bergerak - <nama> <nim>" --body "Pengumpulan Tugas 1 dan refleksi."
-  ```
+    ```bash
+    gh pr create --base main --head <nim> --title "Tugas 1: Identifikasi Kebutuhan Aplikasi Bergerak - <nama> <nim>" --body "Pengumpulan Tugas 1 dan refleksi."
+    ```
   Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
 5. **Verifikasi** — pastikan Pull Request berhasil dibuat, branch menggunakan NIM mahasiswa, dan berkas tugas dapat dibaca sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
 

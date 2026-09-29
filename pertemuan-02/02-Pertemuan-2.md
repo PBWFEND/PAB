@@ -497,13 +497,13 @@ Langkah pengumpulan:
   git push origin <nim>
    ```
 5. Buat Pull Request dari branch tugas ke `main`:
-  ```bash
-  gh pr create \
-    --base main \
-    --head <nim> \
-    --title "Tugas 2: Modul Hitung Nilai - <nama> <nim>" \
-    --body "Pengumpulan Tugas 2 dan refleksi."
-  ```
+   ```bash
+   gh pr create \
+     --base main \
+     --head <nim> \
+     --title "Tugas 2: Modul Hitung Nilai - <nama> <nim>" \
+     --body "Pengumpulan Tugas 2 dan refleksi."
+   ```
   Jika GitHub CLI tidak tersedia, buka repository di browser, pilih **Compare & pull request**, pastikan `base: main` dan `compare: <nim>`, lalu kirim Pull Request.
 6. **Verifikasi** — pastikan Pull Request berhasil dibuat, branch menggunakan NIM mahasiswa, berkas dapat dibaca, dan status pemeriksaan repository tidak bermasalah sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
 

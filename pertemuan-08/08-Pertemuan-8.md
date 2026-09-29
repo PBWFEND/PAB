@@ -386,9 +386,9 @@ Langkah pengumpulan:
   ```
 
 5. Buat Pull Request dari branch UTS ke `main`:
-   ```bash
+  ```bash
   gh pr create --base main --head <nim> --title "UTS: Progress Project - <nama> <nim>" --body "Pengumpulan laporan dan artefak UTS."
-   ```
+  ```
   Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
 6. Buka Pull Request di browser dan pastikan folder UTS serta seluruh berkas dapat dibaca sebelum sesi evaluasi.
 

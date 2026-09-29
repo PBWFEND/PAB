@@ -494,7 +494,7 @@ Langkah pengumpulan:
   ```
 
 5. Buat Pull Request dari branch tugas ke `main`:
-   ```bash
+  ```bash
   gh pr create --base main --head <nim> --title "Tugas 10: Integrasi Proses Bisnis - <nama> <nim>" --body "Pengumpulan Tugas 10 dan refleksi."
    ```
   Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.

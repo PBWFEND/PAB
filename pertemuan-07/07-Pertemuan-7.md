@@ -607,9 +607,9 @@ Langkah pengumpulan:
   git push origin <nim>
    ```
 5. Buat Pull Request dari branch tugas ke `main`:
-  ```bash
-  gh pr create --base main --head <nim> --title "Tugas 7: Data Lokal dan CRUD - <nama> <nim>" --body "Pengumpulan Tugas 7 dan refleksi."
-  ```
+    ```bash
+    gh pr create --base main --head <nim> --title "Tugas 7: Data Lokal dan CRUD - <nama> <nim>" --body "Pengumpulan Tugas 7 dan refleksi."
+    ```
   Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
 6. **Verifikasi** — pastikan Pull Request berhasil dibuat, branch menggunakan NIM mahasiswa, dan berkas tugas dapat dibaca sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
 

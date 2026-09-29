@@ -439,7 +439,7 @@ Langkah pengumpulan:
   ```
 
 5. Buat Pull Request dari branch tugas ke `main`:
-   ```bash
+  ```bash
   gh pr create --base main --head <nim> --title "Tugas 11: Fitur Perangkat - <nama> <nim>" --body "Pengumpulan Tugas 11 dan refleksi."
    ```
   Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
