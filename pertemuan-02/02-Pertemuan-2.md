@@ -468,18 +468,23 @@ Tugas dikumpulkan dengan **push ke repository GitHub kelas** (sesuai kelas Anda)
 
 | Kelas | Repository |
 |:------|:-----------|
-| SI-VIIB | `SI-VIIB-Mobile` |
-| SI-VIIA | `SI-VIIA-Mobile` |
+| SI-VIIB | [SI-VIIB-Mobile](https://github.com/PBWFEND/SI-VIIB-Mobile) |
+| SI-VIIA | [SI-VIIA-Mobile](https://github.com/PBWFEND/SI-VIIA-Mobile) |
 
 > Alamat lengkap repo (organisasi/URL) akan dibagikan melalui kanal kelas. Gunakan repo kelas Anda sendiri — tugas yang di-push ke kelas lain tidak dinilai.
 
 Langkah pengumpulan:
 
-1. *Clone* repo kelas, lalu buat folder tugas dengan nama `<nim>-<nama>`:
+1. Masuk ke branch NIM Anda, lalu buat folder `tugas-2/`:
    ```bash
-   git clone https://github.com/<org-kelas>/SI-VIIB-Mobile.git
-   cd SI-VIIB-Mobile
-   mkdir -p tugas-2/<nim>-<nama>
+  # Pilih URL sesuai kelas:
+  # SI-VIIB: https://github.com/PBWFEND/SI-VIIB-Mobile.git
+  # SI-VIIA: https://github.com/PBWFEND/SI-VIIA-Mobile.git
+  git clone https://github.com/PBWFEND/SI-VIIB-Mobile.git
+  # SI-VIIB menggunakan folder ini; SI-VIIA gunakan: cd SI-VIIA-Mobile
+  cd SI-VIIB-Mobile
+  git checkout <nim>
+  mkdir -p tugas-2
    ```
 2. Simpan berkas tugas ke dalam folder tersebut:
    - `hitung_nilai.dart` — kode modul.
@@ -487,11 +492,20 @@ Langkah pengumpulan:
 3. Jalankan `dart hitung_nilai.dart` dan pastikan tanpa error.
 4. Commit dan push:
    ```bash
-   git add tugas-2/<nim>-<nama>
+  git add tugas-2
    git commit -m "tugas-2: modul hitung nilai - <nama> <nim>"
-   git push origin main
+  git push origin <nim>
    ```
-5. **Verifikasi** — buka repo di browser dan pastikan berkas tugas Anda sudah tampil sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
+5. Buat Pull Request dari branch tugas ke `main`:
+  ```bash
+  gh pr create \
+    --base main \
+    --head <nim> \
+    --title "Tugas 2: Modul Hitung Nilai - <nama> <nim>" \
+    --body "Pengumpulan Tugas 2 dan refleksi."
+  ```
+  Jika GitHub CLI tidak tersedia, buka repository di browser, pilih **Compare & pull request**, pastikan `base: main` dan `compare: <nim>`, lalu kirim Pull Request.
+6. **Verifikasi** — pastikan Pull Request berhasil dibuat, branch menggunakan NIM mahasiswa, berkas dapat dibaca, dan status pemeriksaan repository tidak bermasalah sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
 
 ---
 

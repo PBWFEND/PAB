@@ -500,18 +500,23 @@ Tugas dikumpulkan dengan **push ke repository GitHub kelas** (sesuai kelas Anda)
 
 | Kelas | Repository |
 |:------|:-----------|
-| SI-VIIB | `SI-VIIB-Mobile` |
-| SI-VIIA | `SI-VIIA-Mobile` |
+| SI-VIIB | [SI-VIIB-Mobile](https://github.com/PBWFEND/SI-VIIB-Mobile) |
+| SI-VIIA | [SI-VIIA-Mobile](https://github.com/PBWFEND/SI-VIIA-Mobile) |
 
 > Alamat lengkap repo (organisasi/URL) akan dibagikan melalui kanal kelas. Gunakan repo kelas Anda sendiri — tugas yang di-push ke kelas lain tidak dinilai.
 
 Langkah pengumpulan:
 
-1. *Clone* repo kelas, lalu buat folder tugas dengan nama `<nim>-<nama>`:
+1. *Clone* repo kelas, lalu buat folder `tugas-1/` pada branch NIM Anda:
     ```bash
-    git clone https://github.com/<org-kelas>/SI-VIIB-Mobile.git
+    # Pilih URL sesuai kelas:
+    # SI-VIIB: https://github.com/PBWFEND/SI-VIIB-Mobile.git
+    # SI-VIIA: https://github.com/PBWFEND/SI-VIIA-Mobile.git
+    git clone https://github.com/PBWFEND/SI-VIIB-Mobile.git
+    # SI-VIIB menggunakan folder ini; SI-VIIA gunakan: cd SI-VIIA-Mobile
     cd SI-VIIB-Mobile
-    mkdir -p tugas-1/<nim>-<nama>
+    git checkout -b <nim>
+    mkdir -p tugas-1
     ```
 2. Simpan berkas tugas ke dalam folder tersebut:
     - `README.md` atau `tugas-1.pdf` — deskripsi sistem, tabel kebutuhan, refleksi (cantumkan Nama + NIM).
@@ -520,11 +525,16 @@ Langkah pengumpulan:
     - `aplikasi.png` — tangkapan layar aplikasi counter berjalan.
 3. Commit dan push:
     ```bash
-    git add tugas-1/<nim>-<nama>
+    git add tugas-1
     git commit -m "tugas-1: identifikasi kebutuhan aplikasi bergerak - <nama> <nim>"
-    git push origin main
+  git push --set-upstream origin <nim>
     ```
-4. **Verifikasi** — buka repo di browser dan pastikan berkas tugas Anda sudah tampil sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
+4. Buat Pull Request dari branch tugas ke `main`:
+  ```bash
+  gh pr create --base main --head <nim> --title "Tugas 1: Identifikasi Kebutuhan Aplikasi Bergerak - <nama> <nim>" --body "Pengumpulan Tugas 1 dan refleksi."
+  ```
+  Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
+5. **Verifikasi** — pastikan Pull Request berhasil dibuat, branch menggunakan NIM mahasiswa, dan berkas tugas dapat dibaca sebelum tenggat. Terlambat dihitung dari waktu *push* terakhir.
 
 ---
 

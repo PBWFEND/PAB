@@ -26,7 +26,16 @@
 | 15 | Kode praktikum Pertemuan 6 — [`code/pertemuan-06/`](./code/pertemuan-06/) | `demo-navigasi-flutter.dart`, `latihan-navigasi-flutter.dart` (TODO terbimbing) |
 | 16 | [Pertemuan 7 — `pertemuan-07/07-Pertemuan-7.md`](./pertemuan-07/07-Pertemuan-7.md) | Pengelolaan data lokal: model data, state dengan `StatefulWidget` dan `setState`, CRUD lokal, serta persistensi dasar `shared_preferences` |
 | 17 | Kode praktikum Pertemuan 7 — [`code/pertemuan-07/`](./code/pertemuan-07/) | `demo-data-lokal-flutter.dart`, `demo-persistensi-flutter.dart`, `latihan-data-lokal-flutter.dart` (TODO terbimbing) |
-| 18 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 18 | [Pertemuan 8 — `pertemuan-08/08-Pertemuan-8.md`](./pertemuan-08/08-Pertemuan-8.md) | UTS: evaluasi tengah semester — kisi-kisi, tes konsep 10 soal esai, evaluasi progress project (Milestone M4), rubrik, dan template laporan progress |
+| 19 | [Pertemuan 9 — `pertemuan-09/09-Pertemuan-9.md`](./pertemuan-09/09-Pertemuan-9.md) | Integrasi REST API: arsitektur client–server, `Future`/`async`/`await`, package `http`, `GET`/`POST`, parsing JSON (`fromJson`/`toJson`), tiga kondisi antarmuka, lapisan service, CBL, dan Tugas 9 |
+| 20 | Kode praktikum Pertemuan 9 — [`code/pertemuan-09/`](./code/pertemuan-09/) | `demo-rest-api-flutter.dart` (CBL lengkap), `latihan-rest-api-flutter.dart` (TODO terbimbing) |
+| 21 | [Pertemuan 10 — `pertemuan-10/10-Pertemuan-10.md`](./pertemuan-10/10-Pertemuan-10.md) | Integrasi data dan proses bisnis SI: beberapa endpoint, model relasional, `Future.wait`, service layer, status proses, dan Tugas 10 |
+| 22 | Kode praktikum Pertemuan 10 — [`code/pertemuan-10/`](./code/pertemuan-10/) | `demo-integrasi-proses-bisnis-flutter.dart` (demo lengkap) dan `latihan-integrasi-proses-bisnis-flutter.dart` (TODO terbimbing) |
+| 23 | Panduan Tugas 10 — [`pertemuan-10/contoh-tugas-10-mahasiswa.md`](./pertemuan-10/contoh-tugas-10-mahasiswa.md) | Kerangka pengumpulan integrasi data dan proses bisnis |
+| 24 | [Pertemuan 11 — `pertemuan-11/11-Pertemuan-11.md`](./pertemuan-11/11-Pertemuan-11.md) | Fitur perangkat sesuai kebutuhan: kamera, lokasi, file, notification, permission, lifecycle, dan Tugas 11 |
+| 25 | Panduan Tugas 11 — [`pertemuan-11/contoh-tugas-11-mahasiswa.md`](./pertemuan-11/contoh-tugas-11-mahasiswa.md) | Kerangka pengumpulan integrasi fitur perangkat |
+| 26 | Kode praktikum Pertemuan 11 — [`code/pertemuan-11/`](./code/pertemuan-11/) | `demo-fitur-perangkat-flutter.dart` (demo `image_picker`) dan `latihan-fitur-perangkat-flutter.dart` (TODO terbimbing) |
+| 27 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -110,6 +119,39 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [Flutter — AlertDialog API](https://api.flutter.dev/flutter/material/AlertDialog-class.html) — referensi API `AlertDialog` untuk konfirmasi aksi
 - [shared_preferences — pub.dev](https://pub.dev/packages/shared_preferences) — package penyimpanan pasangan kunci-nilai untuk persistensi dasar
 - [Dart — JSON support](https://dart.dev/guides/json) — `jsonEncode` dan `jsonDecode` untuk menyimpan data model sebagai teks
+
+### 08-Pertemuan-8.md — UTS: Evaluasi Tengah Semester
+
+- [Flutter — State management overview](https://docs.flutter.dev/resources/architectural-overview#stateful-widgets) — konsep state dan `setState` yang dievaluasi pada UTS
+- [Flutter — Navigation overview](https://docs.flutter.dev/ui/navigation) — konsep route dan `Navigator` yang dievaluasi pada UTS
+- [ProductPlan — MoSCoW Prioritization](https://www.productplan.com/glossary/moscow-prioritization/) — prioritas kebutuhan yang dievaluasi pada UTS
+- [Mermaid Live Editor](https://mermaid.live/) — alat menggambar dan mengekspor user flow dan diagram arsitektur
+
+### 09-Pertemuan-9.md — Integrasi REST API
+
+- [Dart — Asynchronous programming](https://dart.dev/learn/tutorial/async) — `Future`, `async`/`await`, dan *event loop*
+- [Dart — Data and JSON](https://dart.dev/learn/tutorial/data-and-json) — `jsonEncode` dan `jsonDecode` untuk serialisasi/deserialisasi
+- [Dart — Fetch data from the internet](https://dart.dev/learn/tutorial/fetch-data) — konsumsi REST API dengan package `http`
+- [Flutter — Fetch data from the internet](https://docs.flutter.dev/cookbook/networking/fetch-data) — pola `http.get` dan `FutureBuilder`
+- [Flutter — Send data to the internet](https://docs.flutter.dev/cookbook/networking/send-data) — pola `http.post` dengan header dan body JSON
+- [package http — pub.dev](https://pub.dev/packages/http) — dokumentasi package `http` untuk Flutter/Dart
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) — API simulasi publik untuk latihan GET/POST
+
+### 10-Pertemuan-10.md — Integrasi Data dan Proses Bisnis Sistem Informasi
+
+- [Dart — Asynchronous programming](https://dart.dev/language/async) — `Future`, `async`/`await`, dan penggabungan operasi asynchronous
+- [Dart API — dart:convert](https://api.dart.dev/dart-convert/) — `jsonEncode`, `jsonDecode`, dan serialisasi/deserialisasi data JSON
+- [Dart — Future.wait](https://api.dart.dev/dart-async/Future/wait.html) — menjalankan beberapa `Future` dan menunggu hasilnya
+- [Flutter — Networking](https://docs.flutter.dev/cookbook/networking) — pola komunikasi aplikasi Flutter dengan layanan jaringan
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) — API simulasi untuk latihan integrasi beberapa endpoint
+
+### 11-Pertemuan-11.md — Fitur Perangkat Sesuai Kebutuhan
+
+- [Flutter — Packages and plugins](https://docs.flutter.dev/packages-and-plugins/using-packages) — cara menambahkan dan menggunakan package Flutter
+- [image_picker — pub.dev](https://pub.dev/packages/image_picker) — memilih gambar dari kamera atau galeri
+- [geolocator — pub.dev](https://pub.dev/packages/geolocator) — membaca lokasi perangkat dengan permission
+- [file_picker — pub.dev](https://pub.dev/packages/file_picker) — memilih file dari perangkat
+- [flutter_local_notifications — pub.dev](https://pub.dev/packages/flutter_local_notifications) — membuat notification lokal sesuai kebutuhan aplikasi
 
 ### Repositori Kelas
 
