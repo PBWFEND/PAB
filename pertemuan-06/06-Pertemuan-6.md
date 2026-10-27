@@ -492,7 +492,7 @@ Langkah pengumpulan:
 | Catatan keputusan navigasi | 15% | Seluruh keputusan beralasan dan merujuk IA/kebutuhan | Keputusan lengkap, alasan sebagian | Catatan parsial tanpa alasan | Tidak ada catatan |
 | Refleksi dan ketepatan waktu | 10% | Refleksi 3 kalimat logis, tepat waktu | Refleksi ada, kurang mendalam | Refleksi kurang dari 3 kalimat | Tidak ada / terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 

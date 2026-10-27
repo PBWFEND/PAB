@@ -10,6 +10,13 @@
 //   flutter pub get
 //   flutter analyze
 //   flutter run -d chrome
+//
+// TODO:
+//   1. Lengkapi validator judul.
+//   2. Tampilkan status penolakan saat form tidak valid.
+//   3. Tampilkan status penyimpanan saat form valid.
+//   4. Cegah pemrosesan ganda saat tombol ditekan lebih dari sekali.
+//   5. Lengkapi ringkasan menjadi minimal enam test case.
 // ============================================================================
 
 import 'package:flutter/material.dart';
@@ -61,9 +68,10 @@ class _HalamanLatihanState extends State<HalamanLatihan> {
   void _simpan() {
     // TODO 2: Jika form tidak valid, tampilkan status penolakan.
     // TODO 3: Jika valid, ubah _status menjadi hasil penyimpanan.
+    // TODO 4: Cegah pemrosesan ganda ketika tombol ditekan lebih dari sekali.
   }
 
-  /// TODO 4: Buat minimal enam test case dari perilaku halaman ini.
+  /// TODO 5: Lengkapi ringkasan menjadi minimal enam test case dari perilaku halaman ini.
   void _tampilkanSkenarioTest() {
     setState(() {
       _status = 'TC-01: input valid; TC-02: judul kosong; TC-03: batas panjang.';

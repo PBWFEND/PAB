@@ -499,7 +499,7 @@ Langkah pengumpulan:
 | Widget tree + dokumentasi | 20% | Diagram jelas, ≥ 3 tingkat, sesuai kode | Diagram ada, kurang detail | Diagram parsial | Tidak ada diagram |
 | Refleksi + ketepatan waktu | 10% | Refleksi 3 kalimat logis, tepat waktu | Refleksi ada, kurang mendalam | Refleksi kurang dari 3 kalimat | Tidak ada / terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 

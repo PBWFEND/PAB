@@ -6,7 +6,7 @@ Dokumen ini membantu Anda memahami **apa yang harus dikerjakan** pada Tugas 3. P
 |:--|:--|
 | **Tenggat** | Sebelum Pertemuan 4 |
 | **Pengumpulan** | Push ke repository GitHub kelas |
-| **Nilai** | Rubrik Tugas 3 pada materi Pertemuan 3 (Σ bobot = 100%, Nilai = Σ(bobot×skor)/16×100) |
+| **Nilai** | Rubrik Tugas 3 pada materi Pertemuan 3 (Σ bobot = 100%, Nilai = Σ(bobot×skor)/4) |
 
 ---
 

@@ -7,7 +7,7 @@
 | **CPMK** | CPMK-4 |
 | **Model Pembelajaran** | Case Based Learning / Project Based Learning |
 | **Stack** | Flutter + Dart, validasi input, HTTPS, token, permission, secure storage |
-| **Milestone** | M7 — Validasi dan Keamanan Praktis |
+| **Milestone** | M7 — Quality dan Security |
 
 > **Catatan penting:** Pertemuan 12 membahas validasi input dan keamanan praktis pada aplikasi mobile. Anda akan membedakan validasi pada halaman dengan pemeriksaan pada server, memahami penggunaan HTTPS dan token, meninjau permission fitur perangkat, serta menyusun security checklist yang sesuai dengan kebutuhan project.
 >
@@ -48,7 +48,9 @@
 
 Pertemuan 12 mendukung **CPMK-4**:
 
-> Mahasiswa mampu menerapkan validasi input dan keamanan praktis pada aplikasi bergerak sesuai kebutuhan serta risiko yang teridentifikasi.
+> Mahasiswa mampu menerapkan validasi, keamanan aplikasi secara praktis, pengujian, debugging, dan perbaikan kualitas pada aplikasi bergerak.
+
+Fokus Pertemuan 12 adalah validasi input dan keamanan praktis yang sesuai dengan kebutuhan serta risiko project.
 
 Pertemuan 9–11 memperkenalkan REST API, integrasi proses bisnis, dan fitur perangkat. Pertemuan 12 menambahkan pemeriksaan agar data yang dikirim, token yang digunakan, dan permission fitur dikelola secara lebih bertanggung jawab.
 
@@ -139,10 +141,10 @@ Form(
     validator: (value) {
       final nama = value?.trim() ?? '';
       if (nama.isEmpty) {
-        return 'Nama pemohon wajib diisi';
+        return 'Nama wajib diisi';
       }
       if (nama.length > 100) {
-        return 'Nama pemohon maksimal 100 karakter';
+        return 'Nama maksimal 100 karakter';
       }
       return null;
     },
@@ -223,6 +225,7 @@ Prinsip implementasi:
 - gunakan masa berlaku token yang sesuai kebijakan backend;
 - hapus token saat logout;
 - tangani token kedaluwarsa dengan alur login ulang atau refresh sesuai kontrak backend;
+- bedakan `401` (token tidak valid atau kedaluwarsa) dan `403` (token sah tetapi tidak memiliki hak akses) ketika menampilkan pesan error;
 - jangan menganggap token yang tersimpan otomatis membuat endpoint aman.
 
 Contoh API konseptual:
@@ -235,7 +238,7 @@ abstract class TokenStorage {
 }
 ```
 
-Konfigurasi platform package harus mengikuti dokumentasi resmi. Jangan menyalin permission atau konfigurasi tanpa memahami dampaknya.
+Konfigurasi package pada setiap platform harus mengikuti dokumentasi resmi. Jangan menggunakan permission atau konfigurasi dari contoh lain tanpa memahami dampaknya.
 
 ---
 
@@ -324,12 +327,12 @@ Bentuk kelompok yang terdiri atas 3–4 mahasiswa:
 
 Gunakan contoh pada [`../code/pertemuan-12/validasi-keamanan-flutter.dart`](../code/pertemuan-12/validasi-keamanan-flutter.dart), lalu lengkapi scaffold [`../code/pertemuan-12/latihan-keamanan-flutter.dart`](../code/pertemuan-12/latihan-keamanan-flutter.dart).
 
-1. Tambahkan validator nama, email, dan tanggal.
+1. Tambahkan validator nama dan email. Jika project Anda memerlukan tanggal, tambahkan validator tanggal dengan rentang yang sesuai.
 2. Tolak input kosong dan input yang melebihi batas panjang.
 3. Tulis tiga pemeriksaan keamanan yang relevan untuk project Anda.
 4. Tentukan permission yang benar-benar diperlukan.
 5. Isi bukti pada security checklist.
-6. Jelaskan mengapa token tidak boleh disimpan pada `shared_preferences` untuk kebutuhan rahasia.
+6. Jelaskan mengapa token tidak boleh disimpan pada `shared_preferences` sebagai data rahasia.
 
 ---
 
@@ -347,7 +350,7 @@ Gunakan contoh pada [`../code/pertemuan-12/validasi-keamanan-flutter.dart`](../c
 **❌ Jangan gunakan AI untuk:**
 
 - Memasukkan token, password, data pribadi, atau source code sensitif ke dalam prompt.
-- Menyalin konfigurasi secure storage atau permission tanpa memahami platform target.
+- Menggunakan konfigurasi secure storage atau permission dari contoh lain tanpa memahami platform target.
 - Menganggap aplikasi aman hanya karena checklist dibuat.
 - Menghasilkan seluruh tugas tanpa dapat menjelaskan alasan setiap pemeriksaan.
 
@@ -377,19 +380,23 @@ Gunakan contoh pada [`../code/pertemuan-12/validasi-keamanan-flutter.dart`](../c
 5. Apa perbedaan `401` dan `403` dalam konteks token dan hak akses?
 6. Sebutkan minimal tiga item security checklist dan bukti pemeriksaannya.
 
+Untuk kuis dengan cakupan lebih luas, gunakan [Quiz Pertemuan 12](./02-Quiz-Pertemuan-12.md) setelah praktikum.
+
 ---
 
 ## 15. Keluaran Pembelajaran — Tugas 12
 
 **Tugas 12 — Security Checklist dan Validasi Project** (dikumpulkan sebelum Pertemuan 13).
 
+Gunakan [Panduan Pengerjaan Tugas 12](./contoh-tugas-12-mahasiswa.md) sebagai checklist pengumpulan. Dokumen tersebut berisi kerangka dan kriteria tugas, bukan contoh jawaban.
+
 Gunakan domain Sistem Informasi yang sama dengan Tugas 1–11. Kerjakan:
 
 1. **Buat file `security-checklist.md`** berisi minimal 10 pemeriksaan, status, dan bukti.
 2. **Buat file `validasi-input.md`** berisi minimal lima input, aturan validasi client, pemeriksaan server, dan pesan error.
-3. **Perbarui kode project** dengan minimal tiga validator yang dapat dijalankan.
+3. **Perbarui kode project** dengan minimal tiga validator yang dapat dijalankan, lalu uji kondisi gagal pada setiap validator.
 4. **Dokumentasikan token dan permission** yang digunakan atau jelaskan mengapa fitur tersebut belum diperlukan.
-5. **Buat file `README.md`** berisi cara menjalankan, dependency, batasan keamanan, dan deklarasi penggunaan AI.
+5. **Perbarui `README.md`** berisi cara menjalankan, dependency, batasan keamanan, dan deklarasi penggunaan AI.
 6. **Refleksi tiga kalimat** tentang risiko paling penting pada project dan keputusan mitigasinya.
 
 **Cara Pengumpulan — Push ke Repository GitHub Kelas**
@@ -446,7 +453,7 @@ git checkout <nim>
 | Implementasi dan pengujian | 15% | Minimal tiga validator berjalan dan kondisi gagal diuji | Validator berjalan, skenario terbatas | Kode sebagian berjalan | Tidak dapat diuji |
 | Dokumentasi, refleksi, dan ketepatan waktu | 15% | Berkas lengkap, refleksi logis, dan tepat waktu | Berkas cukup lengkap | Berkas atau refleksi terbatas | Tidak lengkap atau terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 

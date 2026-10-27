@@ -6,7 +6,7 @@ Dokumen ini membantu Anda memahami **apa yang harus dikerjakan** pada Tugas 6. D
 |:--|:--|
 | **Tenggat** | Sebelum Pertemuan 7 |
 | **Pengumpulan** | Push ke repository GitHub kelas |
-| **Nilai** | Rubrik Tugas 6 pada materi Pertemuan 6 (Σ bobot = 100%, Nilai = Σ(bobot×skor)/16×100) |
+| **Nilai** | Rubrik Tugas 6 pada materi Pertemuan 6 (Σ bobot = 100%, Nilai = Σ(bobot×skor)/4) |
 
 ---
 

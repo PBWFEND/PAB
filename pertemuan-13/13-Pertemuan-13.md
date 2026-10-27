@@ -7,7 +7,7 @@
 | **CPMK** | CPMK-4 |
 | **Model Pembelajaran** | Case Based Learning / Project Based Learning / Praktikum |
 | **Stack** | Flutter + Dart, `flutter_test`, `flutter analyze` |
-| **Milestone** | M8 — Testing dan Bug Fixes |
+| **Milestone** | M7 — Quality dan Security |
 
 > **Catatan penting:** Pertemuan 13 membahas pengujian fungsional, debugging, dan perbaikan bug pada project. Anda akan menulis test case, menjalankan pemeriksaan analyzer dan test, membaca pesan error, memperbaiki penyebab masalah, lalu mencatat hasil aktual.
 >
@@ -45,7 +45,9 @@
 
 Pertemuan 13 mendukung **CPMK-4**:
 
-> Mahasiswa mampu menguji, menemukan, dan memperbaiki masalah pada aplikasi bergerak berdasarkan hasil pengujian.
+> Mahasiswa mampu menerapkan validasi, keamanan aplikasi secara praktis, pengujian, debugging, dan perbaikan kualitas pada aplikasi bergerak.
+
+Fokus Pertemuan 13 adalah pengujian fungsional, debugging, dan perbaikan bug berdasarkan hasil pengujian.
 
 Pertemuan 12 menghasilkan validasi dan security checklist. Pada pertemuan ini, validasi tersebut diuji melalui skenario normal dan gagal agar bug dapat ditemukan sebelum project diintegrasikan lebih lanjut.
 
@@ -102,14 +104,14 @@ Pertanyaan pemantik:
 
 Test case mengubah kebutuhan menjadi skenario yang dapat diperiksa.
 
-| ID | Skenario | Kondisi awal | Input | Expected result | Actual result | Status |
-|:---|:---------|:-------------|:------|:----------------|:--------------|:------:|
-| TC-01 | Form valid | Form kosong | Semua field valid | Data tersimpan satu kali | | |
-| TC-02 | Field wajib kosong | Form kosong | Nama kosong | Pesan validasi tampil | | |
-| TC-03 | Format email salah | Form terbuka | `nama@` | Request tidak dikirim | | |
-| TC-04 | Tombol ditekan dua kali | Form valid | Dua tap cepat | Hanya satu data dibuat | | |
-| TC-05 | Data dihapus | Item tersedia | Konfirmasi hapus | Item hilang dari daftar | | |
-| TC-06 | Permission ditolak | Fitur foto dibuka | Tolak permission | Pesan dan pilihan pemulihan tampil | | |
+| ID | Skenario | Kondisi awal | Langkah | Input | Expected result | Actual result | Status |
+|:---|:---------|:-------------|:--------|:------|:----------------|:--------------|:------:|
+| TC-01 | Form valid | Form kosong | Isi semua field, tekan Simpan | Semua field valid | Data tersimpan satu kali | | |
+| TC-02 | Field wajib kosong | Form kosong | Kosongkan nama, tekan Simpan | Nama kosong | Pesan validasi tampil | | |
+| TC-03 | Format email salah | Form terbuka | Isi email tidak lengkap, tekan Simpan | `nama@` | Request tidak dikirim | | |
+| TC-04 | Tombol ditekan dua kali | Form valid | Tekan Simpan dua kali cepat | Dua tap cepat | Hanya satu data dibuat | | |
+| TC-05 | Data dihapus | Item tersedia | Tekan hapus, konfirmasi | Konfirmasi hapus | Item hilang dari daftar | | |
+| TC-06 | Permission ditolak | Fitur foto dibuka | Buka fitur foto, tolak permission | Tolak permission | Pesan dan pilihan pemulihan tampil | | |
 
 Expected result ditulis sebelum pengujian. Actual result diisi setelah skenario benar-benar dijalankan.
 
@@ -120,7 +122,7 @@ Expected result ditulis sebelum pengujian. Actual result diisi setelah skenario 
 | Jenis | Fokus | Contoh |
 |:------|:------|:-------|
 | Static analysis | Masalah sintaks, tipe, dan lint | `flutter analyze` |
-| Unit test | Fungsi atau class terisolasi | Validator email mengembalikan pesan yang tepat |
+| Unit test | Fungsi atau class terisolasi | Validator judul mengembalikan pesan yang tepat |
 | Widget test | Widget dan interaksi halaman | Tap tombol lalu periksa teks hasil |
 | Integration test | Alur aplikasi pada target | Form dibuka, diisi, dikirim, dan daftar diperbarui |
 | Manual functional test | Skenario pengguna | Menguji kondisi permission ditolak pada perangkat |
@@ -131,20 +133,22 @@ Mulai dari static analysis dan unit/widget test. Gunakan manual test untuk fitur
 
 ## 6. Widget Test dengan flutter_test
 
-Widget test dapat memeriksa widget tanpa menjalankan aplikasi pada perangkat fisik.
+Widget test dapat memeriksa widget tanpa menjalankan aplikasi pada perangkat fisik. Contoh berikut menguji `HalamanTesting` pada [`testing-debugging-flutter.dart`](../code/pertemuan-13/testing-debugging-flutter.dart). Sesuaikan nama package dan lokasi berkas dengan project Anda.
 
 ```dart
-import 'package:flutter_test/flutter_test.dart';
+// test/widget_test.dart
 import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:nama_project/testing_debugging_flutter.dart';
 
 void main() {
-  testWidgets('menampilkan hasil validasi nama kosong', (tester) async {
-    await tester.pumpWidget(const MaterialApp(home: FormContoh()));
+  testWidgets('menampilkan hasil validasi judul kosong', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: HalamanTesting()));
 
-    await tester.tap(find.text('Periksa input'));
+    await tester.tap(find.text('Simpan'));
     await tester.pump();
 
-    expect(find.text('Nama wajib diisi'), findsOneWidget);
+    expect(find.text('Judul wajib diisi'), findsOneWidget);
   });
 }
 ```
@@ -158,6 +162,8 @@ Pola dasar widget test:
 5. `expect()` membandingkan hasil aktual dengan expected result.
 
 Jika widget membutuhkan controller, timer, atau async operation, atur lifecycle dan tunggu perubahan dengan `pumpAndSettle()` sesuai kebutuhan.
+
+Letakkan berkas uji pada folder `test/` project Flutter Anda, lalu jalankan `flutter test`. Karena `HalamanTesting` menunda penyimpanan selama 500 ms, test perlu menunggu dengan `pump(const Duration(milliseconds: 600))` sebelum memeriksa status akhir.
 
 ---
 
@@ -264,7 +270,7 @@ Bentuk kelompok yang terdiri atas 3–4 mahasiswa:
 
 Gunakan contoh pada [`../code/pertemuan-13/testing-debugging-flutter.dart`](../code/pertemuan-13/testing-debugging-flutter.dart), lalu lengkapi scaffold [`../code/pertemuan-13/latihan-testing-flutter.dart`](../code/pertemuan-13/latihan-testing-flutter.dart).
 
-1. Tambahkan test case untuk field kosong, format salah, dan input valid.
+1. Tambahkan test case untuk judul kosong, batas panjang teks, dan input valid.
 2. Jalankan `flutter analyze` dan catat error atau warning yang ditemukan.
 3. Reproduksi satu bug pada project Anda.
 4. Tulis hipotesis penyebab dan perbaikan.
@@ -316,11 +322,15 @@ Gunakan contoh pada [`../code/pertemuan-13/testing-debugging-flutter.dart`](../c
 5. Apa yang dimaksud regresi dan bagaimana test membantu mendeteksinya?
 6. Mengapa test tidak boleh diubah hanya agar lulus?
 
+Untuk kuis dengan cakupan lebih luas, gunakan [Quiz Pertemuan 13](./02-Quiz-Pertemuan-13.md) setelah praktikum.
+
 ---
 
 ## 14. Keluaran Pembelajaran — Tugas 13
 
 **Tugas 13 — Test Case dan Bug Fixes** (dikumpulkan sebelum Pertemuan 14).
+
+Gunakan [Panduan Pengerjaan Tugas 13](./contoh-tugas-13-mahasiswa.md) sebagai checklist pengumpulan. Dokumen tersebut berisi kerangka dan kriteria tugas, bukan contoh jawaban.
 
 Gunakan project yang sama dengan Tugas 1–12. Kerjakan:
 
@@ -386,11 +396,13 @@ git checkout <nim>
 | Dokumentasi dan refleksi | 15% | README, bug report, batasan, dan refleksi lengkap | Dokumentasi cukup | Dokumentasi sebagian | Tidak ada dokumentasi |
 | Ketepatan waktu dan kontribusi | 10% | Branch, Pull Request, dan kontribusi terdokumentasi | Ada kekurangan minor | Kontribusi sulit diverifikasi | Tidak dikumpulkan atau terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 
 ## 16. Verifikasi Kode
+
+Jalankan perintah berikut pada folder project Flutter Anda.
 
 ```bash
 flutter pub get
@@ -410,7 +422,9 @@ Checklist verifikasi:
 - [ ] README memuat perintah verifikasi dan batasan pengujian.
 - [ ] Pull Request branch NIM dapat dibaca.
 
-Jika project membutuhkan device atau permission, dokumentasikan target pengujian dan hasil aktualnya.
+Jika project membutuhkan device atau permission, dokumentasikan target pengujian dan hasil aktualnya. Pengujian pada perangkat memerlukan Android SDK serta emulator atau perangkat fisik yang telah dikonfigurasi; langkah instalasinya tersedia pada [Panduan Lengkap PAB](../panduan/Panduan-Lengkap-PAB.md).
+
+Berkas pada folder `code/pertemuan-13` berupa berkas Dart tunggal tanpa `pubspec.yaml`. Untuk menjalankan atau mengujinya, tempatkan berkas tersebut di dalam project Flutter Anda, kemudian jalankan perintah di atas dari folder project.
 
 ---
 

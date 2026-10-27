@@ -548,7 +548,7 @@ Langkah pengumpulan:
 | Bukti environment siap | 20% | `flutter doctor` bersih + aplikasi berjalan | `flutter doctor` masih ada 1 peringatan non-penghambat | Bukti tidak lengkap | Tidak ada bukti |
 | Skenario uji & ketepatan waktu | 10% | Refleksi 3 kalimat logis, tepat waktu | Refleksi ada, kurang mendalam | Refleksi kurang dari 3 kalimat | Tidak ada / terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 

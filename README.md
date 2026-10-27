@@ -37,9 +37,11 @@
 | 26 | Kode praktikum Pertemuan 11 — [`code/pertemuan-11/`](./code/pertemuan-11/) | `demo-fitur-perangkat-flutter.dart` (demo `image_picker`) dan `latihan-fitur-perangkat-flutter.dart` (TODO terbimbing) |
 | 27 | [Pertemuan 12 — `pertemuan-12/12-Pertemuan-12.md`](./pertemuan-12/12-Pertemuan-12.md) | Validasi input, HTTPS, token, permission, secure storage, security checklist, dan Tugas 12 |
 | 28 | Kode praktikum Pertemuan 12 — [`code/pertemuan-12/`](./code/pertemuan-12/) | `validasi-keamanan-flutter.dart` dan `latihan-keamanan-flutter.dart` |
-| 29 | [Pertemuan 13 — `pertemuan-13/13-Pertemuan-13.md`](./pertemuan-13/13-Pertemuan-13.md) | Testing, debugging, bug fixes, test case, regresi, dan Tugas 13 |
-| 30 | Kode praktikum Pertemuan 13 — [`code/pertemuan-13/`](./code/pertemuan-13/) | `testing-debugging-flutter.dart` dan `latihan-testing-flutter.dart` |
-| 31 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 29 | Panduan Tugas 12 — [`pertemuan-12/contoh-tugas-12-mahasiswa.md`](./pertemuan-12/contoh-tugas-12-mahasiswa.md) | Kerangka pengumpulan security checklist dan validasi project |
+| 30 | [Pertemuan 13 — `pertemuan-13/13-Pertemuan-13.md`](./pertemuan-13/13-Pertemuan-13.md) | Testing, debugging, bug fixes, test case, regresi, dan Tugas 13 |
+| 31 | Kode praktikum Pertemuan 13 — [`code/pertemuan-13/`](./code/pertemuan-13/) | `testing-debugging-flutter.dart` dan `latihan-testing-flutter.dart` |
+| 32 | Panduan Tugas 13 — [`pertemuan-13/contoh-tugas-13-mahasiswa.md`](./pertemuan-13/contoh-tugas-13-mahasiswa.md) | Kerangka pengumpulan test case dan bug fixes |
+| 33 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 

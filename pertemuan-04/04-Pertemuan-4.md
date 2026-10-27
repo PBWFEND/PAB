@@ -452,7 +452,7 @@ Langkah pengumpulan:
 | User flow | 25% | ≥ 8 langkah, ≥ 2 keputusan, semua cabang gagal ada, dapat ditelusuri tanpa penjelasan | Langkah dan keputusan memenuhi, 1 cabang kurang | Alur ada tetapi kurang dari 8 langkah atau tanpa cabang gagal | Tidak ada diagram |
 | Pemetaan, refleksi, ketepatan waktu | 10% | Tabel pemetaan lengkap, refleksi 3 kalimat logis, tepat waktu | Pemetaan ada, refleksi kurang mendalam | Pemetaan parsial atau refleksi kurang dari 3 kalimat | Tidak ada / terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 

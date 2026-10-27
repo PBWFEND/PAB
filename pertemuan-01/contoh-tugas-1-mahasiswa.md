@@ -6,7 +6,7 @@ Dokumen ini membantu Anda memahami **apa yang harus dikerjakan** pada Tugas 1. P
 |:--|:--|
 | **Tenggat** | Sebelum Pertemuan 2 |
 | **Pengumpulan** | Push ke repository GitHub kelas (lihat bagian pengumpulan) |
-| **Nilai** | Rubrik Tugas 1 pada materi pertemuan 1 (Σ bobot = 100%, Nilai = Σ(bobot×skor)/16×100) |
+| **Nilai** | Rubrik Tugas 1 pada materi pertemuan 1 (Σ bobot = 100%, Nilai = Σ(bobot×skor)/4) |
 
 ---
 

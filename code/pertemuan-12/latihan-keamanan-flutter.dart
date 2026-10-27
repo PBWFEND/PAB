@@ -11,9 +11,10 @@
 //   flutter run -d chrome
 //
 // TODO:
-//   1. Lengkapi validator nama dan email.
-//   2. Lengkapi method pemeriksaan Form.
-//   3. Tampilkan tiga item security checklist.
+//   1. Lengkapi validator nama.
+//   2. Lengkapi validator email.
+//   3. Lengkapi method pemeriksaan Form.
+//   4. Tampilkan tiga item security checklist.
 // ============================================================================
 
 import 'package:flutter/material.dart';
@@ -58,6 +59,8 @@ class _HalamanLatihanState extends State<HalamanLatihan> {
   final _emailController = TextEditingController();
 
   /// Pesan status yang ditampilkan setelah pemeriksaan input.
+  // Nilai berubah melalui setState setelah TODO 3 diimplementasikan.
+  // ignore: prefer_final_fields
   String _pesan = 'Lengkapi TODO validasi.';
 
   @override

@@ -519,7 +519,7 @@ Langkah pengumpulan:
 | Blok `main()` + keluaran | 15% | Keluaran lengkap, rapi, sesuai spesifikasi | Keluaran lengkap, kurang rapi | Keluaran sebagian | Tidak berjalan |
 | Refleksi + ketepatan waktu | 15% | Refleksi 3 kalimat logis, tepat waktu | Refleksi ada, kurang mendalam | Refleksi kurang dari 3 kalimat | Tidak ada / terlambat |
 
-**Nilai = Σ(bobot × skor) / 16 × 100.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
+**Nilai = Σ(bobot × skor) / 4.** Pengumpulan terlambat: pengurangan 1 level rubrik per hari.
 
 ---
 
