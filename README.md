@@ -35,7 +35,11 @@
 | 24 | [Pertemuan 11 — `pertemuan-11/11-Pertemuan-11.md`](./pertemuan-11/11-Pertemuan-11.md) | Fitur perangkat sesuai kebutuhan: kamera, lokasi, file, notification, permission, lifecycle, dan Tugas 11 |
 | 25 | Panduan Tugas 11 — [`pertemuan-11/contoh-tugas-11-mahasiswa.md`](./pertemuan-11/contoh-tugas-11-mahasiswa.md) | Kerangka pengumpulan integrasi fitur perangkat |
 | 26 | Kode praktikum Pertemuan 11 — [`code/pertemuan-11/`](./code/pertemuan-11/) | `demo-fitur-perangkat-flutter.dart` (demo `image_picker`) dan `latihan-fitur-perangkat-flutter.dart` (TODO terbimbing) |
-| 27 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
+| 27 | [Pertemuan 12 — `pertemuan-12/12-Pertemuan-12.md`](./pertemuan-12/12-Pertemuan-12.md) | Validasi input, HTTPS, token, permission, secure storage, security checklist, dan Tugas 12 |
+| 28 | Kode praktikum Pertemuan 12 — [`code/pertemuan-12/`](./code/pertemuan-12/) | `validasi-keamanan-flutter.dart` dan `latihan-keamanan-flutter.dart` |
+| 29 | [Pertemuan 13 — `pertemuan-13/13-Pertemuan-13.md`](./pertemuan-13/13-Pertemuan-13.md) | Testing, debugging, bug fixes, test case, regresi, dan Tugas 13 |
+| 30 | Kode praktikum Pertemuan 13 — [`code/pertemuan-13/`](./code/pertemuan-13/) | `testing-debugging-flutter.dart` dan `latihan-testing-flutter.dart` |
+| 31 | RPS — acuan mata kuliah | Rencana Pembelajaran Semester, CPMK, Sub-CPMK, indikator, asesmen, dan rubrik project |
 
 ## Referensi dan Materi Pendukung Dart
 
@@ -152,6 +156,23 @@ Topik Dart lanjutan, seperti package/library, inheritance, enum, extension, JSON
 - [geolocator — pub.dev](https://pub.dev/packages/geolocator) — membaca lokasi perangkat dengan permission
 - [file_picker — pub.dev](https://pub.dev/packages/file_picker) — memilih file dari perangkat
 - [flutter_local_notifications — pub.dev](https://pub.dev/packages/flutter_local_notifications) — membuat notification lokal sesuai kebutuhan aplikasi
+
+### 12-Pertemuan-12.md — Validasi dan Keamanan Praktis
+
+- [Flutter — Build a form with validation](https://docs.flutter.dev/cookbook/forms/validation) — penggunaan `Form`, `GlobalKey<FormState>`, dan validator
+- [Flutter — Networking](https://docs.flutter.dev/cookbook/networking) — pola komunikasi aplikasi Flutter dengan backend
+- [flutter_secure_storage — pub.dev](https://pub.dev/packages/flutter_secure_storage) — penyimpanan nilai sensitif menggunakan mekanisme aman platform
+- [Flutter — Packages and plugins](https://docs.flutter.dev/packages-and-plugins/using-packages) — cara menambahkan dan meninjau package Flutter
+- [OWASP — Mobile Application Security](https://owasp.org/www-project-mobile-top-10/) — risiko keamanan mobile sebagai bahan pengenalan dan diskusi
+
+### 13-Pertemuan-13.md — Testing, Debugging, dan Perbaikan
+
+- [Flutter — Testing](https://docs.flutter.dev/testing) — pengantar unit test, widget test, dan integration test
+- [Flutter — Widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction) — pola dasar `flutter_test`, `pumpWidget`, `find`, dan `expect`
+- [Flutter — Debugging](https://docs.flutter.dev/testing/debugging) — strategi membaca error dan menggunakan alat debugging Flutter
+- [Dart — Testing](https://dart.dev/language/fortify-your-app#testing) — konsep pengujian pada ekosistem Dart
+- [Dart API — `assert`](https://api.dart.dev/stable/dart-core/assert.html) — pemeriksaan kondisi saat pengembangan
+- [Flutter DevTools](https://docs.flutter.dev/tools/devtools/overview) — alat pemeriksaan aplikasi dan proses debugging
 
 ### Repositori Kelas
 
