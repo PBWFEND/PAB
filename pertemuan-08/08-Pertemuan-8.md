@@ -116,7 +116,6 @@ UTS terdiri atas dua komponen dengan bobot berbeda:
 - Soal bersifat **esai analitis** — bukan pilihan ganda. Setiap soal menuntut penjelasan alasan, bukan sekadar menyebut istilah.
 - Soal dirancang berdasarkan **studi kasus domain SI** — mahasiswa menerapkan konsep pada situasi nyata, bukan menghafal definisi.
 - Jawaban tes konsep ditulis pada file **`tes-konsep-uts.md`** di folder `tugas-8/` dan di-push ke repository — tes konsep dikerjakan secara mandiri, bukan di dalam kelas.
-- **Tidak boleh membuka catatan, kode, atau referensi; AI, peramban, dan perangkat lain tidak digunakan** selama pengerjaan tes konsep.
 
 > **SOAL WAJIB DIKERJAKAN:** Jawab **semua Soal 1–10** pada Bagian 5. Tidak ada soal pilihan atau soal tambahan; setiap soal memiliki bobot yang sama.
 
