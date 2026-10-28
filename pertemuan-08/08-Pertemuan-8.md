@@ -9,7 +9,7 @@
 | **Stack** | Flutter + Dart (seluruh materi Pertemuan 1–7) |
 | **Milestone** | M4 — UTS: Project Review |
 
-> **Catatan penting:** Pertemuan 8 adalah **Ujian Tengah Semester (UTS)** — evaluasi pemahaman konsep dan progress implementasi project hingga Minggu 7. UTS terdiri atas dua komponen: **Tes Konsep** (kuis tertulis, 10 soal esai) dan **Evaluasi Progress Project** (demo MVP awal beserta dokumen kebutuhan, prototype, dan kode). Kedua komponen mengevaluasi capaian CPMK-1 (konsep aplikasi bergerak), CPMK-2 (analisis kebutuhan dan UI/UX), dan CPMK-3 (implementasi data lokal).
+> **Catatan penting:** Pertemuan 8 adalah **Ujian Tengah Semester (UTS)** — evaluasi pemahaman konsep dan progress implementasi project hingga Minggu 7. UTS terdiri atas dua komponen: **Tes Konsep** (10 soal esai yang dijawab pada file `tes-konsep-uts.md` dan di-push ke repository) dan **Evaluasi Progress Project** (demo MVP awal beserta dokumen kebutuhan, prototype, dan kode). Kedua komponen mengevaluasi capaian CPMK-1 (konsep aplikasi bergerak), CPMK-2 (analisis kebutuhan dan UI/UX), dan CPMK-3 (implementasi data lokal).
 >
 > **Batas cakupan:** Materi yang diuji mencakup Pertemuan 1–7: konsep aplikasi bergerak dalam SI, dasar Dart, struktur Flutter dan widget, analisis kebutuhan dan user flow, UI/UX mobile, navigasi dan interaksi, serta pengelolaan data lokal (model, state, CRUD, persistensi dasar). Materi Pertemuan 9 dan seterusnya (REST API, fitur perangkat, keamanan, testing) **tidak termasuk** cakupan UTS.
 
@@ -107,7 +107,7 @@ UTS terdiri atas dua komponen dengan bobot berbeda:
 
 | Komponen | Bobot | Durasi | Bentuk | Cakupan |
 |:---------|:-----:|:-------|:-------|:--------|
-| **Tes Konsep** | 40% | 60 menit | 10 soal esai (HOTS / studi kasus) | Pertemuan 1–7 |
+| **Tes Konsep** | 40% | Mandiri sebelum tenggat push | 10 soal esai (HOTS / studi kasus) dalam file `tes-konsep-uts.md` | Pertemuan 1–7 |
 | **Evaluasi Progress Project** | 60% | Demo 10 menit/mahasiswa | Demo MVP + dokumen + kode | M1–M3 (Minggu 1–7) |
 | **Total** | **100%** | — | — | — |
 
@@ -115,7 +115,8 @@ UTS terdiri atas dua komponen dengan bobot berbeda:
 
 - Soal bersifat **esai analitis** — bukan pilihan ganda. Setiap soal menuntut penjelasan alasan, bukan sekadar menyebut istilah.
 - Soal dirancang berdasarkan **studi kasus domain SI** — mahasiswa menerapkan konsep pada situasi nyata, bukan menghafal definisi.
-- **Tidak boleh membuka catatan, kode, atau referensi** selama tes konsep.
+- Jawaban tes konsep ditulis pada file **`tes-konsep-uts.md`** di folder `tugas-8/` dan di-push ke repository — tes konsep dikerjakan secara mandiri, bukan di dalam kelas.
+- **Tidak boleh membuka catatan, kode, atau referensi; AI, peramban, dan perangkat lain tidak digunakan** selama pengerjaan tes konsep.
 
 > **SOAL WAJIB DIKERJAKAN:** Jawab **semua Soal 1–10** pada Bagian 5. Tidak ada soal pilihan atau soal tambahan; setiap soal memiliki bobot yang sama.
 
@@ -167,7 +168,7 @@ Kisi-kisi memetakan cakupan materi ke jumlah soal dan tingkat kognitif (taksonom
 
 ## 5. Tes Konsep UTS — Soal Esai
 
-**Petunjuk:** Jawab seluruh soal berikut secara tertulis. Setiap jawaban harus menyertakan **alasan** — bukan sekadar menyebut istilah atau kode. Soal dirancang berdasarkan studi kasus domain SI. Waktu pengerjaan: 60 menit.
+**Petunjuk:** Jawab seluruh soal berikut pada file `tes-konsep-uts.md` di folder `tugas-8/` repository kelas Anda. Setiap jawaban harus menyertakan **alasan** — bukan sekadar menyebut istilah atau kode. Soal dirancang berdasarkan studi kasus domain SI. Pengerjaan tes konsep bersifat mandiri dan di-push bersamaan dengan artefak project pada [Bagian 6](#cara-pengumpulan--push-ke-repository-github-kelas).
 
 > **PENANDA PENGERJAAN:** Semua soal di bawah ini, yaitu **Soal 1 sampai Soal 10, wajib dikerjakan**.
 
@@ -320,7 +321,8 @@ Setiap mahasiswa wajib memastikan artefak berikut telah berada pada repository G
 | 2 | Prototype UI/UX | Tugas 5 | Wireframe/layout halaman utama dan halaman detail/form, catatan keputusan desain |
 | 3 | Navigasi dan interaksi | Tugas 6 | Minimal 2 halaman terhubung dengan `Navigator`, form dengan validasi, feedback `SnackBar` |
 | 4 | MVP data lokal (CRUD) | Tugas 7 | Model data dengan field tertelusur ke kebutuhan, `StatefulWidget`, operasi Create, Read, Update, Delete yang berfungsi |
-| 5 | Laporan progress project | UTS (M4) | Dokumen ringkasan kemajuan project mengikuti template pada [Bagian 8](#8-template-laporan-progress-project) |
+| 5 | Jawaban Tes Konsep | UTS (M4) | File `tes-konsep-uts.md` berisi jawaban seluruh Soal 1–10 pada [Bagian 5](#5-tes-konsep-uts--soal-esai) |
+| 6 | Laporan progress project | UTS (M4) | Dokumen ringkasan kemajuan project mengikuti template pada [Bagian 8](#8-template-laporan-progress-project) |
 
 ### 6.2 Alur Sesi Evaluasi (10 Menit/Mahasiswa)
 
@@ -360,6 +362,7 @@ Struktur minimal folder pengumpulan:
 
 ```text
 tugas-8/
+├── tes-konsep-uts.md
 ├── laporan-progress-uts.md
 ├── kebutuhan.md atau tautan Tugas 4
 ├── prototype-ui-ux atau tautan Tugas 5
@@ -375,21 +378,21 @@ Langkah pengumpulan:
   git checkout <nim>
   mkdir -p tugas-8
   ```
-2. Simpan laporan progress dan tautan atau salinan artefak M1–M3 di folder tersebut.
+2. Isilah jawaban Tes Konsep pada `tes-konsep-uts.md` (10 bagian sesuai Soal 1–10) dan simpan laporan progress serta tautan atau salinan artefak M1–M3 di folder tersebut.
 3. Periksa kembali kelengkapan artefak pada [Bagian 6.1](#61-artefak-yang-wajib-tersedia).
 4. Commit dan push:
 
-  ```bash
-  git add tugas-8
-  git commit -m "uts: progress project - <nama> <nim>"
-  git push origin <nim>
-  ```
+   ```bash
+   git add tugas-8
+   git commit -m "uts: tes konsep dan progress project - <nama> <nim>"
+   git push origin <nim>
+   ```
 
 5. Buat Pull Request dari branch UTS ke `main`:
-  ```bash
-  gh pr create --base main --head <nim> --title "UTS: Progress Project - <nama> <nim>" --body "Pengumpulan laporan dan artefak UTS."
-  ```
-  Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
+   ```bash
+   gh pr create --base main --head <nim> --title "UTS: Tes Konsep + Progress Project - <nama> <nim>" --body "Pengumpulan jawaban tes konsep, laporan, dan artefak UTS."
+   ```
+   Jika GitHub CLI tidak tersedia, gunakan tombol **Compare & pull request** pada repository GitHub dengan `base: main` dan `compare: <nim>`.
 6. Buka Pull Request di browser dan pastikan folder UTS serta seluruh berkas dapat dibaca sebelum sesi evaluasi.
 
 ---
